@@ -1,3 +1,7 @@
+%---------------------------
+% parametres classicalthesis
+%---------------------------
+
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc} %Permet d'utiliser des caractères spéciaux : éèàçù etc. plus sûr que \usepackage[latin9]{inputenc}
 \usepackage{classicthesis/classicthesis}
@@ -44,43 +48,40 @@
 }
 
 \listfiles
-%\usepackage[latin9]{inputenc}
+
+%---------------------------
+% paquets persos
+%---------------------------
 
 \usepackage[french]{babel}
 
 
 \usepackage{pdfpages} % pour inclure des pdf
 
-%\usepackage{geometry} %Personnaliser l'aspect géométrique du document.
-%\geometry{top=3.3cm, bottom=3.3cm, left=4cm , right=4cm} %plus simple que le suivant, que je ne maîtrise pas...
-%\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=1.5cm,rmargin=1.5cm,headheight=2.5cm,headsep=2.5cm,footskip=2.5cm}
 \usepackage{graphicx} %??
-%\usepackage{amsmath} %Utilisé plus bas
 \usepackage{amssymb} %??
 
-\usepackage{caption} %Moarf. Dans le doute je le garde.
-%\usepackage{graphicx}
-\usepackage{amsmath, amssymb, amsthm} 
+\usepackage{caption} %??
+\usepackage{amsmath, amssymb, amsthm} % maths
 \usepackage{natbib}
 \setcitestyle{square}
-%\usepackage{apacite}
-%\usepackage[hyphens]{url} 
+
 \usepackage{colortbl} 
 
-%\usepackage[french]{minitoc} 
+%\usepackage[french]{minitoc} % on sait jamais...
 \usepackage{tocloft}  
 \usepackage{titletoc}  
 \usepackage{appendix} 
 \usepackage{eurosym}
 \usepackage{stmaryrd} %crochets d'entiers
-\usepackage{empheq} %équations encadrées
-\usepackage{mathrsfs}  %zoulies majuscules
-\usepackage{pgf,tikz}
+\usepackage{empheq} % équations encadrées
+\usepackage{mathrsfs} % zoulies majuscules
+\usepackage{pgf,tikz} % dessiner avec latex
 \usetikzlibrary{arrows}
-\usepackage{yhmath} %arc de cercle sur lettres : \wideparen{AB}
-\usepackage{bm} 
-\usepackage{hhline} %allows double hline
-\usepackage{lscape} %pour mettre des pages en paysage
+\usepackage{yhmath} % arc de cercle sur lettres : \wideparen{AB}
+\usepackage{bm} % gras en maths
+\usepackage{hhline} % allows double hline
+\usepackage{lscape} % pour mettre des pages en paysage
 \usepackage{cancel} % barrer ds equation
 \usepackage{multirow} % tableau multicolonne/ligne
 \usepackage{multicol}
@@ -89,16 +90,14 @@
 %\usepackage[footnotesize]{subcaption} %for subfigures
 \usepackage{adjustbox}
 
-
-\usepackage{changes}
+% utile si on veut rapidement mettre un truc en couleur. Modifier black par la valeur souhaitée.
 \newcommand{\colp}[1]{\textcolor{black}{#1}}
 
 
 \usepackage[shortlabels]{enumitem}
 
-	\usepackage{xcolor}
-%\iffalse
-	\usepackage{color} 
+\usepackage{xcolor}
+\usepackage{color} 
 \definecolor{ffqqqq}{rgb}{1,0,0}
 \definecolor{aaaaaa}{rgb}{1,1,1}
 \definecolor{qqqqff}{rgb}{0,0,1}
@@ -106,39 +105,8 @@
 \definecolor{FF6B00}{rgb}{0.5,0,0}
 \definecolor{dblue}{rgb}{0,0.3,0.5}
 \definecolor{dgreen}{rgb}{0,0.5,0.4}
-%\fi
+
 \usepackage{etoolbox}
-
-
-
-\iffalse
-	\usepackage{hyperref} %Celui-là il est surpuissant : il fait tous les liens hypertexte et intratexte. [hidelinks]==> pas de couleur 
-
-\hypersetup{
-%    bookmarks=true,         % show bookmarks bar?
-%    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
-%    pdftoolbar=true,        % show Acrobat’s toolbar?
-%    pdfmenubar=true,        % show Acrobat’s menu?
-%    pdffitwindow=false,     % window fit to page when opened
-%    pdfstartview={FitH},    % fits the width of the page to the window
-%    pdftitle={My title},    % title
-%    pdfauthor={Author},     % author
-%    pdfsubject={Subject},   % subject of the document
-%    pdfcreator={Creator},   % creator of the document
-%    pdfproducer={Producer}, % producer of the document
-%    pdfkeywords={keyword1, key2, key3}, % list of keywords
-%    pdfnewwindow=true,      % links in new PDF window
-    colorlinks=true,       % false: boxed links; true: colored links
-    linkcolor={darkblue},          % color of internal links (change box color with linkbordercolor)
-	linkbordercolor={darkblue},
-    citecolor={darkgreen},        % color of links to bibliography
-    citebordercolor={darkgreen},        % color of links to bibliography
-    filecolor={darkblue},      % color of file links
-    filebordercolor={darkblue},      % color of file links
-    urlcolor={xdxdff},           % color of external links
-    urlbordercolor={xdxdff},           % color of external links
-}
-\fi
 
 \usepackage{hyperref}
 \hypersetup{%
@@ -161,31 +129,24 @@
   pdfproducer={LaTeX with hyperref and classicthesis}%
 }
 
-
-%\usepackage[nameinlink,capitalize]{cleveref}
-
-\usepackage{tikz}
-
-
 \makeatletter
-
-%nécessite packages
-%\usepackage{etoolbox}
-%\usepackage[numbers,sort&compress,square,comma]{natbib}
 
 %Pour colorer les crochets des citations
 \pretocmd{\NAT@open}{\begingroup\color{\@citecolor}}{}{}
 \apptocmd{\NAT@close}{\endgroup}{}{}
 
 
-%Pour colorer les parenthèses des équations.
+%Pour colorer les parenthèses des équations citées.
 \let\oldtheequation\theequation
 \renewcommand\tagform@[1]{\maketag@@@{\ignorespaces#1\unskip\@@italiccorr}}
 \renewcommand\theequation{(\oldtheequation)}
 
+% pour mettre des lignes de commandes dans le texte. 
+% Attention, il faut ajouter l'option --shell-escape après pdflatex. 
 \usepackage{minted}
 \usemintedstyle{vs}
 
+% pour indiquer des changements.
 \usepackage{changes}
 \definechangesauthor[color=BrickRed]{LC}
 \definechangesauthor[color=blue]{LB}
@@ -197,22 +158,11 @@
 \newcommand{\deletlc}[1]{\deleted[id=LC]{#1}}
 
 
+%--------------------------------------
+% raccourcis pour des symboles utiles
+%--------------------------------------
 
-
-
-
-
-%\usepackage{framed}
-% \colorlet{shadecolor}{lightgrey}
-% \newenvironment{axi}
-%   {\begin{shaded}\begin{axio}}
-%   {\end{axio}\end{shaded}}
-
-
-
-
-
-
+% je laisse ça là
 \def\eps{\varepsilon}
 \def\percent{\%}
 \def\etal{{et al.}}
@@ -242,26 +192,6 @@
 
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Théorèmes, démonstrations, etc.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \newtheorem{post}{Postulat}[section]
-% \newtheorem{theorem}{Théorème}[section]
-%\newtheorem{proof}{Preuve}[section]
-% \newtheorem{lemma}{Lemme}[section]
-% \newtheorem{definition}{Définition}[section]
-% \newtheorem{cor}{Corollaire}[section]
-% \newtheorem{prop}{Proposition}[section]
-% \newtheorem{conj}{Conjecture}[section]
-% \theoremstyle{plain}
-\renewcommand{\proofname}{Preuve}
-%\renewcommand{\qedsymbol}{\textit{End of proof.}}
-
-
-
 
 
 
@@ -319,20 +249,10 @@
 \newcommand{\guil}[1]{\og{} #1\fg}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%bas de page, haut de page
-%        etc.
-%		Plüthaar.
+%--------------------------------------------
+%   Commandes de Loïc (légèrement modifiées)
+%--------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\renewcommand{\headrulewidth}{1pt}
-%\fancyhead[C]{\textbf{page \thepage}} 
-%\fancyhead[L]{\leftmark}
-%\fancyhead[R]{machin}
-
-%\renewcommand{\footrulewidth}{1pt}
-%\fancyfoot[C]{Léo BERNUS} 
-%\fancyfoot[L]{truc}
-%\fancyfoot[R]{\leftmark}
 
 
 % --------------------------------------
@@ -434,10 +354,11 @@
 \newcommand{\cad}{c'est-à-dire }
 \newcommand{\cst}{{\rm Cst} }
 \newcommand{\ssi}{si et seulement si }
-\newcommand{\guil}[1]{\og{} #1\fg} % entourer de guillemets
+%\newcommand{\guil}[1]{\og{} #1\fg} % entourer de guillemets % deja definie plus haut
 
 \setcounter{secnumdepth}{3}
 
+% remarque : j'ai récrit ce truc 
 \newcommand\FigureMarge[3]
 {\marginpar{#1 
     
@@ -447,17 +368,23 @@
 }}
 
 
-\title{\color{BrickRed}{\huge Maths plage} \\\phantom{t} \\École de mathématiques pour non-mathématiciens}
+% inutile mais je le garde au cas où.
+% \title{\color{BrickRed}{\huge Maths plage} \\\phantom{t} \\École de mathématiques pour non-mathématiciens}
 
 
-\author{Loïc Chantry - Léo Bernus}
-\date{Été 2023}
+% \author{Loïc Chantry - Léo Bernus}
+% \date{Été 2023}
 
+
+
+%-------------------------------------------
+% Gestion des theoremes
+%-------------------------------------------
 
 \usepackage{amsthm}
   \newtheorem{post}{Postulat}[section]
   \newtheorem{thm}{Théorème}[section]
-  \newtheorem{lemma}{Lemme}[section]
+  \newtheorem{lem}{Lemme}[section]
   \newtheorem{defi}{Définition}[section]
   \newtheorem{cor}{Corollaire}[section]
   \newtheorem{prop}{Proposition}[section]
@@ -471,6 +398,7 @@
   \newtheorem*{prop*}{Propriété}
   \newtheorem*{conj*}{Conjecture}
 
+% coloration et numérotation spéciale pour les axiomes
 \usepackage[many]{tcolorbox}
 \newtheorem{axi}{Axiome}[subsection]
 \tcolorboxenvironment{axi}{
@@ -483,12 +411,10 @@
   before skip=\topsep,
   after skip=\topsep,
 }
-
-
 \newcounter{serieaxiom}
 \setcounter{serieaxiom}{1}
 \newcounter{axinum}
 \setcounter{axinum}{1}
 \renewcommand{\theaxi}{\Alph{serieaxiom}.\arabic{axi}}
 
-\theorembodyfont{\upshape}
+%\theorembodyfont{\upshape}

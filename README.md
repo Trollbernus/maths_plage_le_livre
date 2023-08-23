@@ -3,7 +3,9 @@
 
 Ouvrage écrit par :
 Léo Bernus et Loïc Chantry, agrégés de mathématiques, docteurs en astrophysique.
-Pour compiler : exécuter ```sh compilation.sh```
+Pour compiler totalement : exécuter ```sh compilation.sh```
+Pour compiler juste une fois : en raison du paquet ```minted```, il faut compiler avec l'option ```--shell-escape```. Donc, taper :
+```pdflatex --shell-escape main.tex```
 
 Structure du fichier
 --------------------
