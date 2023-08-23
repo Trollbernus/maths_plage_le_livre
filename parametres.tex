@@ -1,0 +1,494 @@
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} %Permet d'utiliser des caractères spéciaux : éèàçù etc. plus sûr que \usepackage[latin9]{inputenc}
+\usepackage{classicthesis/classicthesis}
+\PassOptionsToPackage{
+  drafting=false,    % print version information on the bottom of the pages
+  tocaligned=false, % the left column of the toc will be aligned (no indentation)
+  dottedtoc=false,  % page numbers in ToC flushed right
+  eulerchapternumbers=true, % use AMS Euler for chapter font (otherwise Palatino)
+  linedheaders=false,       % chaper headers will have line above and beneath
+  floatperchapter=true,     % numbering per chapter for all floats (i.e., Figure 1.1)
+  eulermath=false,  % use awesome Euler fonts for mathematical formulae (only with pdfLaTeX)
+  beramono=true,    % toggle a nice monospaced font (w/ bold)
+  palatino=true,    % deactivate standard font for loading another one, see the last section at the end of this file for suggestions
+  style=classicthesis % classicthesis, arsclassica
+}{classicthesis}
+\providecommand{\mLyX}{L\kern-.1667em\lower.25em\hbox{Y}\kern-.125emX\@}
+%\usepackage{euler}
+% ****************************************************************************************************
+\usepackage{tabularx} % better tables
+\setlength{\extrarowheight}{3pt} % increase table row height
+\newcommand{\tableheadline}[1]{\multicolumn{1}{l}{\spacedlowsmallcaps{#1}}}
+\newcommand{\myfloatalign}{\centering} % to be used with each float for alignment
+\usepackage{subfig}
+
+\usepackage{listings}
+%\lstset{emph={trueIndex,root},emphstyle=\color{BlueViolet}}%\underbar} % for special keywords
+\lstset{language=[LaTeX]Tex,%C++,
+  morekeywords={PassOptionsToPackage,selectlanguage},
+  keywordstyle=\color{RoyalBlue},%\bfseries,
+  basicstyle=\small\ttfamily,
+  %identifierstyle=\color{NavyBlue},
+  commentstyle=\color{Green}\ttfamily,
+  stringstyle=\rmfamily,
+  numbers=none,%left,%
+  numberstyle=\scriptsize,%\tiny
+  stepnumber=5,
+  numbersep=8pt,
+  showstringspaces=false,
+  breaklines=true,
+  %frameround=ftff,
+  %frame=single,
+  belowcaptionskip=.75\baselineskip
+  %frame=L
+}
+
+\listfiles
+%\usepackage[latin9]{inputenc}
+
+\usepackage[french]{babel}
+
+
+\usepackage{pdfpages} % pour inclure des pdf
+
+%\usepackage{geometry} %Personnaliser l'aspect géométrique du document.
+%\geometry{top=3.3cm, bottom=3.3cm, left=4cm , right=4cm} %plus simple que le suivant, que je ne maîtrise pas...
+%\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=1.5cm,rmargin=1.5cm,headheight=2.5cm,headsep=2.5cm,footskip=2.5cm}
+\usepackage{graphicx} %??
+%\usepackage{amsmath} %Utilisé plus bas
+\usepackage{amssymb} %??
+
+\usepackage{caption} %Moarf. Dans le doute je le garde.
+%\usepackage{graphicx}
+\usepackage{amsmath, amssymb, amsthm} 
+\usepackage{natbib}
+\setcitestyle{square}
+%\usepackage{apacite}
+%\usepackage[hyphens]{url} 
+\usepackage{colortbl} 
+
+%\usepackage[french]{minitoc} 
+\usepackage{tocloft}  
+\usepackage{titletoc}  
+\usepackage{appendix} 
+\usepackage{eurosym}
+\usepackage{stmaryrd} %crochets d'entiers
+\usepackage{empheq} %équations encadrées
+\usepackage{mathrsfs}  %zoulies majuscules
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\usepackage{yhmath} %arc de cercle sur lettres : \wideparen{AB}
+\usepackage{bm} 
+\usepackage{hhline} %allows double hline
+\usepackage{lscape} %pour mettre des pages en paysage
+\usepackage{cancel} % barrer ds equation
+\usepackage{multirow} % tableau multicolonne/ligne
+\usepackage{multicol}
+%\usepackage{mathabx} % symboles astro
+
+%\usepackage[footnotesize]{subcaption} %for subfigures
+\usepackage{adjustbox}
+
+
+\usepackage{changes}
+\newcommand{\colp}[1]{\textcolor{black}{#1}}
+
+
+\usepackage[shortlabels]{enumitem}
+
+	\usepackage{xcolor}
+%\iffalse
+	\usepackage{color} 
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{aaaaaa}{rgb}{1,1,1}
+\definecolor{qqqqff}{rgb}{0,0,1}
+\definecolor{xdxdff}{rgb}{0.49,0.49,1}
+\definecolor{FF6B00}{rgb}{0.5,0,0}
+\definecolor{dblue}{rgb}{0,0.3,0.5}
+\definecolor{dgreen}{rgb}{0,0.5,0.4}
+%\fi
+\usepackage{etoolbox}
+
+
+
+\iffalse
+	\usepackage{hyperref} %Celui-là il est surpuissant : il fait tous les liens hypertexte et intratexte. [hidelinks]==> pas de couleur 
+
+\hypersetup{
+%    bookmarks=true,         % show bookmarks bar?
+%    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+%    pdftoolbar=true,        % show Acrobat’s toolbar?
+%    pdfmenubar=true,        % show Acrobat’s menu?
+%    pdffitwindow=false,     % window fit to page when opened
+%    pdfstartview={FitH},    % fits the width of the page to the window
+%    pdftitle={My title},    % title
+%    pdfauthor={Author},     % author
+%    pdfsubject={Subject},   % subject of the document
+%    pdfcreator={Creator},   % creator of the document
+%    pdfproducer={Producer}, % producer of the document
+%    pdfkeywords={keyword1, key2, key3}, % list of keywords
+%    pdfnewwindow=true,      % links in new PDF window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor={darkblue},          % color of internal links (change box color with linkbordercolor)
+	linkbordercolor={darkblue},
+    citecolor={darkgreen},        % color of links to bibliography
+    citebordercolor={darkgreen},        % color of links to bibliography
+    filecolor={darkblue},      % color of file links
+    filebordercolor={darkblue},      % color of file links
+    urlcolor={xdxdff},           % color of external links
+    urlbordercolor={xdxdff},           % color of external links
+}
+\fi
+
+\usepackage{hyperref}
+\hypersetup{%
+  %draft, % hyperref's draft mode, for printing see below
+  colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
+  % uncomment the following line if you want to have black links (e.g., for printing)
+  %colorlinks=false, linktocpage=false, pdfstartpage=3, pdfstartview=FitV, pdfborder={0 0 0},%
+  breaklinks=true, pageanchor=true,%
+  pdfpagemode=UseNone, %
+  % pdfpagemode=UseOutlines,%
+  plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+  hypertexnames=true, pdfhighlight=/O,%nesting=true,%frenchlinks,%
+  urlcolor=CTurl, linkcolor=CTlink, citecolor=CTcitation, %pagecolor=RoyalBlue,%
+  %urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
+  pdftitle={maths-plage},%
+  pdfauthor={Loïc et Léo},%
+  pdfsubject={},%
+  pdfkeywords={},%
+  pdfcreator={pdfLaTeX},%
+  pdfproducer={LaTeX with hyperref and classicthesis}%
+}
+
+
+%\usepackage[nameinlink,capitalize]{cleveref}
+
+\usepackage{tikz}
+
+
+\makeatletter
+
+%nécessite packages
+%\usepackage{etoolbox}
+%\usepackage[numbers,sort&compress,square,comma]{natbib}
+
+%Pour colorer les crochets des citations
+\pretocmd{\NAT@open}{\begingroup\color{\@citecolor}}{}{}
+\apptocmd{\NAT@close}{\endgroup}{}{}
+
+
+%Pour colorer les parenthèses des équations.
+\let\oldtheequation\theequation
+\renewcommand\tagform@[1]{\maketag@@@{\ignorespaces#1\unskip\@@italiccorr}}
+\renewcommand\theequation{(\oldtheequation)}
+
+\usepackage{minted}
+\usemintedstyle{vs}
+
+\usepackage{changes}
+\definechangesauthor[color=BrickRed]{LC}
+\definechangesauthor[color=blue]{LB}
+\newcommand{\addlb}[1]{\added[id=LB]{ #1}}
+\newcommand{\replb}[2][]{\replaced[id=LB]{#1}{#2}}
+\newcommand{\deletb}[1]{\deleted[id=LB]{#1}}
+\newcommand{\addlc}[1]{\added[id=LC]{ #1}}
+\newcommand{\replc}[2][]{\replaced[id=LC]{#1}{#2}}
+\newcommand{\deletlc}[1]{\deleted[id=LC]{#1}}
+
+
+
+
+
+
+
+%\usepackage{framed}
+% \colorlet{shadecolor}{lightgrey}
+% \newenvironment{axi}
+%   {\begin{shaded}\begin{axio}}
+%   {\end{axio}\end{shaded}}
+
+
+
+
+
+
+\def\eps{\varepsilon}
+\def\percent{\%}
+\def\etal{{et al.}}
+
+
+
+%%%%%%%%%%%Commandes pour la bibliographie.
+\def\aj{\textit{The Astronomical Journal}}
+\def\nat{\textit{Nature}}
+\def\icarus{\textit{Icarus}}
+\def\aap{\textit{Astronomy and Astrophysics}}
+\def\grl{\textit{Geophysical Research Letters}}
+\def\jgr{\textit{Journal of Geophysical Research}}
+\def\prd{\textit{Physical Review D}}
+\def\prl{\textit{Physical Review Letter}}
+\def\mnras{\textit{Monthly Notices of the Royal Astronomical Society}}
+\def\apjl{\textit{Astrophysical Journal Letters}}
+\def\apj{\textit{Astrophysical Journal}}
+\def\physrep{\textit{Physics Reports}}
+
+
+
+
+
+\makeatother
+
+
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Théorèmes, démonstrations, etc.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \newtheorem{post}{Postulat}[section]
+% \newtheorem{theorem}{Théorème}[section]
+%\newtheorem{proof}{Preuve}[section]
+% \newtheorem{lemma}{Lemme}[section]
+% \newtheorem{definition}{Définition}[section]
+% \newtheorem{cor}{Corollaire}[section]
+% \newtheorem{prop}{Proposition}[section]
+% \newtheorem{conj}{Conjecture}[section]
+% \theoremstyle{plain}
+\renewcommand{\proofname}{Preuve}
+%\renewcommand{\qedsymbol}{\textit{End of proof.}}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ù
+%
+%typographie matheuse
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newcommand{\d}{\mathop{}\mathrm{d}}
+\def\lg{\lambda_g}
+\def\d{\mathrm{d}}
+\def\e{\mathrm{e}}
+\def\i{\mathrm{i}}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\D{\mathbb{D}}
+\def\Z{\mathbb{Z}}
+\def\P{\mathbb{P}}
+\def\ch{\mathrm{ch}}
+\def\sh{\mathrm{sh}}
+\def\M{\mathcal{M}}
+\def\N{\mathbb{N}}
+\def\R{\mathbb{R}}
+\def\Z{\mathbb{Z}}
+\def\B{\mathscr{B}}
+\def\cs{\xrightarrow[]{c.s.}}
+\def\cu{\xrightarrow[]{c.u.}}
+\def\cL1{\xrightarrow[]{L^1}}
+\def\cLp{\xrightarrow[]{L^p}}
+\def\({\left(}
+\def\){\right)}
+\def\[{\left[}
+\def\]{\right]}
+\def\EDO{équation différentielle ordinaire}
+\def\EDOU{équation différentielle ordinaire d'ordre 1}
+\def\ch{\mathrm{ch\,}}
+\def\sh{\mathrm{sh\,}}
+\def\ach{\mathrm{ach\,}}
+\def\ash{\mathrm{ash\,}}
+\def\ddet{\mathrm{det\,}}
+\def\ninN{n\in\mathbb{N}}
+\def\asin{\mathrm{asin\,}}
+\def\acos{\mathrm{acos\,}}
+\def\atan{\mathrm{atan\,}}
+\def\psd{\frac{\pi}{2}}
+\def\convn{\xrightarrow[n\to\infty]{}}
+\def\C{\mathbb{C}}
+\def\S{\mathscr{S}}
+\newcommand{\ve}[1]{\overrightarrow{\bm #1}}
+\newcommand{\fl}[1]{\underline{\bm #1}}
+\newcommand{\de}[1]{\underline{\bm{\d}\bm #1}}
+\newcommand{\ovr}[1]{\overrightarrow{#1}}
+\newcommand{\vei}[2][]{\overrightarrow{\bm{#1}_{#2}}}
+\newcommand{\guil}[1]{\og{} #1\fg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%bas de page, haut de page
+%        etc.
+%		Plüthaar.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\renewcommand{\headrulewidth}{1pt}
+%\fancyhead[C]{\textbf{page \thepage}} 
+%\fancyhead[L]{\leftmark}
+%\fancyhead[R]{machin}
+
+%\renewcommand{\footrulewidth}{1pt}
+%\fancyfoot[C]{Léo BERNUS} 
+%\fancyfoot[L]{truc}
+%\fancyfoot[R]{\leftmark}
+
+
+% --------------------------------------
+% Commande chiffre Romain
+% --------------------------------------
+\newcommand{\Rom}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+% --------------------------------------
+% Initial de texte
+% --------------------------------------
+\usepackage{lettrine}
+\newcommand{\initial}[2]{\lettrine[lines=2, lhang=0., loversize=0.1,findent=0.2em, nindent=0pt]{\color{BrickRed}#1}{#2}}
+
+% --------------------------------------
+% Couleurs perso
+% --------------------------------------
+\definecolor{souris}{gray}{0.95}
+\definecolor{LightGrey}{gray}{0.92}
+
+
+
+% --------------------------------------
+% Math : ensemble notation famille d'élèments cardinal
+% --------------------------------------
+\newcommand{\ensemble}[2]{\left\{#1\,\left|\,#2\right.\right\}}
+\newcommand{\fami}[3]{ \left(#1_{#2}\right)_{#2 = #3}}
+\newcommand{\famiin}[3]{ \left(#1_{#2}\right)_{#2 \in #3}}
+\newcommand{\famiup}[3]{ \left(#1^{#2}\right)_{#2 = #3}}
+\newcommand{\famiupin}[3]{ \left(#1^{#2}\right)_{#2 \in #3}}
+\newcommand{\card}{\text{card}}
+
+% --------------------------------------
+% Angles
+% --------------------------------------
+\newcommand\angdroit{%
+    \tikz[line cap=round,x=1.6ex,y=1.6ex,line width=0.4pt]
+    {\draw (0,1) |- (1,0) (0,0) rectangle (.55,.55);}
+}
+\newcommand\angqcq{%
+    \tikz[line cap=round,x=1.6ex,y=1.6ex,line width=0.3pt]
+    {\draw (1,0) -- (0,0); \draw[rotate = 75] (1,0) -- (0,0); \draw (0.55,0) arc(0:75:0.55);}%
+    }
+\newcommand\angbar{%
+    \tikz[line cap=round,x=1.6ex,y=1.6ex,line width=0.3pt]
+    {\draw (1,0) -- (0,0); \draw[rotate = 75] (1,0) -- (0,0); \draw (0.55,0) arc(0:75:0.55); \draw[rotate = 37.5] (0.30,0) -- (0.80,0) }%
+    }
+\newcommand\angdoublebar{%
+    \tikz[line cap=round,x=1.6ex,y=1.6ex,line width=0.3pt]
+    {\draw (1,0) -- (0,0); \draw[rotate = 75] (1,0) -- (0,0); \draw (0.55,0) arc(0:75:0.55); \draw[rotate = 37.5] (0.35,0.08) -- (0.80,0.08) (0.35,-0.08) -- (0.80,-0.08)}%
+    }
+\newcommand\angcircle{%
+    \tikz[line cap=round,x=1.6ex,y=1.6ex,line width=0.3pt]
+    {\draw (1,0) -- (0,0); \draw[rotate = 75] (1,0) -- (0,0); \draw (0.55,0) arc(0:75:0.55); \draw[rotate = 37.5] (0.55,0.0) circle (0.20)}%
+    }
+
+\newcommand\angtroispoint[3]{%
+    \vcenter{\hbox{\tikz[line cap=round,x=1.6ex,y=1.6ex,line width=0.3pt]
+    {\draw (0,0) node[left]{$#2$};
+    \draw[rotate = -30] (0.5,0) -- (1.8,0); 
+    \draw[rotate = -30] (2.5,0) node[right]{$#1$};
+    \draw[rotate = 30] (0.5,0) -- (1.8,0);
+    \draw[rotate = 30] (2.5,0) node[right]{$#3$};
+    \draw[domain=-30:30] plot ({cos(\x)}, {sin(\x)});}%
+    }}
+}
+
+\newcommand\anglesaillant{%
+    \vcenter{\hbox{\tikz[line cap=round,x=1.6ex,y=1.6ex,line width=0.3pt]
+    {\draw[rotate = -30] (0.0,0) -- (1.5,0); 
+    \draw[rotate = 30] (0.0,0) -- (1.5,0);
+    \draw [domain=-30:30] plot ({1.1*cos(\x)}, {1.1*sin(\x)});}%
+    }}
+}
+
+
+
+\newcommand\anglerentrant{%
+    \vcenter{\hbox{\tikz[line cap=round,x=1.6ex,y=1.6ex,line width=0.3pt]
+    {\draw[rotate = -30] (0.0,0) -- (1.5,0); 
+    \draw[rotate = 30] (0.0,0) -- (1.5,0);
+    \draw [domain=30:330] plot ({0.8*cos(\x)}, {0.8*sin(\x)});}%
+    }}
+}
+
+\newcommand\angrentrtroispoint[3]{%
+    \vcenter{\hbox{\tikz[line cap=round,x=1.6ex,y=1.6ex,line width=0.3pt]
+    {\draw (-0.35,0) node{#2};
+    \draw[rotate = -30] (0.5,0) -- (1.8,0); 
+    \draw[rotate = -30] (2.5,0) node{#1};
+    \draw[rotate = 30] (0.5,0) -- (1.8,0);
+    \draw[rotate = 30] (2.5,0) node{#3};
+    \draw [domain=30:330] plot ({1.25*cos(\x)}, {1.25*sin(\x)});}%
+    }}
+}
+
+% --------------------------------------
+% Math : raccourcit pour phrases type
+% --------------------------------------
+\newcommand{\cad}{c'est-à-dire }
+\newcommand{\cst}{{\rm Cst} }
+\newcommand{\ssi}{si et seulement si }
+\newcommand{\guil}[1]{\og{} #1\fg} % entourer de guillemets
+
+\setcounter{secnumdepth}{3}
+
+\newcommand\FigureMarge[3]
+{\marginpar{#1 
+    
+    \vspace{0.1cm}
+
+    \includegraphics[width=#2\marginparwidth]{#3}
+}}
+
+
+\title{\color{BrickRed}{\huge Maths plage} \\\phantom{t} \\École de mathématiques pour non-mathématiciens}
+
+
+\author{Loïc Chantry - Léo Bernus}
+\date{Été 2023}
+
+
+\usepackage{amsthm}
+  \newtheorem{post}{Postulat}[section]
+  \newtheorem{thm}{Théorème}[section]
+  \newtheorem{lemma}{Lemme}[section]
+  \newtheorem{defi}{Définition}[section]
+  \newtheorem{cor}{Corollaire}[section]
+  \newtheorem{prop}{Proposition}[section]
+  \newtheorem{conj}{Conjecture}[section]
+  \newtheorem*{post*}{Postulat}
+  \newtheorem*{axiom*}{Axiome}
+  \newtheorem*{theorem*}{Théorème}
+  \newtheorem*{lemma*}{Lemme}
+  \newtheorem*{definition*}{Définition}
+  \newtheorem*{cor*}{Corollaire}
+  \newtheorem*{prop*}{Propriété}
+  \newtheorem*{conj*}{Conjecture}
+
+\usepackage[many]{tcolorbox}
+\newtheorem{axi}{Axiome}[subsection]
+\tcolorboxenvironment{axi}{
+  colback=grey,
+  boxrule=0pt,
+  boxsep=0pt,
+  left=4pt,right=4pt,top=4pt,bottom=4pt,
+  oversize=4pt,
+  sharp corners,
+  before skip=\topsep,
+  after skip=\topsep,
+}
+
+
+\newcounter{serieaxiom}
+\setcounter{serieaxiom}{1}
+\newcounter{axinum}
+\setcounter{axinum}{1}
+\renewcommand{\theaxi}{\Alph{serieaxiom}.\arabic{axi}}
+
+\theorembodyfont{\upshape}

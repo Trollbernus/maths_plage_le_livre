@@ -1,0 +1,100 @@
+\RequirePackage{silence} % :-\
+\WarningFilter{scrreprt}{Usage of package `titlesec'}
+%\WarningFilter{scrreprt}{Activating an ugly workaround}
+\WarningFilter{titlesec}{Non standard sectioning command detected}
+
+\documentclass[ twoside,openright,titlepage,numbers=noenddot,%1headlines,
+                headinclude,footinclude,cleardoublepage=empty,abstract=on,
+                BCOR=5mm,paper=a4,fontsize=11pt
+                ]{scrreprt}
+
+\input{parametres}
+
+\begin{document}
+
+\frenchspacing
+\raggedbottom
+\pagenumbering{roman}
+\pagestyle{plain}
+
+% \maketitle
+\include{broutilles/titre}
+
+% \clearpage
+% \pagebreak
+
+% \include{broutilles/dostitre}
+
+\cleardoublepage
+\thispagestyle{empty}
+\vfill
+\cleardoublepage
+
+\include{broutilles/auteurs}
+
+\pagestyle{scrheadings}
+%\phantomsection
+\pdfbookmark[1]{\contentsname}{tableofcontents}
+\setcounter{tocdepth}{2} % <-- 2 includes up to subsections in the ToC
+\setcounter{secnumdepth}{3} % <-- 3 numbers up to subsubsections
+\manualmark
+\markboth{\spacedlowsmallcaps{\contentsname}}{\spacedlowsmallcaps{\contentsname}}
+\tableofcontents
+\automark[section]{chapter}
+\renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
+\renewcommand{\sectionmark}[1]{\markright{\textsc{\thesection}\enspace\spacedlowsmallcaps{#1}}}
+
+\vfill
+\pagebreak
+
+\phantom{test}
+\pagebreak
+
+
+\pagestyle{scrheadings}
+\pagenumbering{arabic}
+
+
+
+\include{introduction}
+
+
+%\cite{fienga:2008aa}
+%\pagestyle{scrheadings}
+
+\part{Prélude\,: l'art de manipuler des expressions algébriques avec aisance}\label{part_1}
+
+\include{calcul}
+
+\part{Fugue\,: angles et trigonométrie}\label{part_2}
+
+\include{0-Intro}
+
+\input{1-PiNombre}
+
+\input{2-Angles}
+
+\input{3-CerclesTrigonometrique}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addcontentsline{toc}{chapter}{Bibliographie}  %Tout ce bazar permet d'avoir l'intro dans la table des matières sans la numéroter
+\markboth{Bibliographie}{Bibliographie}
+%\printbibliography[heading=bibintoc]
+\bibliographystyle{unsrt-fr}
+\bibliography{biblio}
+
+
+\part*{Annexes}
+\appendix
+
+\input{4-Appendices}
+
+
+\end{document}
+
