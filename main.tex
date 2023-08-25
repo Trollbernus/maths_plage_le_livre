@@ -1,3 +1,7 @@
+%---------------------------------------------------------
+% Ce document utilise la bibliotheque 'classicthesis'
+%---------------------------------------------------------
+
 \RequirePackage{silence} % :-\
 \WarningFilter{scrreprt}{Usage of package `titlesec'}
 %\WarningFilter{scrreprt}{Activating an ugly workaround}
@@ -8,6 +12,7 @@
                 BCOR=5mm,paper=a4,fontsize=11pt
                 ]{scrreprt}
 
+% contient les paquets et les commandes
 \input{parametres}
 
 \begin{document}
@@ -17,13 +22,13 @@
 \pagenumbering{roman}
 \pagestyle{plain}
 
-% \maketitle
+% \maketitle % je préfère personnaliser le titre
 \include{broutilles/titre}
 
 % \clearpage
 % \pagebreak
 
-% \include{broutilles/dostitre}
+% \include{broutilles/dostitre} % je le garde au cas où
 
 \cleardoublepage
 \thispagestyle{empty}
@@ -33,7 +38,8 @@
 \include{broutilles/auteurs}
 
 \pagestyle{scrheadings}
-%\phantomsection
+
+%\parametres de la table des matieres
 \pdfbookmark[1]{\contentsname}{tableofcontents}
 \setcounter{tocdepth}{2} % <-- 2 includes up to subsections in the ToC
 \setcounter{secnumdepth}{3} % <-- 3 numbers up to subsubsections
@@ -45,6 +51,8 @@
 \renewcommand{\sectionmark}[1]{\markright{\textsc{\thesection}\enspace\spacedlowsmallcaps{#1}}}
 
 \vfill
+
+% page vide avant l'intro
 \pagebreak
 
 \phantom{test}
@@ -52,19 +60,40 @@
 
 
 \pagestyle{scrheadings}
+
+
 \pagenumbering{arabic}
-
-
 
 \include{introduction}
 
-
-%\cite{fienga:2008aa}
-%\pagestyle{scrheadings}
-
 \part{Prélude\,: l'art de manipuler des expressions algébriques avec aisance}\label{part_1}
 
+% pour plus tard\,:
+% \include{operations_elementaires} %contient les sections suivantes : 1 qu'est-ce qu'un nombre ; 2- lois +,x,-,/ ; 
+
 \include{calcul}
+
+% \include{puissances_racines}
+
+% les balises \iffalse et \fi permettent d'empecher le compilateur de lire ce qu'il y a à l'intérieur. 
+% ce sont des balises de commentaires.
+% l'idee est de préremplir ce qu'on va mettre pour inclure "maths-champignons" dans ce fichier.
+\iffalse
+    \part{Géométrie élémentaire semi-intuitive}
+    \include{triangle_isom_axiomes_euclide} %Triangles isométriques et axiomes d'Euclide
+    \include{mesure_euclide} %Théorie de la mesure d'Euclide : longueurs, aires, volumes.
+    \include{pythagore} %Le "vrai" théorème de Pythagore.
+    \include{thales} %Le "vrai" théorème de Thalès. Applications : homothéties et triangles semblables.
+
+
+
+    \part{Logique mathématique (première partie)}
+
+    \input{import_axiom} % importance de l'axiomatique : contre-exemple de la géométrie sphérique.
+    \input{quelques_raisonnements} % Quelques raisonnements mathématiques élémentaires.
+    \input{contredire_prop} % Contredire des propositions.
+    \input{axiom_rec} % Axiome de récurrence.
+\fi
 
 \part{Fugue\,: angles et trigonométrie}\label{part_2}
 

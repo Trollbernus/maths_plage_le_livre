@@ -1,7 +1,7 @@
 
 \chapter{Problèmes introductifs}
 
-
+	\initial{P}{our} mettre le lecteur en appétit, nous mettons à disposition quelques problèmes dont la résolution nécessite les outils mathématiques que nous allons aborder. Nous invitons le lecteur à se creuser la tête avant même de lire les débuts de résolution que nous avons mis à disposition, au moins quelques minutes avec un papier et un crayon. Le lecteur peut revenir à ces problèmes à sa guise, même si nous l'y invitons lorsque les outils nécessaires ont été abordés.
 
 	\paragraph{Problème A} Soit un segment $[AB]$ de mesure 1 (peu importe l'unité). Soit $M$ un point mobile sur $[AB]$. On construit le carré de côté $[AM]$ et le triangle équilatéral de côté $[BM]$.
 	Trouver la position du point $M$ tel que le périmètre du carré égale le périmètre du triangle équilatéral.
@@ -27,7 +27,7 @@
 
 \chapter{Théorie du produit en croix}\label{chap_croix}
 	\section{(R)appel : classe d'équivalence}
-		\initial{L}{a} mathématique, c'est la théorie abstraite des relations entre des quantités (par \guil{quantité} j'entends évidemment les nombres, mais aussi des objets potentiellement plus abstraits qui généralisent les nombres, ou même, des objets géométriques). La notion de relation en mathématiques est donc fondamentale. La relation la plus utile et la plus simple, c'est l'égalité. Mais il y en a d'autres. Par exemple, le parallélisme entre deux droites est aussi une relation entre deux objets. Bref, tout n'est que relation univoque entre objets dans cette discipline. Mais une relation sans contenu est vide. Donc, on commence toujours par décrire l'espace général dans lequel on travaille afin de savoir de quoi on parle, avant d'en parler. Par exemple : est-ce qu'on travaille avec des objets géométriques dans le plan d'Euclide, est-ce qu'on travaille sur des nombres\,? et bien d'autres cas possibles. Pour généraliser tout cela, on peut noter cet \guil{espace général} comme un ensemble $E$ qui contient des éléments $a$, $b$, $c$, etc. La plupart des \guil{phrases} écrites en symboles mathématiques commenceront donc par \guil{$\forall a, b, c,\ldots \in E,\ldots$} ce qui peut se traduire par\footnote{en guise de dico\,: $\forall=$\guil{pour tout}, $\in$=\guil{appartient à} ou \guil{appartenant à} ou autre conjugaison, selon le contexte.} \guil{pour tous $a$, $b$, $c$ et éventuellement autres éléments appartenant à l'ensemble $E$, on a\ldots}.
+		\initial{L}{a} mathématique, c'est la théorie abstraite des relations entre des quantités (par \guil{quantité} j'entends évidemment les nombres, mais aussi des objets potentiellement plus abstraits qui généralisent les nombres, ou même, des objets géométriques). La notion de relation en mathématiques est donc fondamentale. La relation la plus utile et la plus simple, c'est l'égalité. Mais il y en a d'autres. Par exemple, le parallélisme entre deux droites est aussi une relation entre deux objets. Bref, tout n'est que relation univoque entre objets dans cette discipline. Mais une relation sans contenu est vide. Donc, on commence toujours par décrire l'espace général dans lequel on travaille afin de savoir de quoi on parle, avant d'en parler. Par exemple : est-ce qu'on travaille avec des objets géométriques dans le plan d'Euclide, est-ce qu'on travaille sur des nombres\,? et bien d'autres cas possibles. Pour généraliser tout cela, on peut noter cet \guil{espace général} comme un ensemble $E$ qui contient des éléments $a$, $b$, $c$, etc. La plupart des \guil{phrases} écrites en symboles mathématiques commenceront donc par \guil{$\forall a, b, c,\ldots \in E,\ldots$} ce qui peut se traduire par\footnote{en guise de rappel, micro-dico\,: $\forall=$\guil{pour tout}, $\wedge=$\guil{et}, $\lor=$\guil{ou} (inclusif), $\in$=\guil{appartient à} ou \guil{appartenant à} ou autre conjugaison, selon le contexte, .} \guil{pour tous $a$, $b$, $c$ et éventuellement autres éléments appartenant à l'ensemble $E$, on a\ldots}.
 
 		Ainsi, si par exemple l'on travaille dans l'ensemble des nombres entiers naturels $\N$, on aura $E=\N$, et ses éléments seront les nombres entiers. Dans le cas général, si l'on note une relation générique $R$, alors on dit que deux éléments $a$ et $b$ dans l'ensemble $E$ sont en relation $R$ en notant tout simplement $aRb$. Si l'on veut dire que $R$ est l'égalité, et qu'on remplace $a$ par $1+1$ et $b$ par $2$, alors la phrase \guil{$aRb$} devient tout simplement \guil{$1+1=2$}. On peut aussi penser à la relation \guil{strictement inférieur}, notée $<$. Si l'on remplace $a$ par $1$ et $b$ par $2$, on obtient tout simplement la phrase \guil{$1<2$}.
 
@@ -58,7 +58,7 @@
 
 	\section{Fondements de la théorie}\label{sec_fond}
 		La théorie du produit en croix que je propose est en opposition totale avec le vomi académique qui propose de retenir des recettes magiques de calculs de \guil{quatrième proportionnelle} à l'aide de signes sataniques sortis du chapeau du professeur. Nous allons proposer une théorie axiomatique puis déductive du produit en croix. Il s'agit simplement de définir les fractions comme représentants d'une classe d'équivalence, le quotient de deux nombres --- c'est-à-dire le résultat de leur division.
-		\begin{axi} (Loi du produit en croix)
+		\begin{axi}[Loi du produit en croix]
 			Soient $a$, $b$, $c$, et $d$ quatre nombres (réels). Alors\,:
 			\begin{equation}
 				\boxed{\frac{a}{b}=\frac{c}{d} \Leftrightarrow ad=bc}
@@ -68,6 +68,10 @@
 				\frac{a}{b}=\left\{ (c,d)\in\mathbb{E}^2|ad=bc\right\}			
 			\end{equation}
 		\end{axi}
+
+		\begin{rema}
+			À ce stade nous ne nous soucions pas de la division par zéro (nous démontrons plus loin que zéro n'a pas d'inverse). En effet, à ce stade, d'après l'axiome, pour tous nombres $a$ et $b$, $\frac{a}{0}=\frac{b}{0}$, quoique cela veuille dire.
+		\end{rema}
 
 		Toute cette artillerie lourde peut vous paraître compliquée à comprendre en première lecture. Nous allons expliciter cet axiome avec différents niveaux de lecture.
 		\begin{enumerate}
@@ -187,30 +191,32 @@
 
 		On rappelle que par convention, $ab+c=(ab)+c$. Dans les livres communs de l'enseignement secondaire, on appelle cela la \emph{priorité de la multiplication (ou de la division) sur l'addition (ou la soustraction)}. Nous préférons dire, comme Stella Baruk, que le nombre $(ab)+c$ est globalement une somme\,: la somme de $ab$ et de $c$. Autrement dit, l'opération globale à effectuer est une addition. L'addition donc l'opération qu'il faudra effectuer en dernier, une fois qu'on aura intégralement déterminé ses termes à additionner, $ab$ et $c$. 
 
-		\paragraph{Exercice 1} Résoudre les équations suivantes, c'est-à-dire, trouver le nombre inconnu (désigné par une lettre) qui réalise l'égalité.
-		\begin{enumerate}
-			\item Ceinture rose
-			\begin{equation}
-			 	x+1=2;\quad 2y=4;\quad 2y+3=5.
-			\end{equation} 
-			\item Ceinture blanche
-			\begin{equation}
-				5z-2=3;\quad 2u-1=9.
-			\end{equation}
-			\item Ceinture jaune
-			\begin{equation}
-				3u-2=0;\quad 3v+2=0
-			\end{equation}
-			\item Ceinture verte
-			\begin{equation}
-				2w+5=5w-4
-			\end{equation}
-			\item Ceinture rouge
-			\begin{equation}
-				\frac{2}{3}x-\frac{5}{6}=-\frac{9}{11}x+\frac{7}{13}
-			\end{equation}
-		\end{enumerate}
 
+		\begin{exo}
+			Résoudre les équations suivantes, c'est-à-dire, trouver le nombre inconnu (désigné par une lettre) qui réalise l'égalité.
+			\begin{enumerate}
+				\item Ceinture rose
+				\begin{equation}
+				 	x+1=2;\quad 2y=4;\quad 2y+3=5.
+				\end{equation} 
+				\item Ceinture blanche
+				\begin{equation}
+					5z-2=3;\quad 2u-1=9.
+				\end{equation}
+				\item Ceinture jaune
+				\begin{equation}
+					3u-2=0;\quad 3v+2=0
+				\end{equation}
+				\item Ceinture verte
+				\begin{equation}
+					2w+5=5w-4
+				\end{equation}
+				\item Ceinture rouge
+				\begin{equation}
+					\frac{2}{3}x-\frac{5}{6}=-\frac{9}{11}x+\frac{7}{13}
+				\end{equation}
+			\end{enumerate}
+		\end{exo}
 	\section{Approfondissement\,: résolution dans un ensemble}
 
 		Nous déjà avons vu quelques ensembles de nombres\,: $\N$, $\Z$, $\D$, et $\Q$ (voir annexe \ref{app_nbs} pour des rappels).
@@ -358,28 +364,28 @@
 
 			Une équation du premier degré d'inconnue $x$ peut toujours se mettre sous la forme $f(x)=g(x)$ où $f(x)=ax+b$ et $g(x)=cx+d$ où $a$, $b$, $c$, et $d$ sont des nombres fixés. Si on n'aime pas le calcul, il suffit de tracer les graphes des fonctions $f$ et $g$ et de visualiser où les courbes se coupent. Lorsqu'il y a une unique solution, on a affaire à des droites qui se coupent en un point de coordonnées $(x;y)$. L'abscisse $x$ de ce point est la solution de cette équation. Il suffit donc de lire l'abscisse du point solution sur l'axe des abscisse.
 
-			\paragraph{Exercice 1}
-			On considère une voiture sur une autoroute rectiligne se déplaçant à la vitesse $v=130$km/h. On modélise la route par une droite graduée d'origine $O$. La droite est orientée dans le sens du mouvement de la voiture. On note $x(t)$ l'abscisse de la voiture à la date $t$ ; ce nombre représente la position de la voiture sur la droite. On suppose qu'à $t=0$, la voiture passe par $O$.
+			\begin{exo}
+				On considère une voiture sur une autoroute rectiligne se déplaçant à la vitesse $v=130$km/h. On modélise la route par une droite graduée d'origine $O$. La droite est orientée dans le sens du mouvement de la voiture. On note $x(t)$ l'abscisse de la voiture à la date $t$ ; ce nombre représente la position de la voiture sur la droite. On suppose qu'à $t=0$, la voiture passe par $O$.
+				\begin{enumerate}
+					\item Démontrer que $x(t)=v t$.
+					\item Convertir $v$ en m/s.
+					\item Compléter le tableau suivant\,:
 
-			\begin{enumerate}
-				\item Démontrer que $x(t)=v t$.
-				\item Convertir $v$ en m/s.
-				\item Compléter le tableau suivant\,:
+					\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c}
+						t (s) & -5 & -4& -3& -2& -1& 0& 1& 2& 3& 4& 5 \\
+						\hline
+						x(t) (m)& &   &   &    &   &  &  &  &  &  &  
+					\end{tabular}
 
-				\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c}
-					t (s) & -5 & -4& -3& -2& -1& 0& 1& 2& 3& 4& 5 \\
-					\hline
-					x(t) (m)& &   &   &    &   &  &  &  &  &  &  
-				\end{tabular}
-
-				\item Tracer le graphe de la fonction $x:t\mapsto x(t)$. Commenter cette courbe. Y avait-il besoin d'autant de points que de colonnes dans le tableau précedent pour tracer la courbe\,?
-				%\item Calculer l'angle que fait la courbe avec l'axe des abscisses.
-				\item Une autre voiture se déplace dans le sens opposé à la première, à la vitesse\\ $v'=110$km/h, et à $t=0$, elle se situe à $d=200$m de la première voiture. On note $y(t)$ son abscisse à la date $t$. Démontrer que $y(t)=-v't+d$. 
-				\item Tracer le graphe de la fonction $y$. 
-				\item Calculer la date à laquelle les voitures se croiseront. Vérifier la cohérence avec la lecture graphique de la solution.
+					\item Tracer le graphe de la fonction $x:t\mapsto x(t)$. Commenter cette courbe. Y avait-il besoin d'autant de points que de colonnes dans le tableau précedent pour tracer la courbe\,?
+					%\item Calculer l'angle que fait la courbe avec l'axe des abscisses.
+					\item Une autre voiture se déplace dans le sens opposé à la première, à la vitesse\\ $v'=110$km/h, et à $t=0$, elle se situe à $d=200$m de la première voiture. On note $y(t)$ son abscisse à la date $t$. Démontrer que $y(t)=-v't+d$. 
+					\item Tracer le graphe de la fonction $y$. 
+					\item Calculer la date à laquelle les voitures se croiseront. Vérifier la cohérence avec la lecture graphique de la solution.
 
 
-			\end{enumerate}
+				\end{enumerate}
+			\end{exo}
 
 			\textit{Solution.} 
 			\begin{enumerate}
@@ -397,30 +403,45 @@
 
 			\end{enumerate}
 
+			\begin{exo}
+				On rappelle l'axiome de distributivité du produit\,: 
 
-			\paragraph{Exercice 2}
-			L'unité de mesure du temps est la seconde, l'unité de mesure des distance est le mètre.
+				\begin{axi}[Distributivité de $\times$ par rapport à $+$]
+					Pour tous $a,b,c$ nombres, on a $a(b+c)=a b+ a c$.
+				\end{axi}	
 
-			Le lièvre et la tortue font la course. L'arbitre a un chronomètre qui démarre à $t=0$. La tortue est lente : elle se déplace à $v_T=0.01$m/s. Le lièvre avance à $v_L=20$m/s. 
+				L'action de passer de la forme de gauche $a(b+c)$ à la forme de droite s'appelle \emph{développer une expression algébrique}. L'action réciproque s'appelle \emph{factoriser une expression algébrique}.
 
-			On modélise la piste par une demi-droite d'origine $O$ ; la tortue est représentée par un point mobile $T$ et le lièvre est représenté par un point mobile $L$. On note $x_T(t)=OT$, la distance parcourue par la tortue à la date $t$. On note $x_L(t)=OL$, la distance parcourue par le lièvre à la date $t$. 
+				Résoudre le problème A.				
+			\end{exo}
 
-			La tortue commence la course à $t=0$. Le lièvre, lui, sûr de sa victoire, fait une sieste jusqu'à $t_0=996$s, et\footnote{\emph{Le lièvre et la tortue}, de la Fontaine.}
-			\begin{quote}
-				[...] à la fin, quand il  vit \\
-			  Que l'autre touchait presque au bout de la carrière, \\
-			  Il partit comme un trait [...].
-			\end{quote}
+			\noindent\emph{Solution.}
 
-			\begin{enumerate}
-				\item En utilisant les lois de la cinématique, démontrer que lorsque $t\ge0$, $x_T(t)=v_T\times t$.
-				\item De même, démontrer que lorsque $0\le t\le 999s$, $x_L(t)=0$ et lorsque $t\ge t_0$s, $x_L(t)=v_L(t-t_0)$.
-				\item Tracer le graphe des deux fonctions : $x_T: t\mapsto x_T(t)$, et $x_L:t\mapsto x_L(t)$, pour $0\le t\le 100$s.
-				\item Résoudre graphiquement, puis algébriquement, l'équation $x_L(t)=x_T(t)$.
-				\item Sachant que la course se déroule sur 100m, qui va gagner ?
-			\end{enumerate}
+			On rappelle que l'équation à laquelle on était arrivée était\,: $4d=3(1-d)$. En utilisant l'axiome, on transforme $3(1-d)$ en $3\times 1+3\times(-d)$, c'est-à-dire $3-3d$. Ensuite, on procède comme lors des équations du premier degré "classique". Quelques opérations algébriques devraient vous convaincre que la solution est $d=\frac{3}{7}$. La longueur $AM$ doit donc mesurer $\frac{3}{7}$ unités. 
 
 
+			\begin{exo}
+				L'unité de mesure du temps est la seconde, l'unité de mesure des distance est le mètre.
+
+				Le lièvre et la tortue font la course. L'arbitre a un chronomètre qui démarre à $t=0$. La tortue est lente : elle se déplace à $v_T=0.01$m/s. Le lièvre avance à $v_L=20$m/s. 
+
+				On modélise la piste par une demi-droite d'origine $O$ ; la tortue est représentée par un point mobile $T$ et le lièvre est représenté par un point mobile $L$. On note $x_T(t)=OT$, la distance parcourue par la tortue à la date $t$. On note $x_L(t)=OL$, la distance parcourue par le lièvre à la date $t$. 
+
+				La tortue commence la course à $t=0$. Le lièvre, lui, sûr de sa victoire, fait une sieste jusqu'à $t_0=996$s, et\footnote{\emph{Le lièvre et la tortue}, de la Fontaine.}
+				\begin{quote}
+					[...] à la fin, quand il  vit \\
+				  Que l'autre touchait presque au bout de la carrière, \\
+				  Il partit comme un trait [...].
+				\end{quote}
+
+				\begin{enumerate}
+					\item En utilisant les lois de la cinématique, démontrer que lorsque $t\ge0$, $x_T(t)=v_T\times t$.
+					\item De même, démontrer que lorsque $0\le t\le 999s$, $x_L(t)=0$ et lorsque $t\ge t_0$s, $x_L(t)=v_L(t-t_0)$.
+					\item Tracer le graphe des deux fonctions : $x_T: t\mapsto x_T(t)$, et $x_L:t\mapsto x_L(t)$, pour $0\le t\le 100$s.
+					\item Résoudre graphiquement, puis algébriquement, l'équation $x_L(t)=x_T(t)$.
+					\item Sachant que la course se déroule sur 100m, qui va gagner ?
+				\end{enumerate}
+			\end{exo}
 
 
 

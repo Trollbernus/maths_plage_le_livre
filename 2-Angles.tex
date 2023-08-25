@@ -1,5 +1,12 @@
 \chapter{Qu'est ce qu'un angle\,?}
 \label{chap_angle}
+% je remets ça là pour pas avoir les mêmes numéros d'axiomes dans différentes parties.
+\newcounter{serieaxiom}
+\setcounter{serieaxiom}{1}
+\newcounter{axinum}
+\setcounter{axinum}{1}
+\renewcommand{\theaxi}{\Alph{serieaxiom}.\arabic{axi}}
+
 
 %\initial{L}{'angle} est comme tout ce qui semble évident, plutôt laborieux à définir. Dans son acception ancienne l'angle représente une portion de plan entre deux demi-droite, le secteur d'angle, alors qu'aujourd'hui elle se confond souvent avec la mesure de l'angle. Ces représentations ne sont pas fondamentalement en désaccord une fois déployé l'ensemble les distinctions et relations qui les lient. 
 
@@ -272,18 +279,18 @@ La congruence entre segments doit traduire la notion de longueur. Il apparaît a
 \end{axi}   
 \FigureMarge{Axiome \ref{axi-C3}}{1.2}{image/Axiome_C3.png}
 Le prochain axiome de congruence traitera de la congruence entre secteurs d'angle saillants. Les secteurs d'angle saillants sont des portions du plan reposant sur la notion de demi-plan\,: 
-\begin{defi}[Cotés d'une droite et demi-plan]\label{def-demiplan}
+\begin{defi}[Côtés d'une droite et demi-plan]\label{def-demiplan}
 Soit $(d)$ une droite, $A$ et $B$ deux points de $\mathcal{E}$. Alors :
 \begin{itemize}[$\bullet$]
-    \item Soit $[AB]\cap (d) = \varnothing$ et on dit que $A$ et $B$ \emph{se situent du même coté} de $(d)$.
+    \item Soit $[AB]\cap (d) = \varnothing$ et on dit que $A$ et $B$ \emph{se situent du même côté} de $(d)$.
     \item Soit (exclusif) c'est que $[AB]\cap (d) \neq \varnothing$ et on dit que $A$ et $B$ \emph{se situent de part et d'autre} de $(d)$.
 \end{itemize}
-On appelle \emph{demi-plan} $\mathcal{P}_{(d),A}$ l'ensemble des points $M$ du plan tel que $M$ et $A$ se situant du même coté de $(d)$. La droite $(d)$ est alors appelé \emph{droite support} du demi plan $\mathcal{P}_{(d),A}$.
+On appelle \emph{demi-plan} $\mathcal{P}_{(d),A}$ l'ensemble des points $M$ du plan tel que $M$ et $A$ se situant du même côté de $(d)$. La droite $(d)$ est alors appelé \emph{droite support} du demi plan $\mathcal{P}_{(d),A}$.
 \end{defi}
 \FigureMarge{Demi-plan \ref{def-demiplan}}{1.2}{image/DemiPlanDefPoint.png}
 Une fois définie les demi-plans on peut définir les secteurs d'angle saillant\,: 
 \begin{defi}[Secteur d'angle saillant]\label{defi-anglesaillant}
-    Soit $I, O$ et $J$ trois points distincts et non alignés, alors on appelle secteur d'\emph{angle saillant} de sommet $O$ entre $]OI)$ et $]OJ)$ l'ensemble des points $M$ tel que $M$ et $J$ soit du même coté de $(OI)$ et que $M$ et $I$ sont du même coté de $(OJ)$. On note alors,
+    Soit $I, O$ et $J$ trois points distincts et non alignés, alors on appelle secteur d'\emph{angle saillant} de sommet $O$ entre $]OI)$ et $]OJ)$ l'ensemble des points $M$ tel que $M$ et $J$ soit du même côté de $(OI)$ et que $M$ et $I$ sont du même côté de $(OJ)$. On note alors,
     \begin{equation*}
         \anglesaillant\left({O},{]OI)},{]OJ)}\right) := \mathcal{P}_{(OI),J} \cap \mathcal{P}_{(OJ),I}  
     \end{equation*}
@@ -503,7 +510,7 @@ L'exposé des axiomes est terminé. Il est maintenant temps de s'attaquer à ces
         \subsection{Résultat sur l'ordonnancement de quatre points}\label{subsec-quatrepoints}
 
 
-\replaced[id=LB]{Cette partie contient}{Les résultats de cette partie concernent} des résultats primordiaux sur l'ordonnancement à quatre points. Énoncés extrêmement évidents sur des dessins, leurs démonstration à partir des axiomes est laborieuse. Nous conseillons aux lecteurs de passer les démonstrations et de lire néanmoins les énoncés des lemmes et corollaires en première lecture.  Ces résultats sont les fondations de la \href{https://www.ams.org/journals/tran/1902-003-01/S0002-9947-1902-1500592-8/S0002-9947-1902-1500592-8.pdf}{preuve} de l'\guil{axiome B4} par les américains Hastings Moore et Robert Lee Moore. Les lemmes y démontrent des suites d'alignements impossibles en vertu de la configuration plate de l'axiome de Pasch (Ax. \ref{ax-pasch}). Les corollaires énoncent les déductions qui serviront dans des cas plus pratiques.
+\replaced[id=LB]{Cette partie contient}{Les résultats de cette partie concernent} des résultats primordiaux sur l'ordonnancement à quatre points. Énoncés extrêmement évidents sur des dessins, leurs démonstration à partir des axiomes est laborieuse. Nous conseillons aux lecteurs de passer les démonstrations et de lire néanmoins les énoncés des lemmes et corollaires en première lecture.  Ces résultats sont les fondations de la \href{https://www.ams.org/journals/tran/1902-003-01/S0002-9947-1902-1500592-8/S0002-9947-1902-1500592-8.pdf}{preuve}\footnote{\url{https://www.ams.org/journals/tran/1902-003-01/S0002-9947-1902-1500592-8/S0002-9947-1902-1500592-8.pdf}} de l'\guil{axiome B4} par les américains Hastings Moore et Robert Lee Moore\,\cite{moore1902projective}. Les lemmes y démontrent des suites d'alignements impossibles en vertu de la configuration plate de l'axiome de Pasch (Ax. \ref{ax-pasch}). Les corollaires énoncent les déductions qui serviront dans des cas plus pratiques.
 
 %\footnote{\url{https://www.ams.org/journals/tran/1902-003-01/S0002-9947-1902-1500592-8/S0002-9947-1902-1500592-8.pdf}}
     %Le lecteur attentif aura remarqué l'absence de l'axiome B.4. Dans son article original, Hilbert ajoute un quatrième axiome qui est en fait redondant, \cad qu'il peut être démontré à l'aides des axiomes (de \ref{axi-A1} à \ref{axi-A3} et \ref{ax-B1},\ref{ax-B2} et \ref{ax-pasch}). Pour être tout-à-fait exact, il est redondant si l'axiome de Pasch est formulé en intégrant le cas des triplets de points alignés (comme on l'a fait ici ou dans la publication de Hilbert). La \href{https://www.ams.org/journals/tran/1902-003-01/S0002-9947-1902-1500592-8/S0002-9947-1902-1500592-8.pdf}{preuve} de cette redondance axiomatique est due à Eliakim Hastings Moore et Robert Lee Moore deux mathématiciens Américains homonyme. La preuve est fondée sur quelques Lemme concernant les quadruplets de points alignés. La preuve de ces lemmes repose sur la configuration alignée des trois points de l'axiome de Pasch.
@@ -531,41 +538,41 @@ L'exposé des axiomes est terminé. Il est maintenant temps de s'attaquer à ces
     \end{equation*}
     sont impossibles. 
     \begin{proof}
-        Les deux premières relations des deux systèmes sont les même. On commencera par supposer vrai uniquement ces deux première relations.
+        Les deux premières relations des deux systèmes sont les même. On commencera par supposer vraies uniquement ces deux première relations.
     
         Notons $(d_s)=(A_i A_j)$ pour $i\neq j = 1,2,3,4$, $]s_1[=]A_2 A_4[$, $]s_2[=]A_1 A_2[$ et enfin $]s_3[=]A_1 A_4[$. 
 
-        L'axiome \ref{axi-A3} permet alors l'existence d'un point en dehors de $(d_s)$. On note $(d)=(A_3 A)$.  Par construction $(d)$ et $(d_s)$ sont sécante d'intersection $B_3$.
+        L'axiome \ref{axi-A3} permet alors l'existence d'un point en dehors de $(d_s)$. On note $(d)=(A_3 A)$.  Par construction $(d)$ et $(d_s)$ sont sécantes d'intersection $B_3$.
 
-        Puisque $A_{2} \star A_{3} \star A_{4}$, $A_3\in ]s_1[$ et donc $(d)\cap ]s_1[$ vaut donc $A_3$ car il contient $A_3$ et qu'il est composé d'au plus un point puisque inclus dans l'intersection des droites sécantes $(d)$ et $(d_s)$. Son cardinal est égale à $1$
+        Puisque $A_{2} \star A_{3} \star A_{4}$, $A_3\in ]s_1[$ et donc $(d)\cap ]s_1[$ vaut $A_3$ car il contient $A_3$ et qu'il est composé d'au plus un point puisque inclus dans l'intersection des droites sécantes $(d)$ et $(d_s)$. Son cardinal est égal à $1$.
 
         $A_3 \notin ]s_2[ = ]A_1 A_2[$ car si c'était le cas, cela impliquerai $A_1 \star A_3 \star A_2$ qui est (en vertu de l'axiome \ref{ax-B3}) en contradiction avec $A_{1} \star A_{2} \star A_{3}$. Le cardinal de $(d)\cap]s_2[$ est donc $0$.
 
-        La droite $(d)$ n'étant pas confondus avec $(d_s)$ est n'est pas confondus avec aucune des droites supports des segments ouverts $]s_1[,]s_2[$ et $]s_3[$. 
+        La droite $(d)$ n'étant pas confondus avec $(d_s)$ est n'est pas confondus avec aucune des droites supports des segments ouverts $]s_1[,]s_2[$ et $]s_3[$. \addlb{Retravaille la syntaxe, la phrase précédente n'a aucun sens.}
 
-        De plus $(d)$ ne passe ni par $A_1,A_2$ ou $A_4$ puisque vue que les points $\fami{A}{i}{1,2,3,4}$ sont distinct cela impliquerai que $(d)$ et $(d_s)$ soit confondus ce qui est exclut par construction de $(d)$.
+        De plus $(d)$ ne passe ni par $A_1,A_2$ ou $A_4$ puisque vu que les points $\fami{A}{i}{1,2,3,4}$ sont distincts cela impliquerait que $(d)$ et $(d_s)$ soient confondues ce qui est exclu par construction de $(d)$.
 
         On peut donc appliquer l'axiome de Pasch \ref{ax-pasch} au triplet $A_1,A_2$ et $A_4$ et à la droite $(d)$. On en déduit que,
         \begin{equation*}
             (d)\cap]s_3[\neq \varnothing\,.
         \end{equation*}
-        or puisque $(d)\cap]s_3[ \subset (d)\cap (d_s) = \left\{B_3 \right\}$ et donc $(d)\cap]s_3[ = \left\{B_3 \right\}$ ce qui implique que $B_3 \in ]s_3[ = ]A_1 A_4[$ ce qui implique encore que $A_1 \star A_3 \star A_4$. 
+        Or puisque $(d)\cap]s_3[ \subset (d)\cap (d_s) = \left\{B_3 \right\}$ et donc $(d)\cap]s_3[ = \left\{B_3 \right\}$ ce qui implique que $B_3 \in ]s_3[ = ]A_1 A_4[$ ce qui implique encore que $A_1 \star A_3 \star A_4$. 
         
-        Dans le cas ou c'est le premier système qui est supposer vrai $A_1 \star A_3 \star A_4$ entre en contradiction (en vertu de l'axiome \ref{ax-B3}) avec $A_{3} \star A_{4} \star A_{1}$. Contradiction.
+        Dans le cas où c'est le premier système qui est supposé vrai $A_1 \star A_3 \star A_4$ entre en contradiction (en vertu de l'axiome \ref{ax-B3}) avec $A_{3} \star A_{4} \star A_{1}$. Contradiction.
 
-        Dans le cas ou c'est le premier système qui est supposer vrai $A_1 \star A_3 \star A_4$ entre en contradiction (en vertu de l'axiome \ref{ax-B3}) avec $A_{4} \star A_{1} \star A_{3}$. Contradiction.
+        Dans le cas où c'est le premier système qui est supposer vrai $A_1 \star A_3 \star A_4$ entre en contradiction (en vertu de l'axiome \ref{ax-B3}) avec $A_{4} \star A_{1} \star A_{3}$. Contradiction.
 
         Les deux systèmes sont impossibles.
     \end{proof}
 \end{lem}
 \begin{rema}
-    La dénomination cyclique pour une tel système de relation entre points est justifié car chacune des relations se déduit des autre en appliquant un 4-cycle. 
+    La dénomination cyclique pour un tel système de relations entre points est justifiée car chacune des relations se déduit des autre en appliquant un 4-cycle. \addlb{Tu n'as pas défini le 4-cycle, je ne comprends pas la remarque sans aller chercher ailleurs... relou.}
 \end{rema}
 \begin{rema}
     Ce puissant lemme \ref{lem-Impossibilitecyclique} est une sorte d'extension à quatre points de l'axiome \ref{ax-B3}. Vue la fréquence de l'usage de \ref{ax-B3}, on comprend tout l'intérêt d'un tel résultat.
 \end{rema}
 \begin{cor}\label{cor-configurationordrequatrepoint-1}
-Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même droite. Alors on a,
+Soient $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même droite. Alors on a,
         \begin{equation*}
         \left\{
             \begin{array}{c}
@@ -582,15 +589,15 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
     \begin{proof}
         Les trois points $A_1,A_3$ et $A_4$ sont alignés alors l'axiomes \ref{ax-B3} implique que,
         \begin{equation*}
-            A_1 \star A_3 \star A_4 \quad\text{où}\quad A_3 \star A_4 \star A_1 \quad\text{où}\quad A_4 \star A_1 \star A_3 
+            A_1 \star A_3 \star A_4 \quad\text{ou}\quad A_3 \star A_4 \star A_1 \quad\text{ou}\quad A_4 \star A_1 \star A_3 
         \end{equation*}
-        (où exclusif) or les deux dernières options sont exclue en vertu du Lemme \ref{lem-Impossibilitecyclique}. La seule possibilité restante étant $A_1 \star A_3 \star A_4$
+        (ou exclusif) or les deux dernières options sont exclues en vertu du Lemme \ref{lem-Impossibilitecyclique}. La seule possibilité restante étant $A_1 \star A_3 \star A_4$
 
-        De même les trois points $A_1,A_2$ et $A_4$ sont alignés alors l'axiomes \ref{ax-B3} implique que,
+        De même les trois points $A_1,A_2$ et $A_4$ sont alignés alors l'axiome \ref{ax-B3} implique que,
         \begin{equation*}
-            A_1 \star A_2 \star A_4 \quad\text{où}\quad A_2 \star A_4 \star A_1 \quad\text{où}\quad A_4 \star A_1 \star A_2 
+            A_1 \star A_2 \star A_4 \quad\text{ou}\quad A_2 \star A_4 \star A_1 \quad\text{ou}\quad A_4 \star A_1 \star A_2 
         \end{equation*}
-        (où exclusif) or les deux dernières options (en renommant les points) font apparaître les systèmes de relations cyclique et pseudo-cycliques et sont donc excluent (en vertu du Lemme \ref{lem-Impossibilitecyclique}). En effet si la seconde (troisième) option est retenue on obtient les systèmes de relations,
+        (ou exclusif) or les deux dernières options (en renommant les points) font apparaître les systèmes de relations cycliques et pseudo-cycliques et sont donc exclus (en vertu du Lemme \ref{lem-Impossibilitecyclique}). En effet si la seconde (troisième) option est retenue on obtient les systèmes de relations,
         \begin{equation*}
         \begin{array}{cccc}
         \text{Option 2 }:&\left\{
@@ -606,7 +613,7 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
             \end{array}\right.
         \end{array} \,.
         \end{equation*}
-        En renommant les points via $(A_1,A_2,A_3,A_4)=( B_4,B_3,B_2,B_1)$ puis en utilisant la symétrie de la relation \guil{être entre} issue de l'axiome \ref{ax-B1} dans le premier système, et en renommant les points $(A_1,A_2,A_3,A_4)=(C_2,C_3,C_4,C_1)$ dans le second système les systèmes deviennent,
+        En renommant les points via $(A_1,A_2,A_3,A_4)=( B_4,B_3,B_2,B_1)$ puis en utilisant la symétrie de la relation \guil{être entre} issue de l'axiome \ref{ax-B1} dans le premier système, et en renommant les points $(A_1,A_2,A_3,A_4)=(C_2,C_3,C_4,C_1)$ dans le second système, les systèmes deviennent,
         \begin{equation*}
         \begin{array}{cccc}
         \text{Option 2 }:&\left\{
@@ -622,7 +629,7 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
             \end{array}\right.
         \end{array} \,.
         \end{equation*}
-        ce qui permet d'identifier le système de droite comme pseudo-cyclique et le système de gauche comme cyclique et donc tout deux impossible.
+        ce qui permet d'identifier le système de droite comme pseudo-cyclique et le système de gauche comme cyclique et donc tout deux impossibles.
         
         La seule possibilité restante étant $A_1 \star A_2 \star A_4$.
     \end{proof}
@@ -640,22 +647,22 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
     \end{equation*}
 est impossible.
     \begin{proof}
-        On construit comme dans la preuve précédente une droite sécantes à la droite $(d_s)=(A_i A_j)$ (pour $i\neq j$), mais cette fois ci passant par $A_4$. 
+        On construit comme dans la preuve précédente une droite sécante à la droite $(d_s)=(A_i A_j)$ (pour $i\neq j$), mais cette fois-ci passant par $A_4$. 
         
-        Alors les relations supposé conduisent au fait que $A_4\in ]A_1,A_2[$,   $A_4\in ]A_2,A_3[$ et $A_4\in ]A_3,A_1[$ et donc que chaque intersection $(d)\cap ]A_1,A_2[$, $(d)\cap ]A_2,A_3[$, $(d)\cap ]A_2,A_3[$ contient au moins $A_4$ ($A_4\in (d)$ par construction de $(d)$).
+        Alors les relations supposées conduisent au fait que $A_4\in ]A_1,A_2[$,   $A_4\in ]A_2,A_3[$ et $A_4\in ]A_3,A_1[$ et donc que chaque intersection $(d)\cap ]A_1,A_2[$, $(d)\cap ]A_2,A_3[$, $(d)\cap ]A_2,A_3[$ contient au moins $A_4$ ($A_4\in (d)$ par construction de $(d)$).
 
         Ainsi,
         \begin{equation*}
            \mathbf{Card}\left((d)\cap]A_1,A_2[\right)+\mathbf{Card}\left((d)\cap]A_2,A_3[\right)+\mathbf{Card}\left((d)\cap]A_3,A_1[\right) \geq 3
         \end{equation*}
 
-        $(d)$ ne passe par aucun des points $A_1,A_2$ et $A_3$ car puisque ces points sont distincts de $A_4$ si $(d)$ passait par l'un deux elle serait confondus avec $(d_s)$ ce qui n'est pas le cas par construction de $(d)$.
+        $(d)$ ne passe par aucun des points $A_1,A_2$ et $A_3$ car puisque ces points sont distincts de $A_4$, si $(d)$ passait par l'un d'eux, elle serait confondue avec $(d_s)$, ce qui n'est pas le cas par construction de $(d)$.
 
         On peut donc appliquer l'axiome de Pasch \ref{ax-pasch} à $(d)$ et au segments ouverts $]A_1,A_2[$, $ ]A_2,A_3[$ et $ ]A_3,A_1[$ et alors,
         \begin{equation*}
             \mathbf{Card}\left((d)\cap]A_1,A_2[\right)+\mathbf{Card}\left((d)\cap]A_2,A_3[\right)+\mathbf{Card}\left((d)\cap]A_3,A_1[\right) = 0 \text{ ou }2\,.
         \end{equation*}
-        ce qui entre en contradiction avec la relation précédentes.
+        ce qui entre en contradiction avec la relation précédente.
     \end{proof}
 \end{lem}
 \begin{cor}\label{cor-configurationordrequatrepoint-2}
@@ -674,11 +681,11 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
             \right.\,.
     \end{equation*}
     \begin{proof}
-        Les points $A_1,A_3$ et $A_4$ sont alignés alors l'axiome \ref{ax-B3} implique que,
+        Les points $A_1,A_3$ et $A_4$ sont alignés, alors l'axiome \ref{ax-B3} implique que,
         \begin{equation*}
-            A_1 \star A_3 \star A_4 \quad\text{où}\quad A_3 \star A_4 \star A_1 \quad\text{où}\quad A_4 \star A_1 \star A_3 
+            A_1 \star A_3 \star A_4 \quad\text{ou}\quad A_3 \star A_4 \star A_1 \quad\text{ou}\quad A_4 \star A_1 \star A_3 
         \end{equation*}
-        (où exclusif). On montre que les deux dernières options sont exclus. 
+        (ou exclusif). On montre que les deux dernières options sont exclus. 
 
         Si \textbf{la seconde option} $A_3 \star A_4 \star A_1$ est retenue pour $A_1,A_3$ et $A_4$ alors on obtient le système de relation,
         \begin{equation*}
@@ -702,7 +709,7 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
             \end{array}
             \right. \,.
         \end{equation*}
-        or ce système est impossible car, en vertu de l'axiome \ref{ax-B3} la première et la dernière relation de ce système se contredisent. La seconde option est exclus.
+        or ce système est impossible car, en vertu de l'axiome \ref{ax-B3}, la première et la dernière relation de ce système se contredisent. La seconde option est exclue.
 
         \textbf{Si la troisième option} $A_4 \star A_1 \star A_3$ est retenue pour $A_1,A_3$ et $A_4$ alors on obtient le système de relation,
         \begin{equation*}
@@ -727,7 +734,7 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
             \end{array}
             \right. \,.
             \end{equation*}
-            dont les deux dernières implique (Corollaire \ref{cor-configurationordrequatrepoint-1}) $A_2 \star A_1 \star A_4$ et $A_2 \star A_3 \star A_4$. Or $A_2 \star A_1 \star A_4$ vient contredire la première relation du système précédent (axiome \ref{ax-B3}). $A_2 \star A_3 \star A_1$ est impossible.
+            dont les deux dernières impliquent (Corollaire \ref{cor-configurationordrequatrepoint-1}) $A_2 \star A_1 \star A_4$ et $A_2 \star A_3 \star A_4$. Or $A_2 \star A_1 \star A_4$ vient contredire la première relation du système précédent (axiome \ref{ax-B3}). $A_2 \star A_3 \star A_1$ est impossible.
             \item Soit $A_3 \star A_1 \star A_2$ et alors on a le système de relation,
             \begin{equation*}
             \left\{
@@ -739,7 +746,7 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
             \end{array}
             \right. \,.
             \end{equation*}
-            alors le première est la dernière relation implique (Corollaire \ref{cor-configurationordrequatrepoint-1}) $A_3 \star A_1 \star A_4$ et $A_3 \star A_2 \star A_4$. Or  $A_3 \star A_1 \star A_4$ et $A_3 \star A_2 \star A_4$ vient contredire la deuxième relation du système précédent (axiome \ref{ax-B3}). $A_3 \star A_1 \star A_2$ est impossible.
+            alors la première est la dernière relation impliquent (Corollaire \ref{cor-configurationordrequatrepoint-1}) $A_3 \star A_1 \star A_4$ et $A_3 \star A_2 \star A_4$. Or  $A_3 \star A_1 \star A_4$ et $A_3 \star A_2 \star A_4$ vient contredire la deuxième relation du système précédent (axiome \ref{ax-B3}). $A_3 \star A_1 \star A_2$ est impossible.
             \item Soit $A_1 \star A_2 \star A_3$ et alors le système devient,
             \begin{equation*}
             \left\{
@@ -751,11 +758,11 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
             \end{array}
             \right. \,.
             \end{equation*}
-            on remarque alors que les trois dernière relations de ce système forme un système pseudo-cyclique dont l'impossibilité à déja été démontré (Lemme \ref{lem-Impossibilitecyclique}). 
+            on remarque alors que les trois dernières relations de ce système forment un système pseudo-cyclique dont l'impossibilité a déja été démontrée (Lemme \ref{lem-Impossibilitecyclique}). 
         \end{itemize}
-        aucun choix n'est possible concernant l'arrangement des points $A_1,A_2$ et $A_3$. La seconde option est impossible.
+        Aucun choix n'est possible concernant l'arrangement des points $A_1,A_2$ et $A_3$. La seconde option est impossible.
 
-        On en déduit que la première option est la seule possible alors on a,
+        On en déduit que la première option est la seule possible\,; alors on a,
         \begin{equation*}
             \left\{
             \begin{array}{c}
@@ -765,7 +772,7 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
             \end{array}
             \right. \,.
         \end{equation*}
-        $A_1,A_2$ et $A_3$ étant également alignés l'axiome \ref{ax-B3} implique que, 
+        $A_1,A_2$ et $A_3$ étant également alignés, l'axiome \ref{ax-B3} implique que, 
         \begin{itemize}[$\bullet$]
             \item Soit $A_3 \star A_1 \star A_2 = A_2 \star A_1 \star A_3$. Alors le système devient,
             \begin{equation*}
@@ -778,7 +785,7 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
             \end{array}
             \right. \,,
             \end{equation*}
-            dont les deux dernières relations implique (Lemme \ref{cor-configurationordrequatrepoint-1}) que $A_2 \star A_1 \star A_4$ et $A_2 \star A_3 \star A_4$. Or $A_2 \star A_1 \star A_4$ vient contredire (Axiome \ref{ax-B3}) la première relation du sytème. Contradiction : $A_3 \star A_1 \star A_2$ est impossible.
+            dont les deux dernières relations impliquent (Lemme \ref{cor-configurationordrequatrepoint-1}) que $A_2 \star A_1 \star A_4$ et $A_2 \star A_3 \star A_4$. Or $A_2 \star A_1 \star A_4$ vient contredire (Axiome \ref{ax-B3}) la première relation du sytème. Contradiction\,: $A_3 \star A_1 \star A_2$ est impossible.
             \item Soit $A_2 \star A_3 \star A_1$ et alors le système devient,
             \begin{equation*}
             \left\{
@@ -790,7 +797,7 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
             \end{array}
             \right. \,,
             \end{equation*}
-            dont les trois dernière relations sont impossible en vertu du Lemme \ref{lem-impossibiliteunpointentretous}.
+            dont les trois dernière relations sont impossibles en vertu du Lemme \ref{lem-impossibiliteunpointentretous}.
         \end{itemize}
         On en déduit que seule $A_1 \star A_2 \star A_3$ est possible. On a donc,
         \begin{equation*}
@@ -809,7 +816,7 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
     \end{proof}
 \end{cor}
 \begin{cor}\label{cor-configurationuncote}
-    Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts d'une même droite $(d)$ alors,
+    Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts d'une même droite $(d)$, alors,
     \begin{equation*}
         \left\{
         \begin{array}{cc}
@@ -827,17 +834,17 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
         \end{array}\right.\,.
     \end{equation*}
     \begin{proof}
-        Puisque les triplés $\left\{A_2,A_3,A_4\right\}$ et $\left\{A_1,A_3,A_4\right\}$ sont deux triplés de points alignés l'axiome \ref{ax-B3} implique qu'on ai,
+        Puisque les triplets $\left\{A_2,A_3,A_4\right\}$ et $\left\{A_1,A_3,A_4\right\}$ sont deux triplets de points alignés, l'axiome \ref{ax-B3} implique qu'on ait,
         \begin{equation*}
             \begin{array}{cccccc}
                  \left\{A_1,A_2,A_3\right\}\,:\,& A_2 \star A_3 \star A_4 \,(a) & \text{ou} & A_2 \star A_4 \star A_3 \,(b) & \text{ou} & A_4 \star A_2 \star A_3 \,(c) \\
                  \left\{A_2,A_3,A_4\right\}\,:\,& A_1 \star A_3 \star A_4 \,(a) & \text{ou} & A_1 \star A_4 \star A_3 \,(b) & \text{ou} & A_3 \star A_1 \star A_4 \,(c) \\
             \end{array}
         \end{equation*}
-        (ou exclusif). Il s'agit de montrer que les configurations $(ab),(ba)$, $(xc)$ (pour $x=a,b,c$) et $(cx)$ (pour $x=a,b,c$) sont impossible.
+        (ou exclusif). Il s'agit de montrer que les configurations $(ab),(ba)$, $(xc)$ (pour $x=a,b,c$) et $(cx)$ (pour $x=a,b,c$) sont impossibles.
 
         \begin{itemize}[$\bullet$]
-            \item Montrons que $(cx)$ (pour $x=a,b,c$) est impossible. Si c'était le cas, on aurait le système de relation,
+            \item Montrons que $(cx)$ (pour $x=a,b,c$) est impossible. Si c'était le cas, on aurait le système de relations,
             \begin{equation*}
                 \left\{\begin{array}{cc}
                      A_1 \star A_2 \star A_3  \\
@@ -846,7 +853,7 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
                 \end{array}\right.\,,
             \end{equation*}
             qui est impossible en vertu du Lemme \ref{lem-impossibiliteunpointentretous}. $(cx)$ (pour $x=a,b,c$) est impossible.
-            \item Montrons que $(xc)$ (pour $x=a,b,c$) est impossible. Si c'était le cas, on aurait le système de relation,
+            \item Montrons que $(xc)$ (pour $x=a,b,c$) est impossible. Si c'était le cas, on aurait le système de relations,
             \begin{equation*}
                 \left\{\begin{array}{cc}
                      A_1 \star A_2 \star A_3  \\
@@ -854,8 +861,8 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
                      A_3 \star A_1 \star A_4
                 \end{array}\right.\,,
             \end{equation*}
-            dont la deuxième et la troisième relation implique (Corollaire \ref{cor-configurationordrequatrepoint-2} que $A_3 \star A_1 \star A_2$ et $A_3 \star A_2 \star A_4$. Or $A_3 \star A_1 \star A_2$ vient contredire $A_1 \star A_2 \star A_3$ (axiome \ref{ax-B3}). $(xc)$ (pour $x=a,b,c$)  est impossible.
-            \item Montrons que $(ab)$ est impossible. Si c'était le cas, on aurait le système de relation,
+            dont la deuxième et la troisième relations impliquent (Corollaire \ref{cor-configurationordrequatrepoint-2} que $A_3 \star A_1 \star A_2$ et $A_3 \star A_2 \star A_4$. Or $A_3 \star A_1 \star A_2$ vient contredire $A_1 \star A_2 \star A_3$ (axiome \ref{ax-B3}). $(xc)$ (pour $x=a,b,c$)  est impossible.
+            \item Montrons que $(ab)$ est impossible. Si c'était le cas, on aurait le système de relations,
             \begin{equation*}
                 \left\{\begin{array}{cc}
                      A_1 \star A_2 \star A_3  \\
@@ -864,8 +871,8 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
                      A_1 \star A_4 \star A_3
                 \end{array}\right.\,,
             \end{equation*}
-            dont la première et la troisième relation implique (Corollaire \ref{cor-configurationordrequatrepoint-1} que $A_1 \star A_2 \star A_4$ et $A_1 \star A_3 \star A_4$. Or $A_1 \star A_3 \star A_4$ vient contredire $A_1 \star A_4 \star A_3$ (axiome \ref{ax-B3}). $(ab)$ est impossible.
-            \item Montrons que $(ba)$ est impossible. Si c'était le cas, on aurait le système de relation,
+            dont la première et la troisième relation impliquent (Corollaire \ref{cor-configurationordrequatrepoint-1} que $A_1 \star A_2 \star A_4$ et $A_1 \star A_3 \star A_4$. Or $A_1 \star A_3 \star A_4$ vient contredire $A_1 \star A_4 \star A_3$ (axiome \ref{ax-B3}). $(ab)$ est impossible.
+            \item Montrons que $(ba)$ est impossible. Si c'était le cas, on aurait le système de relations,
             \begin{equation*}
                 \left\{\begin{array}{cc}
                      A_1 \star A_2 \star A_3  \\
@@ -874,13 +881,13 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
                      A_1 \star A_3 \star A_4
                 \end{array}\right.\,,
             \end{equation*}
-            dont la troisième et la quatrième relation implique (Corollaire \ref{cor-configurationordrequatrepoint-1} que $A_1 \star A_3 \star A_2$ et $A_1 \star A_4 \star A_2$. Or $A_1 \star A_3 \star A_2$ vient contredire $A_1 \star A_2 \star A_3$ (axiome \ref{ax-B3}). $(ba)$ est impossible.
+            dont la troisième et la quatrième relation impliquent (Corollaire \ref{cor-configurationordrequatrepoint-1} que $A_1 \star A_3 \star A_2$ et $A_1 \star A_4 \star A_2$. Or $A_1 \star A_3 \star A_2$ vient contredire $A_1 \star A_2 \star A_3$ (axiome \ref{ax-B3}). $(ba)$ est impossible.
         \end{itemize}
-        Les seules possibilité restantes sont $(aa)$ ou $(bb)$. Ce qui prouve l'implication.
+        Les seules possibilités restantes sont $(aa)$ ou $(bb)$. Ce qui prouve l'implication.
     \end{proof}
 \end{cor}
 \begin{cor}\label{cor-configurationordrequatrepoint-3}
-    Soit $\fami{A}{i}{1\ldots 4}$ quatre points distincts appartenant à une même droite $(d)$, alors,
+    Soient $\fami{A}{i}{1\ldots 4}$ quatre points distincts appartenant à une même droite $(d)$, alors,
     \begin{equation*}
         \left\{
             \begin{array}{c}
@@ -896,13 +903,13 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
             \,.
     \end{equation*}
     \begin{proof}
-        Les points $A_2,A_3$ et $A_4$ sont alignés alors l'axiome \ref{ax-B3} implique que,
+        Les points $A_2,A_3$ et $A_4$ sont alignés\,; alors l'axiome \ref{ax-B3} implique que,
         \begin{equation*}
-            A_2 \star A_3 \star A_4 \quad\text{où}\quad A_3 \star A_4 \star A_2 \quad\text{où}\quad A_4 \star A_2 \star A_3 \,,
+            A_2 \star A_3 \star A_4 \quad\text{ou}\quad A_3 \star A_4 \star A_2 \quad\text{ou}\quad A_4 \star A_2 \star A_3 \,,
         \end{equation*}
-        (où exclusif). On commence par montrer que la seconde et la troisième options sont impossible. 
+        (ou exclusif). On commence par montrer que la seconde et la troisième options sont impossibles. 
         
-        \textbf{Option 2 ($A_3 \star A_4 \star A_2$) :}  Si la seconde option est choisit on obtient le système,
+        \textbf{Option 2 ($A_3 \star A_4 \star A_2$) :}  Si la seconde option est choisie on obtient le système,
         \begin{equation*}
         \left\{
             \begin{array}{c}
@@ -912,7 +919,7 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
             \end{array}
             \right. \,,
         \end{equation*}
-        on peut alors utiliser le Corrolaire \ref{cor-configurationordrequatrepoint-1} sur les deux dernière relations pour obtenir deux autres relations. Et aboutir aux système.
+        on peut alors utiliser le Corrolaire \ref{cor-configurationordrequatrepoint-1} sur les deux dernières relations pour obtenir deux autres relations. Et aboutir aux système
         \begin{equation*}
         \left\{
             \begin{array}{c}
@@ -926,7 +933,7 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
         \end{equation*}
         dont la première et quatrième relations sont en contradictions en vertu de l'axiome \ref{ax-B3}.
 
-        \textbf{Option 3 ($A_4 \star A_2 \star A_3$) :} Si la troisième option est choisit on obtient le système,
+        \textbf{Option 3 ($A_4 \star A_2 \star A_3$) :} Si la troisième option est choisie on obtient le système,
         \begin{equation*}
         \left\{
             \begin{array}{c}
@@ -936,9 +943,9 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
             \end{array}
             \right. \,,
         \end{equation*}
-        on examine alors les possibilités pour le triplé de points alignés $A_1,A_2$ et $A_4$ (axiome \ref{ax-B3}), on a :
+        on examine alors les possibilités pour le triplet de points alignés $A_1,A_2$ et $A_4$ (axiome \ref{ax-B3}), on a :
         \begin{itemize}[$\bullet$]
-            \item Soit $A_1 \star A_2 \star A_4$ alors on à le système de relation,
+            \item Soit $A_1 \star A_2 \star A_4$ alors on a le système de relations,
             \begin{equation*}
             \left\{
             \begin{array}{c}
@@ -949,8 +956,8 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
             \end{array}
             \right. \,,    
             \end{equation*}
-            or la première, la seconde et la quatrième relation relations ne peuvent être réalisé simultanément (Lemme \ref{lem-impossibiliteunpointentretous}). 
-            \item Soit $A_2 \star A_4 \star A_1$ alors on à le système de relation,
+            or la première, la seconde et la quatrième relations ne peuvent être réalisées simultanément (Lemme \ref{lem-impossibiliteunpointentretous}). 
+            \item Soit $A_2 \star A_4 \star A_1$ alors on a le système de relations,
             \begin{equation*}
             \left\{
             \begin{array}{c}
@@ -961,7 +968,7 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
             \end{array}
             \right. \,,    
             \end{equation*}
-            en renommant les points $(A_1,A_2,A_3,A_4)=(B_4,B_2,B_1,B_3)$ ce système deviens,
+            en renommant les points $(A_1,A_2,A_3,A_4)=(B_4,B_2,B_1,B_3)$ ce système devient,
             \begin{equation*}
             \left\{
             \begin{array}{c}
@@ -972,8 +979,8 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
             \end{array}
             \right. \,,    
             \end{equation*}
-            dont la première, la troisième (une fois utilisé la symétrie de l'axiome \ref{ax-B1}) et la quatrième forme un pseudo cycle ce qui est rendus impossible par le Lemme \ref{lem-Impossibilitecyclique}.
-            \item Soit $A_4 \star A_1 \star A_2$ alors on a le système de relation,
+            dont la première, la troisième (une fois utilisé la symétrie de l'axiome \ref{ax-B1}) et la quatrième forme un pseudo cycle ce qui est rendu impossible par le Lemme \ref{lem-Impossibilitecyclique}.
+            \item Soit $A_4 \star A_1 \star A_2$ alors on a le système de relations,
             \begin{equation*}
             \left\{
             \begin{array}{c}
@@ -984,9 +991,9 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
             \end{array}
             \right. \,,    
             \end{equation*}
-            dont la première et la dernière relation implique (Corollaire \ref{cor-configurationordrequatrepoint-1}) que $A_4 \star A_1 \star A_3$ et $A_4 \star A_2 \star A_3$. Or $A_4 \star A_1 \star A_3$ est (axiome \ref{ax-B3}) en contradiction avec $A_1 \star A_3 \star A_4$. 
+            dont la première et la dernière relation impliquent (Corollaire \ref{cor-configurationordrequatrepoint-1}) que $A_4 \star A_1 \star A_3$ et $A_4 \star A_2 \star A_3$. Or $A_4 \star A_1 \star A_3$ est (axiome \ref{ax-B3}) en contradiction avec $A_1 \star A_3 \star A_4$. 
         \end{itemize}
-        aucune des possibilités issue de la seconde option n'est possible : la troisième option est impossible. 
+        aucune des possibilités issues de la seconde option n'est possible : la troisième option est impossible. 
 
         On a donc prouvé que pour toute famille $\fami{A}{i}{1\ldots 4}$ de quatre points distincts appartenant à une même droite $(d)$, on a,
         \begin{equation*}
@@ -1000,7 +1007,7 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
             \,.
         \end{equation*}
         
-        Continuons, et ajoutons l'équation impliqué au système, on a,
+        Continuons, et ajoutons l'équation impliquée au système, on a,
         \begin{equation*}
         \left\{
             \begin{array}{c}
@@ -1010,7 +1017,7 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
             \end{array}
             \right. \,.
         \end{equation*}
-        la première et troisième relation implique (Corollaire \ref{cor-configurationordrequatrepoint-1}) qu'on a également $A_1 \star A_2 \star A_4$. 
+        la première et troisième relations impliquent (Corollaire \ref{cor-configurationordrequatrepoint-1}) qu'on a également $A_1 \star A_2 \star A_4$. 
 
         Ainsi, on a montré que pour toute famille $\fami{A}{i}{1\ldots 4}$ de quatre points distincts appartenant à une même droite $(d)$ de points distincts sur une même droite, on a,
             \begin{equation*}
@@ -1035,11 +1042,11 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
                  B_1 \star B_3 \star B_4
             \end{array}\,,
     \end{equation*}
-    ce qui permet d'utiliser la première implication déjà démontré et d'aboutir au résultat.
+    ce qui permet d'utiliser la première implication déjà démontrée et d'aboutir au résultat.
     \end{proof}
 \end{cor}
 \begin{cor}\label{cor-configurationdespointsinterne}
-    Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts d'une même droite $(d)$ alors,
+    Soientt $\fami{A}{i}{1,2,3,4}$ quatre points distincts d'une même droite $(d)$ alors,
     \begin{equation*}
         \left\{
         \begin{array}{cc}
@@ -1057,24 +1064,24 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
         \end{array}\right.\,.
     \end{equation*}
     \begin{proof}
-        \textbf{Sens direct $\Rightarrow$ : } Puisque les triplés $\left\{A_1,A_2,A_3\right\}$ et $\left\{A_2,A_3,A_4\right\}$ sont deux triplées de points alignés l'axiome \ref{ax-B3} implique qu'on ai,
+        \textbf{Sens direct $\Rightarrow$ : } Puisque les triplets $\left\{A_1,A_2,A_3\right\}$ et $\left\{A_2,A_3,A_4\right\}$ sont deux triplets de points alignés, l'axiome \ref{ax-B3} implique qu'on ait,
         \begin{equation*}
             \begin{array}{cccccc}
                  \left\{A_1,A_2,A_3\right\}\,:\,& A_1 \star A_2 \star A_3 \,(a) & \text{ou} & A_2 \star A_3 \star A_1 \,(b) & \text{ou} & A_3 \star A_1 \star A_2 \,(c) \\
                  \left\{A_2,A_3,A_4\right\}\,:\,& A_2 \star A_3 \star A_4 \,(a) & \text{ou} & A_4 \star A_2 \star A_3 \,(b) & \text{ou} & A_3 \star A_4 \star A_2 \,(c) \\
             \end{array}
         \end{equation*}
-        (ou exclusif). Il s'agit de montrer que les configurations $(ab),(ba)$, $(xc)$ (pour $x=a,b,c$) et $(cx)$ (pour $x=a,b,c$) sont impossible.
+        (ou exclusif). Il s'agit de montrer que les configurations $(ab),(ba)$, $(xc)$ (pour $x=a,b,c$) et $(cx)$ (pour $x=a,b,c$) sont impossibles.
         \begin{itemize}[$\bullet$]
-            \item Montrons que $(cx)$ (pour $x=a,b,c$) est impossible. Si c'était le cas, on aurait le système de relation,
+            \item Montrons que $(cx)$ (pour $x=a,b,c$) est impossible. Si c'était le cas, on aurait le système de relations,
             \begin{equation*}
                 \left\{\begin{array}{cc}
                      A_1 \star A_2 \star A_4  \\
                      A_1 \star A_3 \star A_4
                 \end{array}\right.\,,
             \end{equation*}
-            dont la première et la dernière relation implique (corrolaire \ref{cor-configurationordrequatrepoint-1}) que $A_3 \star A_1 \star A_4$ et $A_3 \star A_2 \star A_4$. Or $A_3 \star A_1 \star A_4$ vient contredire $A_1 \star A_3 \star A_4$ (axiome \ref{ax-B3}). $(cx)$ (pour $x=a,b,c$) est impossible.
-            \item Montrons que $(xc)$ (pour $x=a,b,c$)  est impossible. Si c'était vrai alors le système deviendrai,
+            dont la première et la dernière relation impliquent (corrolaire \ref{cor-configurationordrequatrepoint-1}) que $A_3 \star A_1 \star A_4$ et $A_3 \star A_2 \star A_4$. Or $A_3 \star A_1 \star A_4$ vient contredire $A_1 \star A_3 \star A_4$ (axiome \ref{ax-B3}). $(cx)$ (pour $x=a,b,c$) est impossible.
+            \item Montrons que $(xc)$ (pour $x=a,b,c$)  est impossible. Si c'était vrai alors le système deviendrait,
             \begin{equation*}
                 \left\{\begin{array}{cc}
                      A_1 \star A_2 \star A_4  \\
@@ -1082,7 +1089,7 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
                      A_3 \star A_4 \star A_2
                 \end{array}\right.\,,
             \end{equation*}    
-            dont la seconde et la troisième relation implique (Corollaire \ref{cor-configurationordrequatrepoint-1}) que $A_1 \star A_3 \star A_2$ et $A_1 \star A_4 \star A_2$. Or $A_1 \star A_4 \star A_2$ vient contredire $A_1 \star A_2 \star A_4$ (axiome \ref{ax-B3}). $(xc)$ (pour $x=a,b,c$)  est impossible.
+            dont la seconde et la troisième relation impliquent (Corollaire \ref{cor-configurationordrequatrepoint-1}) que $A_1 \star A_3 \star A_2$ et $A_1 \star A_4 \star A_2$. Or $A_1 \star A_4 \star A_2$ vient contredire $A_1 \star A_2 \star A_4$ (axiome \ref{ax-B3}). $(xc)$ (pour $x=a,b,c$)  est impossible.
             \item Montrons que $(ab)$ est impossible. Si c'était vrai alors on aurait le système,
             \begin{equation*}
                 \left\{\begin{array}{cc}
@@ -1092,16 +1099,16 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
                      A_4 \star A_2 \star A_3
                 \end{array}\right.\,,
             \end{equation*}  
-            qui est impossible car le sous système de relation contenant la première, la deuxième et la quatrième est impossible (Lemme \ref{lem-impossibiliteunpointentretous}). $(ab)$ est impossible.
-            \item Montrons que $(ba)$ est impossible. Si c'était le cas, a nouveau on rencontrerai un système dont trois relations sont impossible en vertu du Lemme \ref{lem-impossibiliteunpointentretous}.
+            qui est impossible car le sous système de relations contenant la première, la deuxième et la quatrième est impossible (Lemme \ref{lem-impossibiliteunpointentretous}). $(ab)$ est impossible.
+            \item Montrons que $(ba)$ est impossible. Si c'était le cas, à nouveau on rencontrerait un système dont trois relations sont impossibles en vertu du Lemme \ref{lem-impossibiliteunpointentretous}.
         \end{itemize}
         Les seules possibilité restantes sont $(aa)$ ou $(bb)$. Ce qui prouve l'implication.
 
-        {Sens indirect $\Leftarrow$ : }Réciproquement si le premier système étais vrai alors il s'agit d'une conséquence trivial du Corollaire \ref{cor-configurationordrequatrepoint-1}. Si c'est le second système qui était vrai on se ramènes au cas précédent en renommant $(A_1,A_2,A_3,A_4)=(B_1,B_3,B_2,B_4)$.
+        {Sens indirect $\Leftarrow$ : }Réciproquement si le premier système était vrai alors il s'agit d'une conséquence trivial du Corollaire \ref{cor-configurationordrequatrepoint-1}. Si c'était le second système qui était vrai on se ramène au cas précédent en renommant $(A_1,A_2,A_3,A_4)=(B_1,B_3,B_2,B_4)$.
     \end{proof}
 \end{cor}
 \begin{cor}\label{cor-configurationuncote}
-    Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts d'une même droite $(d)$ alors,
+    Soient $\fami{A}{i}{1,2,3,4}$ quatre points distincts d'une même droite $(d)$\,; alors,
     \begin{equation*}
         \left\{
         \begin{array}{cc}
@@ -1119,17 +1126,17 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
         \end{array}\right.\,.
     \end{equation*}
     \begin{proof}
-        Puisque les triplés $\left\{A_2,A_3,A_4\right\}$ et $\left\{A_1,A_3,A_4\right\}$ sont deux triplés de points alignés l'axiome \ref{ax-B3} implique qu'on ai,
+        Puisque les triplets $\left\{A_2,A_3,A_4\right\}$ et $\left\{A_1,A_3,A_4\right\}$ sont deux triplets de points alignés, l'axiome \ref{ax-B3} implique qu'on ait,
         \begin{equation*}
             \begin{array}{cccccc}
                  \left\{A_1,A_2,A_3\right\}\,:\,& A_2 \star A_3 \star A_4 \,(a) & \text{ou} & A_2 \star A_4 \star A_3 \,(b) & \text{ou} & A_4 \star A_2 \star A_3 \,(c) \\
                  \left\{A_2,A_3,A_4\right\}\,:\,& A_1 \star A_3 \star A_4 \,(a) & \text{ou} & A_1 \star A_4 \star A_3 \,(b) & \text{ou} & A_3 \star A_1 \star A_4 \,(c) \\
             \end{array}
         \end{equation*}
-        (ou exclusif). Il s'agit de montrer que les configurations $(ab),(ba)$, $(xc)$ (pour $x=a,b,c$) et $(cx)$ (pour $x=a,b,c$) sont impossible.
+        (ou exclusif). Il s'agit de montrer que les configurations $(ab),(ba)$, $(xc)$ (pour $x=a,b,c$) et $(cx)$ (pour $x=a,b,c$) sont impossibles.
 
         \begin{itemize}[$\bullet$]
-            \item Montrons que $(cx)$ (pour $x=a,b,c$) est impossible. Si c'était le cas, on aurait le système de relation,
+            \item Montrons que $(cx)$ (pour $x=a,b,c$) est impossible. Si c'était le cas, on aurait le système de relations,
             \begin{equation*}
                 \left\{\begin{array}{cc}
                      A_1 \star A_2 \star A_3  \\
@@ -1146,8 +1153,8 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
                      A_3 \star A_1 \star A_4
                 \end{array}\right.\,,
             \end{equation*}
-            dont la deuxième et la troisième relation implique (Corollaire \ref{cor-configurationordrequatrepoint-2} que $A_3 \star A_1 \star A_2$ et $A_3 \star A_2 \star A_4$. Or $A_3 \star A_1 \star A_2$ vient contredire $A_1 \star A_2 \star A_3$ (axiome \ref{ax-B3}). $(xc)$ (pour $x=a,b,c$)  est impossible.
-            \item Montrons que $(ab)$ est impossible. Si c'était le cas, on aurait le système de relation,
+            dont la deuxième et la troisième relation impliquent (Corollaire \ref{cor-configurationordrequatrepoint-2} que $A_3 \star A_1 \star A_2$ et $A_3 \star A_2 \star A_4$. Or $A_3 \star A_1 \star A_2$ vient contredire $A_1 \star A_2 \star A_3$ (axiome \ref{ax-B3}). $(xc)$ (pour $x=a,b,c$)  est impossible.
+            \item Montrons que $(ab)$ est impossible. Si c'était le cas, on aurait le système de relations,
             \begin{equation*}
                 \left\{\begin{array}{cc}
                      A_1 \star A_2 \star A_3  \\
@@ -1156,8 +1163,8 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
                      A_1 \star A_4 \star A_3
                 \end{array}\right.\,,
             \end{equation*}
-            dont la première et la troisième relation implique (Corollaire \ref{cor-configurationordrequatrepoint-1} que $A_1 \star A_2 \star A_4$ et $A_1 \star A_3 \star A_4$. Or $A_1 \star A_3 \star A_4$ vient contredire $A_1 \star A_4 \star A_3$ (axiome \ref{ax-B3}). $(ab)$ est impossible.
-            \item Montrons que $(ba)$ est impossible. Si c'était le cas, on aurait le système de relation,
+            dont la première et la troisième relation impliquent (Corollaire \ref{cor-configurationordrequatrepoint-1} que $A_1 \star A_2 \star A_4$ et $A_1 \star A_3 \star A_4$. Or $A_1 \star A_3 \star A_4$ vient contredire $A_1 \star A_4 \star A_3$ (axiome \ref{ax-B3}). $(ab)$ est impossible.
+            \item Montrons que $(ba)$ est impossible. Si c'était le cas, on aurait le système de relations,
             \begin{equation*}
                 \left\{\begin{array}{cc}
                      A_1 \star A_2 \star A_3  \\
@@ -1166,7 +1173,7 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
                      A_1 \star A_3 \star A_4
                 \end{array}\right.\,,
             \end{equation*}
-            dont la troisième et la quatrième relation implique (Corollaire \ref{cor-configurationordrequatrepoint-1} que $A_1 \star A_3 \star A_2$ et $A_1 \star A_4 \star A_2$. Or $A_1 \star A_3 \star A_2$ vient contredire $A_1 \star A_2 \star A_3$ (axiome \ref{ax-B3}). $(ba)$ est impossible.
+            dont la troisième et la quatrième relation impliquent (Corollaire \ref{cor-configurationordrequatrepoint-1} que $A_1 \star A_3 \star A_2$ et $A_1 \star A_4 \star A_2$. Or $A_1 \star A_3 \star A_2$ vient contredire $A_1 \star A_2 \star A_3$ (axiome \ref{ax-B3}). $(ba)$ est impossible.
         \end{itemize}
         Les seules possibilité restantes sont $(aa)$ ou $(bb)$. Ce qui prouve l'implication.
     \end{proof}
@@ -1181,7 +1188,7 @@ Soit $\fami{A}{i}{1,2,3,4}$ quatre points distincts appartenant à une même dro
     L'axiome \ref{ax-B1} assure alors que $]AB[=]BA[$ et $[AB]=[BA]$. 
 \end{rema}
 \begin{prop}\label{prop-inclusionsegmentdemidroite}
-Soit $A,B$ deux points distincts alors,
+Soient $A,B$ deux points distincts alors,
 \begin{equation*}
     ]AB[\subset (AB) \qquad \text{et} \qquad [AB]\subset (AB)\,,
 \end{equation*}
@@ -1201,17 +1208,17 @@ enfin,
     Soit $]d)$ ($[d)$) une demi-droite ouverte (fermée) de droite support $(d)$. Alors $(d)-]d)$ ($(d)-[d)$) le supplémentaire dans $(d)$ de $]d)$ ($[d)$) est une demi-droite fermée (ouverte) de droite support $(d)$. On appelle cette demi-droite, la demi-droite supplémentaire  à $]d)$ ($[d)$).
 
     \begin{proof}
-        $[d)$ est une demi-droite donc il existe deux points distincts $O$ et $I$ tel que $[d)=[OI)$. Il existe $I'$ tel que $I' \star O \star I$ (Axiome \ref{ax-B2}). Montrons que $]OI') = (d)-[d)$.
+        $[d)$ est une demi-droite donc il existe deux points distincts $O$ et $I$ tels que $[d)=[OI)$. Il existe $I'$ tel que $I' \star O \star I$ (Axiome \ref{ax-B2}). Montrons que $]OI') = (d)-[d)$.
 
         Soit un point $M\in ]OI')$ et donc $M\in (OI')=(OI)=(d)$ (Axiome \ref{axi-A1}). La définition des demi-droites \ref{def-demidroite} implique qu'on ait, soit $M=I'$ soit  $M\star I' \star O$, soit $I' \star M \star O$. Traitons les deux cas : 
         \begin{itemize}[$\bullet$]
-            \item si $M=I'$ alors $I' \star O \star I$ deviens $M\star O\star I$,
+            \item si $M=I'$ alors $I' \star O \star I$ devient $M\star O\star I$,
             \item si $I' \star M \star O$, puisque on a $I' \star O \star I$, le corollaire \ref{cor-configurationordrequatrepoint-1} implique $M\star O\star I$, 
             \item si $M \star I' \star  O$, puisque on a $I' \star O \star I$, le corollaire \ref{cor-configurationordrequatrepoint-2} implique $M\star O\star I$,
         \end{itemize}
         dans les deux cas $M\star O\star I$ implique (par définition des demi-droite) que $M \notin ]OI)$. De plus $M\in ]OI')$ et donc $M\neq O$ ainsi $M\notin [OI)=[d)$. On en déduis $]OI') \subset (d)-[d)$.
 
-        Réciproquement si $M \in (d)-[d)=(OI)-[OI)$, la définition des demi-droites \ref{def-demidroite} combiné à l'axiome \ref{ax-B3} implique $M \star O \star I$. On a donc $M\star O\star I$ et $I'\star O \star I$ et donc :
+        Réciproquement si $M \in (d)-[d)=(OI)-[OI)$, la définition des demi-droites \ref{def-demidroite} combinée à l'axiome \ref{ax-B3} implique $M \star O \star I$. On a donc $M\star O\star I$ et $I'\star O \star I$ et donc :
         \begin{itemize}[$\bullet$]
             \item soit $M = I'$ et donc $M\in ]OI')$ et donc $(d)-[d) \subset [OI')$. 
             \item soit les quatre points $M,I',O $ et $I$ sont distinct sur un même droite et le corrolaire \ref{cor-configurationuncote} implique $M \star I' \star O$ ou $I'\star M\star O$. Autrement dit $M \in [OI')$ 
@@ -1220,23 +1227,23 @@ enfin,
         On a donc $(d)-[d) = [OI')$ qui est donc une demi-droite.
     \end{proof}
 \end{prop}
-\marginpar{Une réunion $A\cup B$ de deux ensembles est une partition d'un ensemble $C$ \ssi leurs intersection est vide et $A\cap B = C$. Autrement dit appartenir à $C$ implique appartenir à l'un où à l'autre mais pas les deux. Quand plus d'ensemble sont dans la réunion on dit qu'ils forment une partition s'il sont deux-à-deux d'intersection vide.}
+\marginpar{Une réunion $A\cup B$ de deux ensembles est une partition d'un ensemble $C$ \ssi leur intersection est vide et $A\cap B = C$. Autrement dit, appartenir à $C$ implique appartenir à l'un où à l'autre mais pas les deux. Quand plus d'ensembles sont dans la réunion on dit qu'ils forment une partition s'il sont deux-à-deux d'intersection vide.}
 \begin{thm}\label{th-partitionsemgmendroite}
-    Soit $A,B,C$ trois points tel que $A\star B \star C$ alors on à les \emph{partitions},
+    Soit $A,B,C$ trois points tel que $A\star B \star C$\,; alors on à les \emph{partitions},
     \begin{equation*}
         [AB[\,\cup \left\{B\right\}\cup\, ]BC] = [AC] \qquad \text{et} \qquad ]BA)\,\cup \left\{B\right\}\cup\, ]BC) = (AC) \,,
     \end{equation*}
     \begin{proof}
-        L'inclusion $[AB[\,\cup \left\{B\right\}\cup\, ]BC] \subset [AC]$  est une conséquences immédiate de la Proposition \ref{prop-inclusionsegmentdemidroite}.
+        L'inclusion $[AB[\,\cup \left\{B\right\}\cup\, ]BC] \subset [AC]$  est une conséquence immédiate de la Proposition \ref{prop-inclusionsegmentdemidroite}.
 
         Réciproquement, $[AB[\,\cup \left\{B\right\}\cup\, ]BC] \supset [AC]$ est une conséquence immédiate du Corollaire \ref{cor-configurationdespointsinterne}. 
 
         Enfin, $]BA)\,\cup \left\{B\right\}\cup\, ]BC) \supset (AC) $ est une conséquence de l'axiome \ref{ax-B3} (on prend $M\in (AC)$ et on distingue $M=B$ et $M\neq B$).
 
-        Le vrai résultat de ce théorème est la partition. Déjà il découle de la définitions des segments \ref{defi-segment}  que $[AB[\,\cap \left\{B\right\}=\varnothing$ et $[CB[\,\cap \left\{B\right\}=\varnothing$. Enfin montrons qu'il est impossible de trouver $M \in [AB[\,\cap\, ]BC]$. Si un tel $M$ existe alors soit,
+        Le vrai résultat de ce théorème est la partition. Déjà il découle de la définition des segments \ref{defi-segment}  que $[AB[\,\cap \left\{B\right\}=\varnothing$ et $[CB[\,\cap \left\{B\right\}=\varnothing$. Enfin montrons qu'il est impossible de trouver $M \in [AB[\,\cap\, ]BC]$. Si un tel $M$ existe alors soit,
         \begin{itemize}[$\bullet$]
-            \item $M=A$ et donc $A\in]BC]$. Or $A\neq C$ (puisque $A\star B \star C$) et donc $A\in ]BC[$ autrement dit (définitions des segments \ref{defi-segment}) $B\star A \star C$ ce qui est impossible en vertu de l'axiome \ref{ax-B3}.
-            \item $M=B$ et le même genre d'argument conduirait au mêmes impossibilité.
+            \item $M=A$ et donc $A\in]BC]$. Or $A\neq C$ (puisque $A\star B \star C$) et donc $A\in ]BC[$ autrement dit (définition des segments \ref{defi-segment}) $B\star A \star C$ ce qui est impossible en vertu de l'axiome \ref{ax-B3}.
+            \item $M=B$ et le même genre d'argument conduirait aux mêmes impossibilités.
             \item $M\neq A$ et $M\neq B$ et par conséquent $M\in ]AB[\,\cap\, ]BC[$ et donc $A \star B\star C$ $A \star M \star B$ et $B \star M \star C$ ce qui est impossible (Lemme \ref{lem-impossibiliteunpointentretous}).
         \end{itemize}
 
@@ -1258,19 +1265,19 @@ enfin,
     \end{proof}
 \end{thm}
 \begin{cor}
-    Soit $A,B,C$ trois points tel que $A\star B\star C$ alors $[AB]\cap[BC]=\left\{B\right\}$
+    Soit $A,B,C$ trois points tels que $A\star B\star C$ alors $[AB]\cap[BC]=\left\{B\right\}$
 \end{cor}
 \begin{cor}\label{cor-partitiondroite}
     Pour toute droite $(d)$ et tout point $O\in (d)$ il existe une unique partition de $(d)-\left\{O\right\}$ en deux demi-droites ouvertes $]d_A)$ et $]d_B)$ d'extrémité $O$,
     \begin{equation*}
         (d)-\left\{O\right\} = ]d_A) \cup ]d_B)\,,
     \end{equation*}
-    on appellera ces deux demi-droite, demi-droites issue de la partition induite sur $(d)$ par $O$.
+    on appellera ces deux demi-droites, demi-droites issue de la partition induite sur $(d)$ par $O$.
 \end{cor}
 \begin{cor}
     Soit $B'\in]AB)$ alors $[AB') = [AB)$.
     \begin{proof}
-        Montrons que leurs supplémentaire dans leurs supports sont égaux et notons,
+        Montrons que leurs supplémentaires dans leurs supports sont égaux et notons,
         \begin{equation*}
             \begin{array}{rl}
                  ]d) & = (AB)-[AB) = \ensemble{M}{M\star A \star B}  \\
@@ -1289,11 +1296,11 @@ enfin,
     \end{proof}
 \end{cor}
 \begin{cor}\label{cor-demidroitedansdemidroite}
-    Soit $]d)$ une demi-droite ouvert et $B\in]d)$ alors il existe une unique demi-droite ouverte d'extrémité $B$ contenue dans $]d)$.
+    Soit $]d)$ une demi-droite ouverte et $B\in]d)$\,; alors il existe une unique demi-droite ouverte d'extrémité $B$ contenue dans $]d)$.
 \begin{proof}
-    Notons $A$ l'extrémité de $]d)$ puisque $B\in]d)$ on a $B\neq A$ et donc $]d)=]AB)$. Soit $C$ tel que $A\star B \star C$ (existence assuré par l'axiome \ref{ax-B2}). 
+    Notons $A$ l'extrémité de $]d)$ puisque $B\in]d)$, on a $B\neq A$ et donc $]d)=]AB)$. Soit $C$ tel que $A\star B \star C$ (existence assurée par l'axiome \ref{ax-B2}). 
     
-    Par construction $B$ et $C$ sont distinct et on peut donc définir $]BC)$. Le corrolaire \ref{cor-partitiondroite} associé au théorème \ref{th-partitionsemgmendroite} assure alors qu'il n'y à que deux demi-droite ouverte d'extrémité $B$ incluse dans $(d)$ et formant une partition de $(d)-\{B\}$ : $]BC)$ et $]BA)$.
+    Par construction $B$ et $C$ sont distincts et on peut donc définir $]BC)$. Le corrolaire \ref{cor-partitiondroite} associé au théorème \ref{th-partitionsemgmendroite} assure alors qu'il n'y à que deux demi-droite ouvertes d'extrémité $B$ incluse dans $(d)$ et formant une partition de $(d)-\{B\}$ : $]BC)$ et $]BA)$.
     
     On prend $M\in ]BC)$ et donc,
     \begin{equation*}
@@ -1310,19 +1317,19 @@ enfin,
         \subsection{Demi plan}
 
 \begin{rema}
-Deux points identiques en dehors d'une droite se situent toujours du même coté de celles-ci. 
+Deux points identiques en dehors d'une droite se situent toujours du même côté de celles-ci. 
 \end{rema}
 
 \begin{rema}
-Par construction un demi-plan ne contient pas sa droite support on parle de demi-plan ouvert.
+Par construction un demi-plan ne contient pas sa droite support\,; on parle de demi-plan ouvert.
 \end{rema}
 
 \begin{prop}\label{prop-memecoterelequi}
-Soit $(d)$ une droite de $\mathcal{E}$, alors la relation \guil{est du même coté de $(d)$} est une relation d'équivalence.
+Soit $(d)$ une droite de $\mathcal{E}$, alors la relation \guil{est du même côté de $(d)$} est une relation d'équivalence.
 \end{prop}
 
 \begin{proof}
-La réflexivité est l'expression du fait que deux points identiques en dehors d'une droite se situe toujours du même coté de celles-ci. La symétrie du fait que pour tout segment $[AB]=[BA]$. La transitivité est une application immédiate de l'axiome de Pasch (Ax.\ref{ax-pasch}). 
+La réflexivité est l'expression du fait que deux points identiques en dehors d'une droite se situent toujours du même côté de celle-ci. La symétrie vient du fait que pour tout segment $[AB]$, $[AB]=[BA]$. La transitivité est une application immédiate de l'axiome de Pasch (Ax.\ref{ax-pasch}). 
 \end{proof}
 
 \begin{thm}[Partition du plan en demi-plan.]\label{thm-partitiondemiplan}
@@ -1331,11 +1338,11 @@ Dans $\mathcal{E}$, toute droite $(d)$ détermine deux demi-plan $\mathcal{P}_1$
     \mathcal{E} - (d) = \mathcal{P}_1 \cup \mathcal{P}_2\,, \qquad \text{et} \qquad \mathcal{P}_1 \cap \mathcal{P}_2 = \varnothing\,.
 \end{equation*}
 \begin{proof}
-Soit $A_1$ un point de $\mathcal{E} - (d)$ (existence assurer par l'axiome \ref{axi-A3}) et notons $\mathcal{P}_1$ le demi-plan de droite support $(d)$ contenant $A_1$. Soit $I\in (d)$ (existence assuré par l'axiome \ref{axi-A2}) et $A_2\in(A_1 I)$ tel que $A_1 \star I \star A_2$ (Axiome \ref{ax-B2}). La droite $(A_1 I)$ est sécante avec $(d)$ car elles partagent le point $I$ et sont distincte ($A_1\notin (d)$), de point $A_2$ n'est pas contenue dans $(d)$ (l'intersection de deux droite sécante est réduite a un point).
+Soit $A_1$ un point de $\mathcal{E} - (d)$ (existence assurée par l'axiome \ref{axi-A3}) et notons $\mathcal{P}_1$ le demi-plan de droite support $(d)$ contenant $A_1$. Soit $I\in (d)$ (existence assurée par l'axiome \ref{axi-A2}) et $A_2\in(A_1 I)$ tel que $A_1 \star I \star A_2$ (Axiome \ref{ax-B2}). La droite $(A_1 I)$ est sécante avec $(d)$ car elles partagent le point $I$ et sont distinctes ($A_1\notin (d)$), le point $A_2$ n'est pas contenue= dans $(d)$ (l'intersection de deux droites sécantes est réduite a un point).
 
 Alors par construction $I\in ]A_1 A_2[$ et donc $A_2 \in \mathcal{E}-(d)-\mathcal{P}_1$, notons $\mathcal{P}_2$ le demi-plan de demi-droite support $(d)$ et contenant $A_2$. 
 
-Soit $M\in\mathcal{E}-(d)$ montrons que soit $M$ appartient à $\mathcal{P}_1$ où (exclusif) $\mathcal{P}_2$. Si $M$ n'appartient pas à $\mathcal{P}_1$ alors cela signifie que $]A_1 M[\cap (d) \neq \varnothing$, puisque $]A_1 A_2[\cap (d) \neq \varnothing$ alors l'axiome de Pash \ref{ax-pasch} assure que $]M A_2[\cap (d) = \varnothing$ et donc que $M \in \mathcal{P}_2$. Par symétrie on a donc $$\mathcal{E} - (d) = \mathcal{P}_1 \cup \mathcal{P}_2\,,$$ enfin un point $M$ ne peut appartenir aux deux demi-plan. En effet par construction $M\neq A_1$ car sinon $A_1 \in \mathcal{P}_2$, de même $M\neq A_2$. Enfin si $M$ appartenait au deux demi-plan a l'exclusion de $A_1$ et $A_2$ on aurait $\mathbf{Card}\left((d)\cap]A_1 A_2[\right)+\mathbf{Card}\left((d)\cap]A_1 M[\right)+\mathbf{Card}\left((d)\cap]A_2 M[\right)=1$ contredisant ainsi l'axiome de Pash. 
+Soit $M\in\mathcal{E}-(d)$, montrons que $M$ appartient à $\mathcal{P}_1$ ou (exclusif) $\mathcal{P}_2$. Si $M$ n'appartient pas à $\mathcal{P}_1$ alors cela signifie que $]A_1 M[\cap (d) \neq \varnothing$, puisque $]A_1 A_2[\cap (d) \neq \varnothing$ alors l'axiome de Pash \ref{ax-pasch} assure que $]M A_2[\cap (d) = \varnothing$ et donc que $M \in \mathcal{P}_2$. Par symétrie on a donc $$\mathcal{E} - (d) = \mathcal{P}_1 \cup \mathcal{P}_2\,,$$ enfin un point $M$ ne peut appartenir aux deux demi-plans. En effet par construction $M\neq A_1$ car sinon $A_1 \in \mathcal{P}_2$, de même $M\neq A_2$. Enfin si $M$ appartenait au deux demi-plans à l'exclusion de $A_1$ et $A_2$ on aurait $\mathbf{Card}\left((d)\cap]A_1 A_2[\right)+\mathbf{Card}\left((d)\cap]A_1 M[\right)+\mathbf{Card}\left((d)\cap]A_2 M[\right)=1$ contredisant ainsi l'axiome de Pash. 
 \end{proof}
 \end{thm}
 
@@ -1347,7 +1354,7 @@ Soit $M\in\mathcal{E}-(d)$ montrons que soit $M$ appartient à $\mathcal{P}_1$ o
     \begin{equation*}
         M \star O \star B \quad \text{ou}\quad O \star M \star B \quad \text{ou}\quad O \star B \star M
     \end{equation*}
-    où le ou est exclusif. De plus la première option est exclut car elle équivaut à dire que $M$ et $B$ sont de part et d'autre de $(D)$. Ainsi,
+    où le ou est exclusif. De plus la première option est exclue car elle équivaut à dire que $M$ et $B$ sont de part et d'autre de $(D)$. Ainsi,
     \begin{equation*}
         O \star M \star B \quad \text{ou}\quad O \star B \star M
     \end{equation*}
@@ -1360,39 +1367,45 @@ Soit $M\in\mathcal{E}-(d)$ montrons que soit $M$ appartient à $\mathcal{P}_1$ o
         ]OI)\subset\mathcal{P}
     \end{equation*}
 \begin{proof}
-    Notons $(D)$ le support de $\mathcal{P}$ alors $(D)$ et $(OI)$ sont sécantes car elles partagent un point commune et ne sont pas confondus (car sinon $I\in(D)\cap\mathcal{P}=\varnothing$). 
+    Notons $(D)$ le support de $\mathcal{P}$ alors $(D)$ et $(OI)$ sont sécantes car elles partagent un point commun et ne sont pas confondues (car sinon $I\in(D)\cap\mathcal{P}=\varnothing$). 
 
-    Par conséquent la proposition précédentes \ref{prop-demiplandroite} implique que $\mathcal{P}\cap (OI)$ est une demi-droite (qu'on notera $]d)$) ouverte d'extrémité $(D)\cap (OI)=\{O\}$. De plus $I\in \mathcal{P}\cap (OI)$ et donc $]OI)=]d)=\mathcal{P}\cap (OI)\subset \mathcal{P}$.
+    Par conséquent la proposition précédente \ref{prop-demiplandroite} implique que $\mathcal{P}\cap (OI)$ est une demi-droite (qu'on notera $]d)$) ouverte d'extrémité $(D)\cap (OI)=\{O\}$. De plus $I\in \mathcal{P}\cap (OI)$ et donc $]OI)=]d)=\mathcal{P}\cap (OI)\subset \mathcal{P}$.
 \end{proof}
 \end{prop}
 
         \subsection{Sur la relation d'ordre des couples de points}\label{subsec-ordresegment}
 
-La relation de congruence induit un relation d'ordre stricte total sur les paires non ordonnée de points compatible avec la relation de congruence. Afin de montrer que la relation qu'on définira est en effet une relation d'ordre total on doit établir quelque résultat préalable.
+La relation de congruence induit un relation d'ordre stricte totale sur les paires non ordonnées de points, compatible avec la relation de congruence. Afin de montrer que la relation qu'on définira est en effet une relation d'ordre totale on doit établir quelques résultats préalables.
 
 Commençons par étendre la logique de l'axiome \ref{axi-C3}:
 \begin{prop}
-     Soit six points $A,B,C,A',B'$ et $C'$ tel que $A \star B \star C$ et que $A' \star B' \star C'$. Alors si $[AB]\equiv [A'B']$ et $[AC]\equiv [A'C']$ alors $[BC]\equiv [B'C']$.
+     Soient six points $A,B,C,A',B'$ et $C'$ tel que $A \star B \star C$ et que $A' \star B' \star C'$. Alors si $[AB]\equiv [A'B']$ et $[AC]\equiv [A'C']$ alors $[BC]\equiv [B'C']$.
 \begin{proof}
     L'axiome \ref{axi-C1} assure l'existence de $C''$ tel que $A'\star B' \star C''$ et que $[BC]\equiv [B'C'']$. Alors l'axiome \ref{axi-C3} assure que $[AC]\equiv [AC'']$. Or par construction $C'$ et $C''$ appartiennent à $]A'B')$ et donc l'unicité dans l'axiome \ref{axi-C1} assure que $C'=C''$.
 \end{proof}
 \end{prop}
-La compatibilité de la relation d'ordre avec la congruence se déduira des propositions :
+La compatibilité de la relation d'ordre avec la congruence se déduira des propositions suivantes :
 \begin{prop}\label{prop-inegcongcomp}
     Soit $A,B,A'$ et $C'$ quatre points tel que $[AC]\equiv [A'C']$. Alors pour tout point $B\in ]AC[$ il existe un unique point $B'\in ]A'C'[$ tel que $[AB]\equiv [A'B']$.
 \begin{proof}
     L'axiome \ref{axi-C1} assure l'existence d'un unique point $B'\in]A'C')$ tel que $[AB] \equiv [A'B']$. Il s'agit de montrer que $B'\in ]A'B'[$. 
 
     Soit alors $C''$ l'unique point tel que $B'\in]A'C''[$ et que $[B'C'']\equiv[BC]$ (axiome \ref{axi-C1}). Alors l'axiome \ref{axi-C3} assure que $[A'C'']\equiv[AC]$.
-    
-    Par transitivité de la congruence entre segment \ref{axi-C2}, $[A'C'']\equiv[AC']$, or $C'$ et $C''$ appartiennent tout deux par construction à $]A'C')$ et donc l'axiome \ref{axi-C1} assure que $C'=C''$ et donc que $B'\in]A'C'[$.
+
+    Par transitivité de la congruence entre segments \ref{axi-C2}, $[A'C'']\equiv[AC']$, or $C'$ et $C''$ appartiennent tout deux par construction à $]A'C')$ et donc l'axiome \ref{axi-C1} assure que $C'=C''$ et donc que $B'\in]A'C'[$.
 \end{proof}
 \end{prop}
 \begin{cor}\label{cor-dedanssipluspetit}
-    Soit six points $A,B,C,A',B'$ et $C'$ tel que $A \star B \star C$, que $[AC]\equiv [A'C']$, que $[AB]\equiv [A'B']$ et que $B'\in ]A'C')$. Alors $B' \in ]A'C'[$ et $[BC]\equiv [B' C']$. 
+    Soient six points $A,B,C,A',B'$ et $C'$ tels que $A \star B \star C$, que $[AC]\equiv [A'C']$, que $[AB]\equiv [A'B']$ et que $B'\in ]A'C')$. Alors $B' \in ]A'C'[$ et $[BC]\equiv [B' C']$. 
 \end{cor}
+
+\marginpar{On dira d'une relation binaire $\simeq$ qu'elle est compatible avec la relation d'équivalence $\sim$ \ssi $\forall x,x',y,y'$ tels que $x\sim x'$ et $y\sim y'$, la relation $x\simeq y$ implique $x'\simeq y'$ et $x\simeq y'$. 
+Une relation binaire $\leq$ est dite relation d'ordre sur la relation $\sim$ \ssi est réflexive, antisymétrique (\cad $\forall x,y, ((x\leq y) \wedge (y\leq x)) \Rightarrow x \sim y $) et transitive. Elle est de plus dite totale \ssi $\forall x,y$ on a soit $x\leq y$ soit $y\leq y$.}
+
+\addlb{Je propose de passer la note de marge en texte sous forme de "(r)appel".}
+
 \begin{defi}[Relation d'ordre sur les couples de points]\label{def-ineqlong}
-    Soit $A,B,C$ et $D$ quatre points tel que $A\neq B$ et $C\neq B$ alors on dit que : 
+    Soient $A,B,C$ et $D$ quatre points tels que $A\neq B$ et $C\neq B$\,; alors on dit que : 
     \begin{itemize}[$\bullet$]
         \item $[AB]$ est plus petit que $[CD]$ \ssi $\exists B'\in ]CD]$ tel que $[CB']\equiv [AB]$. On note alors,
     \begin{equation*}
@@ -1405,34 +1418,32 @@ La compatibilité de la relation d'ordre avec la congruence se déduira des prop
     \end{itemize} 
     On appellera relation d'inégalité entre segments les relations $\leq$ et $<$. 
 \end{defi}
-\marginpar{On dira d'un relation binaire $\simeq$ qu'elle est compatible avec la relation d'équivalence $\sim$ \ssi $\forall x,x',y,y'$ tel que $x\sim x'$ et $y\sim y'$, la relation $x\simeq y$ implique $x'\simeq y'$ et $x\simeq y'$. 
 
-Une relation binaire $\leq$ est dites relation d'ordre sur la relation $\sim$ \ssi est réflexive, antisymétrique (\cad $\forall x,y, ((x\leq y) \wedge (y\leq x)) \Rightarrow x \sim y $) et transitive. Elle est de plus dites total \ssi $\forall x,y$ on a soit $x\leq y$ soit $y\leq y$.}
 
 
 \begin{thm}\label{thm-relationordretotal}
-    La relation $\leq$ est une relation d'ordre total compatible avec la relation de congruence entre segment et $<$ est la relation d'ordre strict associé. 
+    La relation $\leq$ est une relation d'ordre totale compatible avec la relation de congruence entre segments et $<$ est la relation d'ordre stricte associée. 
 \begin{proof}
     Commençons par la compatibilité. Soit $[AB]\leq [CD]$ tel que $[AB]\equiv [A'B']$ et $[CD]\equiv [C'D']$. La relation $[AB]\leq [CD]$ signifie qu'il existe $E\in ]CD]$ tel que $[AB]\equiv [CE]$. Alors, 
     \begin{itemize}[$\bullet$]
         \item Soit  $E = D$ alors $[AB]\equiv [CD]$ et par transitivité de la congruence sur les segments (axiome \ref{axi-C2}) $[AB]\equiv [C'D']$. Ce qui implique que $[AB] \leq [C'D']$ (via l'utilisation de l'axiome \ref{axi-C1}). Par transitivité on a aussi $[A'B']\equiv [CD]$ et donc $[A'B']\leq [CD]$. 
         \item Soit $E\in ]CD[$. Alors la proposition \ref{prop-inegcongcomp} assure l'existence de $E'\in ]C'D'[$ tel que $[C'E']\equiv [CE]$, par transitivité on a alors $[C'E']\equiv [AB]$ et donc $[AB]\leq [C'D']$. 
 
-        Il existe un unique (Axiome \ref{axi-C1}) $F\in ]CD)$ tel que $[A'B']\equiv [CF]$. Par transitivité $[AB]\equiv [CF]$ et $[CE]\equiv [CF]$ les points $E$ et $F$ appartenant tout deux à $]CD)$ on a $E=F$ (axiome \ref{axi-C1}). Et donc $F\in ]CD[$, ce qui implique que $[A'B'] \leq [CD]$.  
+        Il existe un unique $F\in ]CD)$ (Axiome \ref{axi-C1}) tel que $[A'B']\equiv [CF]$. Par transitivité $[AB]\equiv [CF]$ et $[CE]\equiv [CF]$, les points $E$ et $F$ appartenant tout deux à $]CD)$, on a $E=F$ (axiome \ref{axi-C1}). Et donc $F\in ]CD[$, ce qui implique que $[A'B'] \leq [CD]$.  
     \end{itemize}
     Ce qui conclut pour la compatibilité.
 
-    Montrons que cette relation est anti-symétrique. Soit $[AB]\leq [CD]$ et $[CD]\leq [AB]$. La première relation implique l'existence de $B'\in ]CD]$. Supposons que $B\neq D$ on a donc $C\star B' \star D$. L'axiome \ref{axi-C1} assure l'existence de $D'$ tel que $A\star B\star D'$ et $[BD']\equiv [B'D]$. L'axiome \ref{axi-C3} implique alors que $[AD']\equiv [CD]$. L'autre relation $[CD]\leq [AB]$ implique l'existence de $D''$ dans $]AB]$ tel que $[AD'']\equiv [AD']$. Les deux points $D'$ et $D''$ appartenant à $]AB]$ on en déduit (axiome \ref{axi-C1}) que $D'=D''$. Contradiction car $A\star B\star D'$ et $D''\in ]AB]$. 
+    Montrons que cette relation est anti-symétrique. Soit $[AB]\leq [CD]$ et $[CD]\leq [AB]$. La première relation implique l'existence de $B'\in ]CD]$. Supposons que $B\neq D$ on a donc $C\star B' \star D$. L'axiome \ref{axi-C1} assure l'existence de $D'$ tel que $A\star B\star D'$ et $[BD']\equiv [B'D]$. L'axiome \ref{axi-C3} implique alors que $[AD']\equiv [CD]$. L'autre relation $[CD]\leq [AB]$ implique l'existence de $D''$ dans $]AB]$ tel que $[AD'']\equiv [AD']$. Les deux points $D'$ et $D''$ appartenant à $]AB]$ on en déduit que $D'=D''$ (axiome \ref{axi-C1}). Contradiction car $A\star B\star D'$ et $D''\in ]AB]$. 
 
-    Montrons qu'elle est transitive : $[AB]\leq [CD] $ et $[CD] \leq [EF]$. La première relation implique l'existence de $B'\in ]CD]$ tel que $[CB']\equiv [AB]$. La compatibilité implique alors $[CB']\leq [CD]$. L'autre relaiton implique l'existence de $D'\in [EF]$ tel que $[CD]\equiv [ED']$. La compatibilité implique alors $[AB]\leq [ED']$ et donc il existe $B''\in ]ED']$ tel que $[AB]\equiv [EB'']$. Or la proposition \ref{prop-inclusionsegmentdemidroite} implique $B''\in ]ED']\subset ]EF]$ et donc $[AB]\leq [EF]$.
+    Montrons qu'elle est transitive\,: $[AB]\leq [CD] $ et $[CD] \leq [EF]$. La première relation implique l'existence de $B'\in ]CD]$ tel que $[CB']\equiv [AB]$. La compatibilité implique alors $[CB']\leq [CD]$. L'autre relaiton implique l'existence de $D'\in [EF]$ tel que $[CD]\equiv [ED']$. La compatibilité implique alors $[AB]\leq [ED']$ et donc il existe $B''\in ]ED']$ tel que $[AB]\equiv [EB'']$. Or la proposition \ref{prop-inclusionsegmentdemidroite} implique $B''\in ]ED']\subset ]EF]$ et donc $[AB]\leq [EF]$.
 
-    Enfin le caractère total provient de l'axiome \ref{axi-C1} et de la partition de toute demi droite, $$]AB)=]AB]\cup\ensemble{M\in (AB)}{A\star B\star M}$$.
+    Enfin le caractère total provient de l'axiome \ref{axi-C1} et de la partition de toute demi-droite, $$]AB)=]AB]\cup\ensemble{M\in (AB)}{A\star B\star M}$$.
 \end{proof}
 \end{thm}
     
     \section{Secteurs d'angles et congruences}\label{subsec_secang}
 
-La dénomination de secteur d'angle exprime la notion d'angles comme portion du plan entre deux demi-droites. 
+La dénomination de secteur d'angle exprime la notion d'angle comme portion du plan entre deux demi-droites. 
         
         \subsection{Secteurs d'angles}
 
@@ -1444,26 +1455,26 @@ La dénomination de secteur d'angle exprime la notion d'angles comme portion du 
 \end{rema}
 
 \begin{rema}
-    Au vue de la définition \ref{defi-anglesaillant}, on pourrait penser que la notion d'angle saillant dépend du couple constitué de $O$ et de la paire $\left\{I,J\right\}$ (ceux-ci jouant un rôle symétrique dans la définition) et non du triplet constitué d'un point et deux demi-droite distinct ayant ce point pour extrémité. Et donc que la notation adopté est inadaptés. Il n'en est rien. En effet, pour tout $I'$ dans $]OI)$ on a $]OI)=]OI')$ de plus,
+    Au vu de la définition \ref{defi-anglesaillant}, on pourrait penser que la notion d'angle saillant dépend du couple constitué de $O$ et de la paire $\left\{I,J\right\}$ (ceux-ci jouant un rôle symétrique dans la définition) et non du triplet constitué d'un point et deux demi-droite distinctes ayant ce point pour extrémité. Et donc que la notation adoptée est inadaptée. Il n'en est rien. En effet, pour tout $I'$ dans $]OI)$ on a $]OI)=]OI')$, de plus,
     $$\mathcal{P}_{(OI),J} = \mathcal{P}_{(OI'),J}$$
-    en vertu de l'axiome \ref{axi-A1}. De plus $O$ appartient au support de $\mathcal{P}_{(OJ),I}$ et $I\in \mathcal{P}_{(OJ),I}$ et donc la proposition \ref{prop-demidroitedemiplan} assure que $]OI)\subset \mathcal{P}_{(OJ),I}$ et donc $I'\in \mathcal{P}_{(OJ),I}$. Par conséquent, $$\mathcal{P}_{(OJ),I}=\mathcal{P}_{(OJ),I'}\,.$$ On en déduit que $\forall I'\in ]OI)$,
+    en vertu de l'axiome \ref{axi-A1}. De plus $O$ appartient au support de $\mathcal{P}_{(OJ),I}$ et $I\in \mathcal{P}_{(OJ),I}$ et donc la proposition \ref{prop-demidroitedemiplan} assure que $]OI)\subset \mathcal{P}_{(OJ),I}$, et donc $I'\in \mathcal{P}_{(OJ),I}$. Par conséquent, $$\mathcal{P}_{(OJ),I}=\mathcal{P}_{(OJ),I'}\,.$$ On en déduit que $\forall I'\in ]OI)$,
     \begin{equation*}
         \anglesaillant \left({O},{]OI')},{]OJ)}\right) = \mathcal{P}_{(OI'),J}\cap\mathcal{P}_{(OJ),I'}= \mathcal{P}_{(OI),J}\cap\mathcal{P}_{(OJ),I}=\anglesaillant \left({O},{]OI)},{]OJ)}\right)
     \end{equation*}
-    ce qui assure que le angle secteurs d'angle dépend de la demi-droite $]OI)$ (et non du point $I$). La non orientation permet de conclure en même façon pour le point $J$ et la demi-droite $]OJ)$. 
+    ce qui assure que le secteur d'angle dépend de la demi-droite $]OI)$ (et non du point $I$). La non orientation permet de conclure en même façon pour le point $J$ et la demi-droite $]OJ)$. 
 \end{rema}
 
 \begin{rema}
-    Soit $(D)$ une droite et $]d)$ une demi-droite non incluse dans $(D)$ et d'extrémité contenue dans $(D)$, de la partition en deux demi-plan \ref{thm-partitiondemiplan} et des propositions \ref{prop-demiplandroite} et\ref{prop-demidroitedemiplan} on déduit que la partition du plan induite par $(D)$ est constitué d'un demi-plan contenant $]d)$ que par la suite on notera,
+    Soit $(D)$ une droite et $]d)$ une demi-droite non incluse dans $(D)$ et d'extrémité contenue dans $(D)$, de la partition en deux demi-plan \ref{thm-partitiondemiplan} et des propositions \ref{prop-demiplandroite} et\ref{prop-demidroitedemiplan} on déduit que la partition du plan induite par $(D)$ est constituée d'un demi-plan contenant $]d)$ que par la suite on notera,
     \begin{equation*}
         \mathcal{P}_{(D),]d)}    
     \end{equation*}
-    et d'un autre ne contenant aucun point de $]d)$.  Attention cette notation ne souffre d'aucune ambiguïté \ssi $]d)$ est une demi-droite non incluse dans $(D)$ et d'extrémité contenue dans $(D)$.
+    et d'un autre ne contenant aucun point de $]d)$.  Attention, cette notation ne souffre d'aucune ambiguïté \ssi $]d)$ est une demi-droite non incluse dans $(D)$ et d'extrémité contenue dans $(D)$.
 
     De cette remarque on tire une définition équivalente de l'angle saillant. 
 \end{rema}
 \begin{prop}\label{prop-anglesaillantequiv}
-    Soit $]d_1)$ et $]d_2)$ deux demi-droite d'extrémité $O$ et tel que leurs droites supports $(d_1)$ et $(d_2)$ soit distinctes. Alors on appelle angles saillant de sommet $O$ et de demi-droite support $]d_1)$ et $]d_2)$ la partie du plan,
+    Soit $]d_1)$ et $]d_2)$ deux demi-droite d'extrémité $O$ et tel que leurs droites supports $(d_1)$ et $(d_2)$ soient distinctes. Alors on appelle angle saillant de sommet $O$ et de demi-droite support $]d_1)$ et $]d_2)$ la partie du plan,
     \begin{equation*}
         \anglesaillant\left(O,]d_1),]d_2)\right) := \mathcal{P}_{(d_1),]d_2)}\cap \mathcal{P}_{(d_2),]d_1)}
     \end{equation*}
@@ -1473,7 +1484,7 @@ La dénomination de secteur d'angle exprime la notion d'angles comme portion du 
 \end{prop}
 
 \begin{prop}\label{prop-anglesaillantensemble}
-    Soit $I, O$ et $J$ trois points distincts alors,
+    Soit $I, O$ et $J$ trois points distincts, alors,
     \begin{equation*}
         \anglesaillant\left({O},{]OI)},{]OJ)}\right) = \ensemble{M\in\mathcal{E}}{[MI]\cap (OJ)=\varnothing \text{ et }[MJ]\cap (OI)=\varnothing} 
     \end{equation*}
@@ -1482,7 +1493,7 @@ La dénomination de secteur d'angle exprime la notion d'angles comme portion du 
     \end{proof}
 \end{prop}
 \begin{prop}\label{prop-demidroitsecteurangle}
-    Soit $O,I,J$ trois points non alignés, pour tout point $M \in \anglesaillant\left({O},{]OI)},{]OJ)}\right)$  alors $]OM)$ est inclus dans l'angle saillant :
+    Soient $O,I,J$ trois points non alignés, pour tout point $M \in \anglesaillant\left({O},{]OI)},{]OJ)}\right)$\,;  alors $]OM)$ est inclus dans l'angle saillant\,:
     \begin{equation*}
         \forall M \in \anglesaillant\left({O},{]OI)},{]OJ)}\right)\,, ]OM) \subset \anglesaillant\left({O},{]OI)},{]OJ)}\right) \,.
     \end{equation*}
@@ -1491,17 +1502,17 @@ La dénomination de secteur d'angle exprime la notion d'angles comme portion du 
         \forall M \in \anglesaillant\left({O},{]OI)},{]OJ)}\right)\,, (OM)-]OM) \subset \mathcal{E}-\anglesaillant\left({O},{]OI)},{]OJ)}\right) \,.
     \end{equation*}
 \begin{proof}
-    Conséquence de la proposition \ref{prop-demidroitedemiplan} et de la définition \ref{defi-anglesaillant} 
+    Conséquence de la proposition \ref{prop-demidroitedemiplan} et de la définition \ref{defi-anglesaillant}. 
 \end{proof}
 \end{prop}
 \begin{prop}\label{prop-barrtrans}
-    Soit $s$ un secteurs d'angle saillant de sommet $O$ et de demi-droites support $]d_1)$ et $]d_2)$ alors $\forall I\in ]d_1)$, $\forall J\in ]d_2)$, alors pour tout $M\in (IJ)$,
+    Soit $s$ un secteur d'angle saillant de sommet $O$ et de demi-droites support $]d_1)$ et $]d_2)$ alors $\forall I\in ]d_1)$, $\forall J\in ]d_2)$, alors pour tout $M\in (IJ)$,
     \begin{equation*}
         M\in]IJ[ \Longleftrightarrow M \in \anglesaillant\left({O},{]OI)},{]OJ)}\right)
     \end{equation*}
 \begin{proof}
 
-    $(OI)$ et $(IJ)$ sont deux droites distinctes car sinon $(d_1)=(d_2)$ (impossible par définitions des angles saillants). De plus $(IJ)\cap(OI)$ contient $I$ donc $(OI)$ et $(IJ)$ sont sécante et donc le théorème \ref{thm-droitesecante} implique $(IJ)\cap(OI)=\{I\}$. $I$ et $J$ sont distincts car sinon $(d_1)=(d_2)$ serait confondus. Ainsi $]IJ[$ est non vide. En appliquant la proposition \ref{prop-inclusionsegmentdemidroite} on a donc,
+    $(OI)$ et $(IJ)$ sont deux droites distinctes car sinon $(d_1)=(d_2)$ (impossible par définition des angles saillants). De plus $(IJ)\cap(OI)$ contient $I$ donc $(OI)$ et $(IJ)$ sont sécantes et donc le théorème \ref{thm-droitesecante} implique $(IJ)\cap(OI)=\{I\}$. $I$ et $J$ sont distincts car sinon $(d_1)=(d_2)$ seraient confondus\addlb{problème de syntaxe dans la phrase précédente}. Ainsi $]IJ[$ est non vide. En appliquant la proposition \ref{prop-inclusionsegmentdemidroite} on a donc,
     \begin{equation*}
         [MJ]\cap (OI) \subset (IJ)\cap (OI) = \{I\}
     \end{equation*}
@@ -1530,37 +1541,37 @@ La dénomination de secteur d'angle exprime la notion d'angles comme portion du 
     \begin{equation*}
         [MJ]\cap (OI)  = \varnothing
     \end{equation*}
-    et donc $M\star I\star J$ est impossible car sinon l'intersection précédentes contiendrait $I$. D'autre part, 
+    et donc $M\star I\star J$ est impossible car sinon l'intersection précédente contiendrait $I$. D'autre part, 
     \begin{equation*}
         [MI]\cap (OJ)  = \varnothing
     \end{equation*}
-    et donc $I\star J\star M$ est impossible car sinon l'intersection précédentes contiendrait $J$. En vertue de l'axiome \ref{ax-B3} on en deduit que $I\star M \star J$ et donc que $M\in ]IJ[$.
+    et donc $I\star J\star M$ est impossible car sinon l'intersection précédente contiendrait $J$. En vertue de l'axiome \ref{ax-B3} on en deduit que $I\star M \star J$ et donc que $M\in ]IJ[$.
 \end{proof}
 \end{prop}
 \begin{lem}[Barreau transversal]\label{lem-barrtrans}
-    Soit $]d_I)$, $]d_J)$ et $]d)$ trois demi-droites ouvertes de même extrémité et tel que $]d)$ soit entre $]d_I)$ et $]d_J)$. Alors pour tout $(I,J)\in ]d_I)\times]d_J)$, la demi-droite $]d)$ coupe $]IJ[$.
+    Soient $]d_I)$, $]d_J)$ et $]d)$ trois demi-droites ouvertes de même extrémité et telles que $]d)$ soit entre $]d_I)$ et $]d_J)$. Alors pour tout $(I,J)\in ]d_I)\times]d_J)$, la demi-droite $]d)$ coupe $]IJ[$.
     \begin{proof}
         La preuve de ce lemme repose massivement sur l'axiome de Pash.
 
-        Prenons $I_1 \in ]OI[$ (existence assuré par l'axiome \ref{ax-B2}) un point $D\in ]d)\subset \anglesaillant\left(I,]d_I),]d_J)\right)$ (la dernière inclusion est conséquence de la proposition \ref{prop-demidroitsecteurangle}). 
+        Prenons $I_1 \in ]OI[$ (existence assurée par l'axiome \ref{ax-B2}), et un point $D\in ]d)\subset \anglesaillant\left(I,]d_I),]d_J)\right)$ (la dernière inclusion est conséquence de la proposition \ref{prop-demidroitsecteurangle}). 
 
-        La droite $(JI_1)$ ne contient pas $O$ car sinon les droite support des demi-droites $]d_I)$ et $]d_J)$ serai confondus. De même $(J I_1)$ ne contient pas $I$ car sinon $I_1 = I$ (impossible par construction de $I_1$). 
+        La droite $(JI_1)$ ne contient pas $O$ car sinon les droites supports des demi-droites $]d_I)$ et $]d_J)$ seraient confondues. De même $(J I_1)$ ne contient pas $I$ car sinon $I_1 = I$ (impossible par construction de $I_1$). 
         
-        \textbf{Si} $(JI_1)$ contient $D$ alors la proposition précédente \ref{prop-barrtrans} assure que $D\in]JI_1[$ on applique Pasch au triangle $I_1 I J$ et à la sécante $(OD)$ (la droite $(OD)$ ne contient aucun des points $I_1, I$ et $J$), la sécante $(OD)$ coupe $]JI_1[$ et ne peux couper $]I_1 I[$ car sinon $]d)=]d_J)$ ce qui est impossible. On en déduit que $]IJ[\cap (OD)=\{M\}$. Le point $M\in (d)$ et puisque $M\in ]IJ[$ la proposition \ref{prop-barrtrans} assure que $M\in \anglesaillant\left(I,]d_I),]d_J)\right)$. Enfin la proposition \ref{prop-demidroitsecteurangle} assure que $\anglesaillant\left(I,]d_I),]d_J)\right) \cap (d) = ]d)$ et donc $M\in ]d)$ ce qui permet d'aboutir à,
+        \textbf{Si} $(JI_1)$ contient $D$ alors la proposition précédente \ref{prop-barrtrans} assure que $D\in]JI_1[$\,; on applique Pasch au triangle $I_1 I J$ et à la sécante $(OD)$ (la droite $(OD)$ ne contient aucun des points $I_1, I$ et $J$), la sécante $(OD)$ coupe $]JI_1[$ et ne peux couper $]I_1 I[$ car sinon $]d)=]d_J)$ ce qui est impossible. On en déduit que $]IJ[\cap (OD)=\{M\}$. Le point $M\in (d)$ et puisque $M\in ]IJ[$ la proposition \ref{prop-barrtrans} assure que $M\in \anglesaillant\left(I,]d_I),]d_J)\right)$. Enfin la proposition \ref{prop-demidroitsecteurangle} assure que $\anglesaillant\left(I,]d_I),]d_J)\right) \cap (d) = ]d)$ et donc $M\in ]d)$ ce qui permet d'aboutir à,
         \begin{equation*}
             ]IJ[\cap ]d) =\{M\}
         \end{equation*}
         ce qui conclut.
 
-        \textbf{Sinon} peut donc appliquer l'axiome de Pasch sur le triangle $OID$ avec $(JI_1)$ pour sécante (cette sécante ne passe par aucun des points $O,I$ et $D$) et puisque comme déjà mentionné $(JI_1)\cap ]OI[=\{I_1\}$ deux choix sont possible : 
+        \textbf{Sinon} on peut appliquer l'axiome de Pasch sur le triangle $OID$ avec $(JI_1)$ pour sécante (cette sécante ne passe par aucun des points $O,I$ et $D$) et puisque comme déjà mentionné $(JI_1)\cap ]OI[=\{I_1\}$ deux choix sont possible : 
         \begin{itemize}[$\bullet$]
-            \item Soit $(JI_1)\cap ]OD[=\{D_1\}$. Alors $D_1 \in ]OD[\subset ]d) \subset \anglesaillant\left(I,]d_I),]d_J)\right)$ (Proposition \ref{prop-inclusionsegmentdemidroite}) et \ref{prop-demidroitsecteurangle}) et par conséquent (Proposition \ref{prop-barrtrans}) $D\in]JI_1[$. En appliquant alors Pasch au triangle $I_1JI$ et à la sécante $(OD)$, sachant que $]I_1 I[\cap (OD)=\varnothing$ (car sinon $(OD)=(OI)$ ce qui est impossible car $D\in \anglesaillant\left(I,]d_I),]d_J)\right)$) on a forcement $]IJ[\cap (OD)=\{M\}$. 
+            \item Soit $(JI_1)\cap ]OD[=\{D_1\}$. Alors $D_1 \in ]OD[\subset ]d) \subset \anglesaillant\left(I,]d_I),]d_J)\right)$ (Proposition \ref{prop-inclusionsegmentdemidroite}) et \ref{prop-demidroitsecteurangle}) et par conséquent (Proposition \ref{prop-barrtrans}) $D\in]JI_1[$. En appliquant alors Pasch au triangle $I_1JI$ et à la sécante $(OD)$, sachant que $]I_1 I[\cap (OD)=\varnothing$ (car sinon $(OD)=(OI)$ ce qui est impossible car $D\in \anglesaillant\left(I,]d_I),]d_J)\right)$) on a forcément $]IJ[\cap (OD)=\{M\}$. 
             
             \item Soit $(JI_1)\cap ]DI[=\{I\}$. On $D\in \anglesaillant\left(I,]d_I),]d_J)\right)\subset \mathcal{P}_{(OI),J}$ et donc (Proposition \ref{prop-demidroitedemiplan}) $]ID)\subset \mathcal{P}_{(OI),J}$ et en particulier $D \in \mathcal{P}_{(OI),J}$. De même $D$ et $I$ sont dans $\mathcal{P}_{(OJ),I}$ et donc c'est aussi vrai pour $P$ (convexité des demi-plan). On en déduit que $P\in \anglesaillant\left(I,]d_I),]d_J)\right)$. 
             
-            Ainsi (Proposition \ref{prop-barrtrans}) $P\in]J I_1[$. On applique alors l'axiome de Pasch au triangle $OI_1 J$ et à la sécante $(DI)$. Puisque $O\star I_1\star I$ l'intersection $]OI_1[\cap (DI)=\varnothing$ et donc puisque $]I_1 J[\cap (DI)=\{P\}$ on a, $]OJ[\cap (DI)=\{J_1\}$.
+            Ainsi $P\in]J I_1[$ (Proposition \ref{prop-barrtrans}). On applique alors l'axiome de Pasch au triangle $OI_1 J$ et à la sécante $(DI)$. Puisque $O\star I_1\star I$ l'intersection $]OI_1[\cap (DI)=\varnothing$ et donc puisque $]I_1 J[\cap (DI)=\{P\}$ on a, $]OJ[\cap (DI)=\{J_1\}$.
 
-            Par construction $J_1\in ]d_J)$ et donc (proposition \ref{prop-barrtrans}) implique que $D\in ]J_1 I[$. On applique alors Pash au triangle $J_1 I J$ et à la sécante $(OD)$. Cette fois ci $]J_1 I[\cap (OD)=\{D\}$ et $]J_1 J[\cap (OD)=\varnothing$ (sinon $(OD)=(OJ)$) et donc forcement $]IJ[\cap (OD)=\{M\}$. 
+            Par construction $J_1\in ]d_J)$ et donc (proposition \ref{prop-barrtrans}) implique que $D\in ]J_1 I[$ \addlb{problème de syntaxe dans la phrase précédente}. On applique alors Pash au triangle $J_1 I J$ et à la sécante $(OD)$. Cette fois ci $]J_1 I[\cap (OD)=\{D\}$ et $]J_1 J[\cap (OD)=\varnothing$ (sinon $(OD)=(OJ)$) et donc forcement $]IJ[\cap (OD)=\{M\}$. 
         \end{itemize}
         Dans les deux cas, le point $M\in (d)$ et  $M\in ]IJ[$, alors la proposition \ref{prop-barrtrans} assure que $M\in \anglesaillant\left(I,]d_I),]d_J)\right)$. De plus la proposition \ref{prop-demidroitsecteurangle} assure que $\anglesaillant\left(I,]d_I),]d_J)\right) \cap (d) = ]d)$ et donc $M\in ]d)$ ce qui permet d'aboutir à,
         \begin{equation*}
@@ -1576,13 +1587,13 @@ La dénomination de secteur d'angle exprime la notion d'angles comme portion du 
     \end{proof}
 \end{lem}
 \begin{thm}\label{thm-incluspart}
-    Soit $]d_I)$, $]d_J)$ et $]d)$ trois demi-droites ouvertes de même extrémité $O$ et tel que $]d)$ soit entre $]d_I)$ et $]d_J)$. alors,
+    Soient $]d_I)$, $]d_J)$ et $]d)$ trois demi-droites ouvertes de même extrémité $O$ et telles que $]d)$ soit entre $]d_I)$ et $]d_J)$. alors,
     \begin{equation*}
     \begin{array}{ccc}
          \anglesaillant\left({O},{]d_I)},{]d)}\right)\subset \anglesaillant\left({O},{]d_I)},{]d_J)}\right) & \text{et} & \anglesaillant\left({O},{]d)},{]d_J)}\right)\subset\anglesaillant\left({O},{]d_I)},{]d_J)}\right)\,.
     \end{array}
     \end{equation*}
-    De plus on à la partition,
+    De plus on a la partition,
     \begin{equation*}
         \anglesaillant\left({O},{]d_I)},{]d_J)}\right) - ]d) = \anglesaillant\left({O},{]d_I)},{]d)}\right) \bigcup \anglesaillant\left({O},{]d)},{]d_J)}\right) 
     \end{equation*}
@@ -1595,7 +1606,7 @@ La dénomination de secteur d'angle exprime la notion d'angles comme portion du 
     
     Le lemme du barreau transversal \ref{lem-barrtrans} assure que l'intersection $]d)\cap ]IJ[$ est un unique point $P$. Puisque $P\in]d)$, on a $\mathcal{P}_{(d_I),]d)}=\mathcal{P}_{(d_I),P}$ de plus $P\in ]d)\subset \anglesaillant\left({O},{]d_I)},{]d_J)}\right)$ et donc $P\in \mathcal{P}_{(d_I),]d_J)}=\mathcal{P}_{(d_I),J}$ ce qui implique $\mathcal{P}_{(d_I),J}=\mathcal{P}_{(d_I),P}$. On en déduit que $M\in \mathcal{P}_{(d_I),]d)} = \mathcal{P}_{(d_I),]d_J)}$.
 
-    Sachant que puisque $M\in \anglesaillant\left({O},{]d_I)},{]d)}\right)$ on a $]MI[\cap ]d)\subset [MI]\cap (d)=\varnothing$ ce qui permet de déduire du Lemme \ref{lem-pashsect} que $]MJ[\cap ]d)$ est un point $C$. 
+    Sachant que puisque $M\in \anglesaillant\left({O},{]d_I)},{]d)}\right)$ on a $]MI[\cap ]d)\subset [MI]\cap (d)=\varnothing$ ce qui permet de déduire du Lemme \ref{lem-pashsect} que $]MJ[\cap ]d)$ est un point $C$ \addlb{problème de syntaxe dans la phrase précédente}. 
 
     Par construction $C\in]MJ[$ et donc $C\in]JM)$. De plus $C\in ]d)\subset \anglesaillant\left({O},{]d_I)},{]d_J)}\right)$ et donc $C\in \mathcal{P}_{(OJ),I}$. On en déduit que $]JM)$ est une demi-droite incluse dans $\mathcal{P}_{(d_I),]d_J)}$ et par conséquent $M\in\mathcal{P}_{(d_I),]d_J)}$.
 
@@ -1603,29 +1614,29 @@ La dénomination de secteur d'angle exprime la notion d'angles comme portion du 
     \begin{equation*}
         \anglesaillant\left({O},{]d_I)},{]d)}\right)\subset \anglesaillant\left({O},{]d_I)},{]d_J)}\right) \,.
     \end{equation*}
-    L'autre inclusion se démontrerai de même manière.
+    L'autre inclusion se démontrerait de même manière.
 
-    La partition est conséquence de la partition du plan par la droite support de $]d)$ (Théorème \ref{thm-partitiondemiplan}). 
+    La partition est une conséquence de la partition du plan par la droite support de $]d)$ (Théorème \ref{thm-partitiondemiplan}). 
 \end{proof}
 \end{thm}
 
         \subsection{Sur les secteurs d'angle supplémentaire}
 
 \begin{defi}[Secteur d'angle supplémentaire]\label{defi-secteurssupplementaire}
-Deux secteurs d'angles saillant de même sommet, partageant une demi-droite en commun dans leurs support et deux demi-droite distincte sont dit supplémentaire \ssi la réunion de deux demi-droite distinctes et du sommet et une droite.
+Deux secteurs d'angles saillants de même sommet, partageant une demi-droite en commun dans leurs supports et deux demi-droite distinctes sont dits supplémentaires \ssi la réunion de deux demi-droite distinctes et du sommet et une droite.
 \end{defi}
 \begin{prop}\label{prop-partitiondemiplan}
-    Toute demi-droite contenue dans un demi-plan et ayant sont extrémité dans le support de ce demi-plan partitionne celui-ci en deux secteurs d'angles saillant supplémentaire.
+    Toute demi-droite contenue dans un demi-plan et ayant sont extrémité dans le support de ce demi-plan partitionne celui-ci en deux secteurs d'angle saillants supplémentaires.
 \end{prop}
 \begin{cor}[B3 des demi-droite]\label{cor-B3demidroite}
-    Soit $\mathcal{P}$ un demi-plan et $]d)$ une demi-droite ouverte d'extrémité $O$ incluse dans le support de $\mathcal{P}$. Alors pour toutes demi-droite distincte $]d_1)$ et $]d_2)$ d'extrémité $O$ contenue dans $\mathcal{P}$, soit $]d_1)$ est entre $]d)$ et $]d_2)$, soit $]d_2)$ est entre $]d_1)$ et $]d)$.
+    Soit $\mathcal{P}$ un demi-plan et $]d)$ une demi-droite ouverte d'extrémité $O$ incluse dans le support de $\mathcal{P}$. Alors pour toutes demi-droites distinctes $]d_1)$ et $]d_2)$ d'extrémité $O$ contenue dans $\mathcal{P}$, soit $]d_1)$ est entre $]d)$ et $]d_2)$, soit $]d_2)$ est entre $]d_1)$ et $]d)$.
 \end{cor}
 \begin{lem}\label{lem-secteurssupplementairecongru}
-    Des secteurs d'angles supplémentaire de secteurs d'angle congruent sont eux même congruent. 
+    Des secteurs d'angle supplémentaires de secteurs d'angle congruents sont eux même congruents. 
 \begin{proof}
     Cette preuve repose sur un usage massif de l'axiome \ref{axi-C6}.
 
-    Soit deux paire de secteurs d'angle supplémentaire $(s,\bar{s})$ et $(s',\bar{s}')$ alors il existe deux droite $(d)$ et $(d')$, deux point $O$ et $O'$ trois demi droite $]d_1),]d_2),]d)$ d'extremité $O$, trois demi droite$ ]d_1'),]d_2'),]d')$ d'extrémité $O'$ tel que $]d_1)$ et $]d_2)$ partitionne $(d)-\{O\}$ et $]d_1')$ et $]d_2')$ partitionne $(d')-\{O\}$. 
+    Soient deux paires de secteurs d'angle supplémentaires $(s,\bar{s})$ et $(s',\bar{s}')$ alors il existe deux droites $(d)$ et $(d')$, deux point $O$ et $O'$ trois demi-droites $]d_1),]d_2),]d)$ d'extremité $O$, trois demi-droites$ ]d_1'),]d_2'),]d')$ d'extrémité $O'$ telles que $]d_1)$ et $]d_2)$ partitionne $(d)-\{O\}$ et $]d_1')$ et $]d_2')$ partitionne $(d')-\{O\}$. 
 
     Alors on prend $A,B,D$ dans $]d_1)\times]d_2)\times]d)$, l'axiome \ref{axi-C1} assure alors l'existence et l'unicité de trois points $A',B',D'$ dans $]d_1')\times]d_2')\times]d')$ tel que $[OA]\equiv[O'A']$, $[OB]\equiv[O'B']$ et $[OD]\equiv[O'D']$.
 
@@ -1633,9 +1644,9 @@ Deux secteurs d'angles saillant de même sommet, partageant une demi-droite en c
     \begin{equation*}
         \anglesaillant\left(O,]d_1),]d)\right)\equiv \anglesaillant\left(O',]d_1'),]d')\right)
     \end{equation*}
-    alors l'axiome \ref{axi-C6} assure que les triangles $OAD\equiv O'A'D'$. 
+    alors l'axiome \ref{axi-C6} assure que \deleted[id=LB]{les triangles} $OAD\equiv O'A'D'$. 
     
-    Par conséquent leurs angles en $A$ et en $A'$ sont congruent ainsi que les segments $[AD]\equiv[A'D']$. L'axiome \ref{axi-C3} permet alors de déduire du fait que $A\star O\star B$ et que $A'\star O\star B'$ que $[AB]\equiv [A'B']$ ce qui permet de réappliquer l'axiome \ref{axi-C6} pour aboutir à $ABD\equiv A'B'D'$.
+    Par conséquent leurs angles en $A$ et en $A'$ sont congruents ainsi que les segments $[AD]\equiv[A'D']$. L'axiome \ref{axi-C3} permet alors de déduire du fait que $A\star O\star B$ et que $A'\star O\star B'$ que $[AB]\equiv [A'B']$ ce qui permet de réappliquer l'axiome \ref{axi-C6} pour aboutir à $ABD\equiv A'B'D'$.
 
     Par conséquent les angles en $B$ et en $B'$ sont congruents et en appliquant un dernière fois l'axiome \ref{axi-C6} on aboutit à $BOD\equiv B'O'D'$. Ce qui induit le résultat souhaité.
 \end{proof}
@@ -1644,49 +1655,49 @@ Deux secteurs d'angles saillant de même sommet, partageant une demi-droite en c
     \subsection{Sur les secteurs d'angle opposés par le sommet}
 
 \begin{defi}[Secteurs d'angles opposées par le sommet]
-    Deux secteurs d'angles saillants sont dit opposé par le sommet si la réunion deux-à-deux de leurs demi-droite supports et de leurs sommet est constitué de deux droites sécantes.
+    Deux secteurs d'angles saillants sont dit opposés par le sommet si la réunion deux-à-deux de leurs demi-droites supports et de leurs sommet est constituée de deux droites sécantes.
 \end{defi}
 \begin{prop}\label{prop-existetuniqueopposesommet}
-    Pour tout secteurs d'angle $s$ il existe un unique secteur d'angle $\bar{s}$ tel que $s$ et $\bar{s}$ soit opposé par le sommet. On appellera $\bar{s}$ le secteur d'angle opposée par le sommet à $s$
+    Pour tout secteur d'angle $s$ il existe un unique secteur d'angle $\bar{s}$ tel que $s$ et $\bar{s}$ soient opposés par le sommet. On appellera $\bar{s}$ le secteur d'angle opposé par le sommet à $s$
 \end{prop}
-\begin{cor}[Congruence des secteurs d'angle opposées par le sommet]\label{cor-anglesometcongru}
-    Deux secteurs d'angles opposé par le sommet sont congruent.
+\begin{cor}[Congruence des secteurs d'angle opposés par le sommet]\label{cor-anglesometcongru}
+    Deux secteurs d'angle opposés par le sommet sont congruents.
 \begin{proof}
-    Soit $s$ et $s'$ deux angles opposés par le sommet, qu'on appelle $O$. Notons $]d1)$ et $]d_2)$ les demi-droites supports de $s$ et $]d_1')$ et $]d_2')$ les demi-droite supports de $s'$ tel que $]d_1)\cup ]d_1') \cup \{O\}$ et $]d_2)\cup ]d_2') \cup \{O\}$ sont deux droites distinctes qu'on appellera $(d_1)$ et $(d_2)$. 
+    Soient $s$ et $s'$ deux angles opposés par le sommet, qu'on appelle $O$. Notons $]d1)$ et $]d_2)$ les demi-droites supports de $s$ et $]d_1')$ et $]d_2')$ les demi-droite supports de $s'$ telles que $]d_1)\cup ]d_1') \cup \{O\}$ et $]d_2)\cup ]d_2') \cup \{O\}$ sont deux droites distinctes qu'on appellera $(d_1)$ et $(d_2)$. 
     
-    Alors d'après la définition des angles supplémentaires \ref{defi-secteurssupplementaire} les secteurs d'angle $s$ et $s'$ sont tout deux supplémentaire au secteur d'angle $\bar{s} = \anglesaillant\left(O,]d_1),]d_2)\right)$. Le lemme \ref{lem-secteurssupplementairecongru} permet alors de conclure $s\equiv \,s'$.
+    Alors d'après la définition des angles supplémentaires \ref{defi-secteurssupplementaire} les secteurs d'angle $s$ et $s'$ sont tous deux supplémentaires au secteur d'angle $\bar{s} = \anglesaillant\left(O,]d_1),]d_2)\right)$. Le lemme \ref{lem-secteurssupplementairecongru} permet alors de conclure $s\equiv \,s'$.
 \end{proof}
 \end{cor}
 
-    \subsection{Sur les secteurs d'angle adjacent}
+    \subsection{Sur les secteurs d'angle adjacents}
 
-\begin{defi}[Secteurs d'angles saillant adjacents]
-Deux secteurs d'angles saillant $s_1$ et $s_2$ sont dit adjacents \ssi ils sont disjoint ($s_1 \cap s_2 = \varnothing$) et ont une demi-droite support en commun et deux autres distincte tel que la demi-droite support en commun soit situé entre les deux autres. 
+\begin{defi}[Secteurs d'angles saillants adjacents]
+Deux secteurs d'angles saillant $s_1$ et $s_2$ sont dit adjacents \ssi ils sont disjoints ($s_1 \cap s_2 = \varnothing$) et ont une demi-droite support en commun et deux autres distinctes tel que la demi-droite support en commun soit située entre les deux autres. 
 \end{defi}
 \begin{rema}
-    Il s'ensuit que deux secteurs d'angles saillant adjacents ont même sommet. 
+    Il s'ensuit que deux secteurs d'angles saillants adjacents ont même sommet. 
 \end{rema}
 \begin{cor}
-    La réunion de deux secteurs d'angles saillant adjacents est un secteur d'angle saillant privé d'une demi-droite dont l'extrémité est le sommet des deux secteurs d'angle adjacents.
+    La réunion de deux secteurs d'angles saillants adjacents est un secteur d'angle saillant privé d'une demi-droite dont l'extrémité est le sommet des deux secteurs d'angle adjacents.
 \begin{proof}
     Conséquence immédiate du Théoreme \ref{thm-incluspart}.
 \end{proof}
 \end{cor}
 \begin{thm}[Hilbert \Rom{13}]\label{thm-hilbert13}
-    Soit $]h),]k),]h')$ et $]k')$ quatre demi-droite tel que $]h)$ et $]k)$ soit de même extrémité $O$, que $]h')$ et $]k')$ soit de même extrémité $O'$ et que,
+    Soient $]h),]k),]h')$ et $]k')$ quatre demi-droites telles que $]h)$ et $]k)$ soient de même extrémité $O$, que $]h')$ et $]k')$ soient de même extrémité $O'$ et que,
     \begin{equation*}
         \anglesaillant \left(O,]h),]k)\right)\equiv\anglesaillant \left(O',]h'),]k')\right)
     \end{equation*}
-    Alors pour toute demi-droite $]l)$ d'extrémité $O$ entre $]h)$ et $]k)$, il existe une unique demi-droite $]l')$ d'extrémité $O'$ entre $]h')$ et $]k')$ tel que,
+    Alors pour toute demi-droite $]l)$ d'extrémité $O$ entre $]h)$ et $]k)$, il existe une unique demi-droite $]l')$ d'extrémité $O'$ entre $]h')$ et $]k')$ telle que,
     \begin{equation*}
         \anglesaillant \left(O,]h),]l)\right)\equiv\anglesaillant \left(O',]h'),]l')\right) \quad \text{et} \quad \anglesaillant \left(O,]l),]k)\right)\equiv\anglesaillant \left(O',]l'),]k')\right)
     \end{equation*}
 \begin{proof}
-    On pose $A$ sur $]h)$, $B$ sur $]k)$, $A'$ sur $]h')$ et $B'$sur $]k')$ tel que,
+    On pose $A$ sur $]h)$, $B$ sur $]k)$, $A'$ sur $]h')$ et $B'$sur $]k')$ tels que,
     \begin{equation*}
         [OA]\equiv[OA'] \quad \text{et} \quad [OB]\equiv[OB']
     \end{equation*}
-    alors l'axiome \ref{axi-C6} assure alors que,
+    alors l'axiome \ref{axi-C6} assure que,
     \begin{equation*}
         \begin{array}{c}
             [AB]\equiv[A'B']\,, \\
@@ -1695,16 +1706,16 @@ Deux secteurs d'angles saillant $s_1$ et $s_2$ sont dit adjacents \ssi ils sont 
         \end{array}
     \end{equation*}
 
-    Le lemme du Barreau transversal \ref{lem-barrtrans} assure alors que $]l)\cap ]AB[$ est un point qu'on appellera $C$. 
+    Le lemme du barreau transversal \ref{lem-barrtrans} assure alors que $]l)\cap ]AB[$ est un point qu'on appellera $C$. 
 
     L'axiome \ref{axi-C1} assure alors l'existence d'un point $C'$ de $]A'B')$ tel que $[AC]\equiv[A'C']$. %Par construction $C\in ]AB[$ et donc $[AC]\leq [AB]$ par compatibilité de la relation d'ordre entre segment avec la congruence on en déduit (Théorème \ref{thm-relationordretotal}) on en déduit que $[A'C']\leq [A'B']$. 
-    Le corrolaire \ref{cor-dedanssipluspetit} assure alors que $C'\in ]A'B'[$ et donc $C'\in \anglesaillant \left(O',]h'),]k')\right)$ (Proposition \ref{prop-barrtrans}) . L'axiome \ref{axi-C3} s'applique donc sur les triplet ordonné $A\star C\star B$ et $A' \star C' \star B'$ et assure que $[BC]\equiv [B'C']$. On pose alors $]l') = ]O'C')$. Cette demi-droite est entièrement incluse dans $\anglesaillant \left(O',]h'),]k')\right)$ car d'extrémité $O'$ et contenant $C'\in \anglesaillant \left(O',]h'),]k')\right)$ (Proposition \ref{prop-demidroitsecteurangle}).
+    Le corrolaire \ref{cor-dedanssipluspetit} assure alors que $C'\in ]A'B'[$ et donc $C'\in \anglesaillant \left(O',]h'),]k')\right)$ (Proposition \ref{prop-barrtrans}). L'axiome \ref{axi-C3} s'applique donc sur les triplets ordonnés $A\star C\star B$ et $A' \star C' \star B'$ et assure que $[BC]\equiv [B'C']$. On pose alors $]l') = ]O'C')$. Cette demi-droite est entièrement incluse dans $\anglesaillant \left(O',]h'),]k')\right)$ car d'extrémité $O'$ et contenant $C'\in \anglesaillant \left(O',]h'),]k')\right)$ (Proposition \ref{prop-demidroitsecteurangle}).
 
-    Nous avons assez de congruence pour appliquer l'axiome \ref{axi-C6} et en déduire que $OBC\equiv O'B'C'$ et $OCA\equiv O'C'A'$ et donc les congruences demandé.  L'unicité découle de l'axiome \ref{axi-C4}.
+    Nous avons assez de congruences pour appliquer l'axiome \ref{axi-C6} et en déduire que $OBC\equiv O'B'C'$ et $OCA\equiv O'C'A'$ et donc les congruences demandées.  L'unicité découle de l'axiome \ref{axi-C4}.
 \end{proof}
 \end{thm}
 \begin{cor}\label{cor-congrudiffanglecongru}
-Soit $]h),]k),]l),]h'),]k')$ et $]l')$ six demi-droite tel que $]h),]k)$ et $]l)$ soit de même extrémité $O$, que $]h'),]k')$ et $]l')$ soit de même extrémité $O'$, que $]l)$ soit entre $]h)$ et $]k)$, que $]l')$ soit entre $]h')$ et $]k')$, et enfin que 
+Soient $]h),]k),]l),]h'),]k')$ et $]l')$ six demi-droites telles que $]h),]k)$ et $]l)$ soient de même extrémité $O$, que $]h'),]k')$ et $]l')$ soient de même extrémité $O'$, que $]l)$ soit entre $]h)$ et $]k)$, que $]l')$ soit entre $]h')$ et $]k')$, et enfin que 
     \begin{equation*}
         \anglesaillant \left(O,]h),]k)\right)\equiv\anglesaillant \left(O',]h'),]k')\right) \quad \text{et} \quad \anglesaillant \left(O,]h),]l)\right)\equiv\anglesaillant \left(O',]h'),]l')\right)
     \end{equation*}
@@ -1713,13 +1724,13 @@ alors,
     \anglesaillant \left(O,]l),]k)\right)\equiv\anglesaillant \left(O',]l'),]k')\right)
 \end{equation*}
 \begin{proof}
-    Le théorème \ref{thm-hilbert13} assure alors l'existence d'une unique demi-droite $]l'')$ entre $]h')$ et $]k')$ assurant la congruence demandé. Or cette demi-droite s'identifie à $]l')$ en vertu de \ref{axi-C4}.
+    Le théorème \ref{thm-hilbert13} assure alors l'existence d'une unique demi-droite $]l'')$ entre $]h')$ et $]k')$ assurant la congruence demandée. Or cette demi-droite s'identifie à $]l')$ en vertu de \ref{axi-C4}.
 \end{proof}
 \end{cor}
 \begin{thm}
-    Soit $s_1,s_2, s_1'$ et $s_2'$ quatre secteurs d'angles saillant tel que $s_1$ et $s_2$ soit des secteurs d'angles saillant adjacents, que $s_1'$ et $s_2'$ soit des secteurs d'angles saillant adjacents, que $s_1 \equiv \, s_2$ et que $s_1' \equiv \, s_2'$. 
+    Soient $s_1,s_2, s_1'$ et $s_2'$ quatre secteurs d'angles saillants tel que $s_1$ et $s_2$ soient des secteurs d'angle saillants adjacents, que $s_1'$ et $s_2'$ soient des secteurs d'angle saillants adjacents, que $s_1 \equiv \, s_2$ et que $s_1' \equiv \, s_2'$. 
 
-    Alors les secteurs d'angles issue des reunion des secteurs d'angles adjacents $s$ et $s'$ sont congruents. 
+    Alors les secteurs d'angle issus des réunions des secteurs d'angle adjacents $s$ et $s'$ sont congruents. 
 \begin{proof}
     Similaire à la preuve du Théorème \ref{thm-hilbert13}.
 \end{proof}
@@ -1727,8 +1738,8 @@ alors,
 
         \subsection{Théorème de l'angle Alterne-Interne}
 
-\begin{defi}[Secteurs d'angle internes, pairs de secteurs alterne-interne]
-Soit $(d)$ et $(d')$ deux droites et $(t)$ une droite sécante à $(d)$ (en un point $B$) et à $(d')$ (en $B'$) et tel que $B\neq B'$. On note $\mathcal{P}_1$ et $\mathcal{P}_2$ les demi-plans de la partition induite sur $\mathcal{E}$ par $(d)$, $]d_1) = (d)\cap\mathcal{P}_1$, $]d_2) = (d)\cap\mathcal{P}_2$ , $]d_1') = (d')\cap\mathcal{P}_1$ et $]d_2') = (d')\cap\mathcal{P}_2$ les quatre demi-droite induite par cette partition. 
+\begin{defi}[Secteurs d'angle internes, paires de secteurs alternes-internes]
+Soient $(d)$ et $(d')$ deux droites et $(t)$ une droite sécante à $(d)$ (en un point $B$) et à $(d')$ (en $B'$) et tels que $B\neq B'$. On note $\mathcal{P}_1$ et $\mathcal{P}_2$ les demi-plans de la partition induite sur $\mathcal{E}$ par $(d)$, $]d_1) = (d)\cap\mathcal{P}_1$, $]d_2) = (d)\cap\mathcal{P}_2$ , $]d_1') = (d')\cap\mathcal{P}_1$ et $]d_2') = (d')\cap\mathcal{P}_2$ les quatre demi-droite induite par cette partition. 
 
 Alors on appelle secteurs d'angle internes les secteurs d'angles,
 \begin{equation*}
@@ -1737,7 +1748,7 @@ Alors on appelle secteurs d'angle internes les secteurs d'angles,
          \anglesaillant\left(B',]d_1'),]B'B)\right)\,,& \anglesaillant\left(B,]d_2'),]B'B)\right) \,.
     \end{array}
 \end{equation*}
-On appelle pairs de secteurs alterne-interne les pairs,
+On appelle paires de secteurs alternes-internes les paires,
 \begin{equation*}
     \anglesaillant\left(B,]d_1),]BB')\right) \quad \anglesaillant\left(B,]d_2'),]B'B)\right)
 \end{equation*}
@@ -1747,21 +1758,21 @@ et
 \end{equation*}
 \end{defi}
 \begin{rema}
-    La construction du dessus repose pour être construite sans ambiguïté sur l'unicité de la partition du plan en deux demi plan \ref{thm-partitiondemiplan}, de la proposition \ref{prop-demiplandroite} et du corollaire de la partition des droites en deux demi-droite \ref{cor-partitiondroite}.
+    \replaced[id=LB]{Pour être sans ambiguïté, la construction du dessus repose}{La construction du dessus repose pour être construite sans ambiguïté} sur l'unicité de la partition du plan en deux demi-plans \ref{thm-partitiondemiplan}, de la proposition \ref{prop-demiplandroite} et du corollaire de la partition des droites en deux demi-droites \ref{cor-partitiondroite}.
 \end{rema}
 \begin{thm}[De secteurs d'angle alterne-interne]
-    Soit deux droite $(d)$ et $(d')$ sécantesà une troisième en deux point distinct. Si une paire de secteurs d'angle alterne-interne sont congruents alors $(d)$ et $(d')$ sont parallèle.  
+    Soient deux droites $(d)$ et $(d')$ sécantes à une troisième en deux points distincts. Si une paire de secteurs d'angle alternes-internes sont congruents, alors $(d)$ et $(d')$ sont parallèle.  
 \begin{proof}
-    Si une paires de secteurs alterne interne sont égaux, par exemple,
+    Si une paire de secteurs alterne-interne sont \replaced[id=LB]{congruents}{égaux}, par exemple,
     \begin{equation*}
         \anglesaillant\left(B,]d_2),]BB')\right) \equiv \anglesaillant\left(B,]d_1'),]B'B)\right)
     \end{equation*}
-    alors l'autre pairs étant des secteurs d'angle supplémentaire le lemme \ref{lem-secteurssupplementairecongru} montre qu'on a également,
+    alors l'autre paire étant des secteurs d'angle supplémentaires, le lemme \ref{lem-secteurssupplementairecongru} montre qu'on a également,
     \begin{equation*}
         \anglesaillant\left(B,]d_1),]BB')\right) \equiv \anglesaillant\left(B,]d_2'),]B'B)\right)
     \end{equation*}
 
-    Supposons que $(d)\cap(d')=\{D\}$ et que $D \in \mathcal{P}_2$ (la démonstration de passerai de la même façon si $D\in\mathcal{P}_1$). L'axiome \ref{axi-C1} permet de construire $E\in ]d'1)$ tel que $[BE]\equiv [BD]$. La première congruence entre angles et $[BE]\equiv [BD]$ permet d'utiliser \ref{axi-C6} et alors les triangles $B'B E$ et $BB'D$ sont congruent. On en déduit que,
+    Supposons que $(d)\cap(d')=\{D\}$ et que $D \in \mathcal{P}_2$ (la démonstration se passerait de la même façon si $D\in\mathcal{P}_1$). L'axiome \ref{axi-C1} permet de construire $E\in ]d'1)$ tel que $[BE]\equiv [BD]$. La première congruence entre \addlb{secteurs d'}angle et $[BE]\equiv [BD]$ permet d'utiliser \ref{axi-C6} et alors les triangles $B'B E$ et $BB'D$ sont congruent. On en déduit que,
     \begin{equation*}
         \anglesaillant\left(B,]BE),]BB')\right)\equiv \anglesaillant\left(B',]d_2'),]B'B)\right)
     \end{equation*}
@@ -1769,27 +1780,27 @@ et
     \begin{equation*}
         \anglesaillant\left(B,]BE),]BB')\right)\equiv \anglesaillant\left(B,]d_1),]BB')\right) 
     \end{equation*}
-    ce qui se réécrit,
+    ce qui se récrit,
     \begin{equation*}
         \anglesaillant\left(B,]BB'),]BE)\right)\equiv \anglesaillant\left(B,]BB'),]d_1)\right) 
     \end{equation*}
-    Puisque $]BE)$ et $]d_1)$ sont dans $\mathcal{P}_1$, l'axiome \ref{axi-C4} assure alors $]BE)=]d_1)$ et donc $E\in (d)$. Puisque $E$ et $D$ sont construit de part et d'autre de $(BB')$, $E\neq E'$ et donc $(d)=(d')$ contradiction. 
+    Puisque $]BE)$ et $]d_1)$ sont dans $\mathcal{P}_1$, l'axiome \ref{axi-C4} assure alors $]BE)=]d_1)$ et donc $E\in (d)$. Puisque $E$ et $D$ sont construits de part et d'autre de $(BB')$, $E\neq E'$ et donc $(d)=(d')$, contradiction. 
 \end{proof}
 \end{thm}
 
-        \subsection{Congruence dans les triangle isocèles}
+        \subsection{Congruence dans les triangles isocèles}
 
 \begin{prop}\label{prop-isocelecongruenceangle}
-    Soit $ABC$ in triangle tel que $[AB]\equiv [BC]$ alors : $$\anglesaillant \left(A,]AB),]AC)\right)\equiv\anglesaillant \left(C,]CA),]CB)\right)\,.$$
+    Soit $ABC$ un triangle tel que $[AB]\equiv [BC]$ alors : $$\anglesaillant \left(A,]AB),]AC)\right)\equiv\anglesaillant \left(C,]CA),]CB)\right)\,.$$
 % page 30 de https://publimath.univ-irem.fr/numerisation/LY/ILY98002/ILY98002.pdf
 \end{prop}
 
-        \subsection{Bonus : secteurs d'angle rentrant et secteurs d'angle}
+        \subsection{Bonus : secteurs d'angle rentrant et secteurs d'angle \addlb{plat}}
 
 \begin{defi}[Secteurs d'angles rentrant]\label{defi-anglerentrant}
-    Soit $O,I$ et $J$ trois points distincts et non-alignés.
+    Soit $O,I$ et $J$ trois points distincts et non alignés.
     
-    On appellera secteur d'\emph{angle rentrant} l'ensemble des points $M\in \mathcal{E}-((OI)\cup(OJ))$ tel que $M$ et $I$ soit de part et d'autres de $(OJ)$ ou $M$ et $J$ soit de part et d'autres de $(OJ)$. On note alors,
+    On appellera secteur d'\emph{angle rentrant} l'ensemble des points $M\in \mathcal{E}-((OI)\cup(OJ))$ tel que $M$ et $I$ soient de part et d'autres de $(OJ)$ ou $M$ et $J$ soient de part et d'autres de $(OJ)$. On note alors,
     %\begin{equation*}
     %    \anglerentrant \left({O},{]OI)},{]OJ)}\right) = \ensemble{M\in (OIJ)-(OI)\cup(OJ)}{ [MI] \cap (OJ)\neq \varnothing \text{ ou } [MJ] \cap (OI)\neq \varnothing}
     %\end{equation*}
@@ -1808,14 +1819,14 @@ et
  \begin{equation*}
       \anglesaillant\left({O},{]OI)},{]OJ)}\right) \quad \text{ou} \quad \anglerentrant\left({O},{]OI)},{]OJ)}\right)
  \end{equation*}
- où les points $I,O$ et $J$ serait trois points de la demi-droite support du secteurs d'angle plat considérer avec $I\star O\star J$. On comprend intuitivement que cela n'a pas de sens, quel demi-plan choisir alors? C'est pour cette raison que le secteurs d'angle plat est traiter à part.
+ où les points $I,O$ et $J$ seraient trois points de la demi-droite support du secteurs d'angle plat considéré avec $I\star O\star J$. On comprend intuitivement que cela n'a pas de sens\,: quel demi-plan choisir alors\,? C'est pour cette raison que le secteur d'angle plat est traité à part.
 \end{rema}
 
 \begin{defi}[Secteur d'angle]    
-    Un secteur d'angle est une portion de plan qui est soit un angles plat, soit une secteur d'angle saillant soit un secteur d'angle rentrant. 
+    Un secteur d'angle est une portion de plan qui est soit un angle plat, soit une secteur d'angle saillant soit un secteur d'angle rentrant. 
 \end{defi}
 
-\begin{defi}[Support d'un secteur d'angles]
+\begin{defi}[Support d'un secteur d'angle]
     On appelle support du secteur d'angle $\anglesaillant\left({O},{]OI)},{]OJ)}\right)$ ou $\anglerentrant \left({O},{]OI)},{]OJ)}\right)$ la réunion $[OI)\cup[OJ)$. Le support d'un angle plat est la droite support du demi-plan consideré.
 \end{defi}
 
@@ -1830,29 +1841,29 @@ et
 %\end{lem}
 \marginpar{Une partie $\mathcal{A}\subset \mathcal{E}$ est dite convexe \ssi $\forall X,Y\in \mathcal{A}$ le segment $[XY]\subset \mathcal{A}$}
 \begin{thm}
-    Soit $O,I$ et $J$ trois points distincts non-alignés de $\mathcal{E}$ alors la réunion des demi-droites $[OI)\cup [OJ)$ partitionne $\mathcal{E}$ en deux partie : composé de l'angle saillant qui est convexe et l'angle rentrant :  
+    Soient $O,I$ et $J$ trois points distincts non-alignés de $\mathcal{E}$, alors la réunion des demi-droites $[OI)\cup [OJ)$ partitionne $\mathcal{E}$ en deux parties\,: \replaced[id=LB]{l'une composée du secteur d'angle saillant (qui est convexe) et l'autre composée de l'angle rentrant\,:}{ composé de l'angle saillant qui est convexe et l'angle rentrant :}  
     \begin{align*}
         &\anglesaillant\left({O},{]OI)},{]OJ)}\right) \bigcap \anglerentrant\left({O},{]OI)},{]OJ)}\right) = \varnothing &\\
         &\mathcal{E} - [OI)\cup[OJ) = \anglesaillant\left({O},{]OI)},{]OJ)}\right) \bigcup \anglerentrant\left({O},{]OI)},{]OJ)}\right)&
     \end{align*}
     \begin{proof}
-        La première égalité est un conséquences immédiate des conditions apparaissant dans les ensembles de la proposition \ref{prop-anglesaillantensemble} et de la définition \ref{defi-anglerentrant}.
+        La première égalité est un conséquence immédiate des conditions apparaissant dans les ensembles de la proposition \ref{prop-anglesaillantensemble} et de la définition \ref{defi-anglerentrant}.
 
         L'inclusion,
         \begin{equation*}
             \anglesaillant\left({O},{]OI)},{]OJ)}\right) \bigcup \anglerentrant\left({O},{]OI)},{]OJ)}\right) \subset \mathcal{E} - [OI)\cup[OJ)
         \end{equation*}
-        est conséquences immédiate du fait que les secteurs d'angles ne contiennent pas leurs supports et que le support des secteurs d'angles proposé est le même. 
+        est conséquence immédiate du fait que les secteurs d'angle ne contiennent pas leurs supports et que le support des secteurs d'angle proposé est le même. 
 
         Soit $M\in \mathcal{E} - [OI)\cup[OJ)$ puisque,
         \begin{equation*}
-            \neg\left( [MI]\cap(OJ) = \varnothing \wedge [MJ]\cap(OI) = \varnothing \right) \Longleftrightarrow [MI]\cap(OJ) \neq \varnothing \lor [MJ]\cap(OI) \neq \varnothing
+            \neg\left( [MI]\cap(OJ) = \varnothing \wedge [MJ]\cap(OI) = \varnothing \right) \Longleftrightarrow [MI]\cap(OJ) \neq \varnothing \lor [MJ]\cap(OI) \neq \varnothing,
         \end{equation*}
-        La proposition,
+        la proposition,
         \begin{equation*}
             \left( [MI]\cap(OJ) = \varnothing \wedge [MJ]\cap(OI) = \varnothing \right) \lor \left([MI]\cap(OJ) \neq \varnothing \lor [MJ]\cap(OI) \neq \varnothing\right)
         \end{equation*}
-        est toujours vrai pour tout $M\in \mathcal{E} - [OI)\cup[OJ)$ et donc,
+        est toujours vraie pour tout $M\in \mathcal{E} - [OI)\cup[OJ)$ et donc,
         \begin{equation*}
             M\in \anglesaillant\left({O},{]OI)},{]OJ)}\right) \bigcup \anglerentrant\left({O},{]OI)},{]OJ)}\right)
         \end{equation*}
@@ -1868,19 +1879,19 @@ La notion de mesure fait intervenir la notion de nombre réels ... blabla
         \subsection{Sur le milieu}
 
 \begin{defi}[Milieu]
-    Soit $A$ et $B$ deux points distinct, alors un point $I\in(AB)-\{A,B\}$ est dit milieu de $[AB]$ \ssi $[AI]\equiv [IB]$. 
+    Soient $A$ et $B$ deux points distincts, alors un point $I\in(AB)-\{A,B\}$ est dit milieu de $[AB]$ \ssi $[AI]\equiv [IB]$. 
 \end{defi}
 \begin{prop}[Unicité du milieu]
     Si le milieu d'un segment existe alors il appartient au segment ouvert et il est unique. 
 \begin{proof}
-    Notons $(d)=(AB)=(IB)$. Puisque il n'existe que deux demi-droite ouverte d'extrémité $I$ dans $(d)$ réalisant une partition de $(d)-\{I\}$ (voir corollaire \ref{cor-partitiondroite}). $A\in (d)-\{I\}$, on notera $]d_A)$ la demi-droite de cette partition contenant $A$ et $]d_B)$ l'autre qui par conséquent contient $B$ (sinon l'axiome \ref{axi-C1} impliquerai $A=B$). Par conséquent $B\in (d)-]d_A)$ ce qui équivaut à dire que $B\star I\star A$.
+    Notons $(d)=(AB)=(IB)$. Puisqu'il n'existe que deux demi-droites ouvertes d'extrémité $I$ dans $(d)$ réalisant une partition de $(d)-\{I\}$ (voir corollaire \ref{cor-partitiondroite}) \addlb{la syntaxe de la phrase précédente est incorrecte}. $A\in (d)-\{I\}$, on notera $]d_A)$ la demi-droite de cette partition contenant $A$ et $]d_B)$ l'autre qui par conséquent contient $B$ (sinon l'axiome \ref{axi-C1} impliquerai $A=B$). Par conséquent $B\in (d)-]d_A)$ ce qui équivaut à dire que $B\star I\star A$.
 \end{proof}
 \end{prop}
 \begin{rema}
-    L'existence repose sur un lemme de congruence entre triangle, reposant sur la propriété des angles alterne-interne. 
+    L'existence repose sur un lemme de congruence entre triangle, reposant sur la propriété des angles alternes-internes. 
 \end{rema}
 \begin{lem}\label{lem-congrutriang}
-    Soit $ABC$ et $A'B'C'$ deux triangles tel que,
+    Soient $ABC$ et $A'B'C'$ deux triangles tels que,
     \begin{equation*}
         \left\{
         \begin{array}{rl}
@@ -1909,9 +1920,9 @@ La notion de mesure fait intervenir la notion de nombre réels ... blabla
     \begin{equation*}
         \anglesaillant \left(B'',]B''B'),]B''C'')\right) \equiv \anglesaillant \anglesaillant \left(B',]B'A'),]B'C')\right)
     \end{equation*}    
-    qui sont dans une configuration alterne interne et donc $(B'' C)\| (B'C')$ ce qui est absurde puisque elle on $C'$ en commun.  
+    qui sont dans une configuration alterne-interne et donc $(B'' C)\| (B'C')$ ce qui est absurde puisque elles ont $C'$ en commun.  
     
-    Soit $A'\star B'\star B''$ alors on construit cette fois $C''$ tel que $C'\star B'\star C''$ afin d'utiliser la congruence des angles au sommet (par hypothese Corrolaire \ref{cor-anglesometcongru}) ,
+    Soit $A'\star B'\star B''$, alors on construit cette fois $C''$ tel que $C'\star B'\star C''$ afin d'utiliser la congruence des angles au sommet (par hypothèse Corrolaire \ref{cor-anglesometcongru}) ,
     \begin{equation*}
         \anglesaillant \left(B',]B'B''),]B'C'')\right) \equiv \anglesaillant \left(B',]B'A'),]B'C')\right)
     \end{equation*}
@@ -1919,59 +1930,59 @@ La notion de mesure fait intervenir la notion de nombre réels ... blabla
     \begin{equation*}
         \anglesaillant \left(B'',]B''C'),]B''A')\right) \equiv  \anglesaillant \left(B',]B'C''),]B'B'')\right)
     \end{equation*}   
-    qui sont dans une configuration alterne interne et donc $(B'' C)\| (B'C')$ ce qui est absurde puisque elle on $C'$ en commun. 
+    qui sont dans une configuration alterne-interne et donc $(B'' C)\| (B'C')$ ce qui est absurde puisque elles ont $C'$ en commun. 
 \end{proof}
 \end{lem}
 \begin{thm}
     Pour tout $(A,B)$ paires de points distinct, alors il existe $I\in ]AB[$ tel que $I$ soit le milieu de $[AB]$.
 \begin{proof}
-    Il ne reste à prouvé que l'existence. 
+    Il ne reste à prouver que l'existence. 
 
     Soit $C$ en dehors de $(AB)$ (Axiome \ref{axi-A2}) et considérons (Axiome \ref{axi-C4}) l'unique demi-droite $]d)$  d'extrémité $B$ contenue dans le demi-plan de support $(AB)$ et ne contenant pas $C$ tel que,
     \begin{equation*}
         \anglesaillant \left(B,[BA),[d)\right)\equiv \anglesaillant \left(A,[AB),[AC)\right)
     \end{equation*}
-    et plaçont sur cette demi-droite (axiome \ref{axi-C1}) l'unique point $D$ de $]d)$ tel que $[AC]\equiv [BD]$. Alors $C$ et $D$ ayant été construit de par et d'autre de $(AB)$, on a $]CD[\cap (AB) = \{I\}$. Par conséquent $I\in ]CD[$
+    et plaçons sur cette demi-droite (axiome \ref{axi-C1}) l'unique point $D$ de $]d)$ tel que $[AC]\equiv [BD]$. Alors $C$ et $D$ ayant été construit de part et d'autre de $(AB)$, on a $]CD[\cap (AB) = \{I\}$. Par conséquent $I\in ]CD[$
 
-    Si on arrive a montrer que $I\in ]AB[$ on utilise le fait que les angles $\anglesaillant\left(I, ]ID), ]IB)\right)$ et $\anglesaillant\left(I, ]IC), ]IA)\right)$ soit opposé par le sommet et donc qu'ils sont congru,
+    Si on arrive a montrer que $I\in ]AB[$ on utilise le fait que les angles $\anglesaillant\left(I, ]ID), ]IB)\right)$ et $\anglesaillant\left(I, ]IC), ]IA)\right)$ sont opposés par le sommet et donc qu'ils sont congrus,
     \begin{equation}
         \anglesaillant\left(I, ]ID), ]IB)\right) \equiv \anglesaillant\left(I, ]IC), ]IA)\right)
     \end{equation}
     ce qui permet d'utiliser le lemme \ref{lem-congrutriang} et donc  que $OBD\equiv OAC$ pour en déduire trivialement le résultat.
 
-    Reste donc a prouvé que $I\in ]AB[$, procédons par l'absurde. Tout d'abords $I\neq A$ car sinon cela impliquera $A=B$. Donc soit $I\star A\star B$ soit $A\star B\star I$. Supposons par exemple que $A\star B\star I$ et appliquons l'axiome de Pasch \ref{ax-pasch} au triangle $AIC$ et a la sécante $(BD)$ qui puisque elle coupe $]AI[$ en $B$ doit également coupé $]IC[$ où $]AC[$. Par construction $(AC)\| (BD)$ et donc $(BD)$ doit rencontrer $]IC[$, or $(BD)$ et $(IC)$ sont sécante en $D$ et donc $(BD)\cap ]IC[ = \{D\}$ et donc $D\in ]IC[$. Or on a déjà montrer que $I\in ]CD[$ ce qui entre en contradiction avec $D\in ]IC[$ (Axiome \ref{ax-B3}). 
+    Reste donc a prouver que $I\in ]AB[$, procédons par l'absurde. Tout d'abord $I\neq A$, car sinon cela impliquerait $A=B$. Donc soit $I\star A\star B$ soit $A\star B\star I$. Supposons par exemple que $A\star B\star I$ et appliquons l'axiome de Pasch \ref{ax-pasch} au triangle $AIC$ et à la sécante $(BD)$ qui puisque elle coupe $]AI[$ en $B$ doit également couper $]IC[$ où $]AC[$. Par construction $(AC)\| (BD)$ et donc $(BD)$ doit rencontrer $]IC[$, or $(BD)$ et $(IC)$ sont sécantes en $D$ et donc $(BD)\cap ]IC[ = \{D\}$ et donc $D\in ]IC[$. Or on a déjà montré que $I\in ]CD[$ ce qui entre en contradiction avec $D\in ]IC[$ (Axiome \ref{ax-B3}). 
 \end{proof}
 \end{thm}
     
-        \subsection{Notion de longueurs entière}
+        \subsection{Notion de longueurs entières}
 
-Avant de poursuivre utilisons les axiomes de congruences entre segments afin de construire la notion de longueurs entre deux points, puis de longueurs d'un arc qui nous sera essentiel pour définir la mesure d'un secteur d'angle.
+Avant de poursuivre utilisons les axiomes de congruence entre segments afin de construire la notion de longueurs entre deux points, puis de longueurs d'un arc qui nous sera essentielle pour définir la mesure d'un secteur d'angle.
 
 \begin{defi}[Plan euclidien métré]
     L'espace euclidien $\mathcal{E}$ est dit métré \ssi il est muni d'un segment $u$ dit unité. On note alors $(\mathcal{E},u)$ l'espace euclidien métré. 
 \end{defi}
 % Paire de point de distance entiere
 \begin{defi}[Couple de points de distance entière]
-    Dans un plan euclidien métré de segment unité $u$. Deux points $A$ et $B$ sont dit de distance entière \ssi
+    Dans un plan euclidien métré de segment unité $u$, deux points $A$ et $B$ sont dits de distance entière \ssi
     \begin{itemize}[$\bullet$]
         \item Soit $A=B$ et on dit que la distance $AB$ est nulle : $AB=0$,
-        \item soit il existe un entier $n\in \N_\star$ tel que $B$ soit le $n$-report de $u$ sur $[AB)$.. On dit alors que la distance $AB$ est $n$ : $AB=n$. 
+        \item soit il existe un entier $n\in \N_\star$ tel que $B$ soit le $n$-report de $u$ sur $[AB)$. On dit alors que la distance $AB$ est $n$ : $AB=n$. \addlb{$n$-repport défini implicitement... Il faudrait ajouter un paragraphe pour justifier cela avec "l'axiome du compas".}
     \end{itemize}
 \end{defi}
 \begin{rema}
     La distance entière est bien définie : si elle existe, elle est unique car les points de la suite des $n$-reports de $u$ sur $[AB)$ sont deux-à-deux distincts.
 \end{rema}
 \begin{prop}
-    Soit $A,B$ distinct de distance entière et $A',B'$ distincts de distance entière. Alors,
+    Soient $A,B$ distincts de distance entière et $A',B'$ distincts de distance entière. Alors,
     \begin{equation*}
         [AB]\equiv[A'B'] \Longleftrightarrow AB = A'B'
     \end{equation*}
 \begin{proof}
-    Repose sur l'axiome \ref{axi-C1} pour initialiser et identifier dans les demi-droites et par récurrence \ref{axi-C3} afin d'assuré les congruences $[AI_n]\equiv[A'I'_n]$. On laissera lke lecteurs scrupuleux la rédaction de cette preuve.
+    Repose sur l'axiome \ref{axi-C1} pour initialiser et identifier dans les demi-droites et par récurrence \ref{axi-C3} afin d'assurer les congruences $[AI_n]\equiv[A'I'_n]$. On laissera aux lecteurs scrupuleux la rédaction de cette preuve.
 \end{proof}
 \end{prop}
 \begin{prop}
-    Soit $A,B,C$ et $D$ quatre point tel que $A$ et $B$ soit distinct et de distance entière et $A$ et $B$ soit distinct et de distance entière alors,
+    Soient $A,B,C$ et $D$ quatre points tels que $A$ et $B$ soient distincts et de distance entière et $A$ et $B$ soient distincts et de distance entière\,; alors,
     \begin{equation*}
         AB \leq CD \Longleftrightarrow [AB]\leq[CD]
     \end{equation*}
@@ -1981,13 +1992,13 @@ Avant de poursuivre utilisons les axiomes de congruences entre segments afin de 
     \end{equation*}
 \end{prop}
 \begin{rema}
-    Dans l'équivalence de la proposition précédentes, à droite $\leq$ fait référence a la relation d'ordre entre segment alors qu'a gauche il s'agit de la relation d'ordre entre nombre entier.  
+    Dans l'équivalence de la proposition précédente, à droite $\leq$ fait référence à la relation d'ordre entre segments alors qu'à gauche il s'agit de la relation d'ordre entre nombres entiers.  
 \end{rema}
 
         \subsection{Notion de longueur diadique}
 
 \begin{prop}
-   Soit $A$ et $B$ deux points distincts et $I$ le milieu de alors $I+\overrightarrow{AI}=B$.
+   Soient $A$ et $B$ deux points distincts et $I$ le milieu de \addlb{$[AB]$\,;} alors $I+\overrightarrow{AI}=B$. \addlb{$\ovr{AB}$ n'est pas défini !!!}
 \end{prop}
 \begin{defi}[$1/2^k$-milieu]
     Soit $A$ et $B$ deux points distincts, alors pour tout $k\in \N$ on construit par récurrence la suite de points $\famiin{I}{k}{\N}$,
@@ -1998,47 +2009,47 @@ Avant de poursuivre utilisons les axiomes de congruences entre segments afin de 
         \end{array}
         \right.
     \end{equation*}
-    pour tout $k$, le point $I_k$ est alors appelé $1/2^k$-milieu de $[AB]$ du coté de $A$
+    pour tout $k$, le point $I_k$ est alors appelé $1/2^k$-milieu de $[AB]$ du côté de $A$
 \end{defi}
 \begin{rema}
-    Dans la suite on notera $A + \dfrac{1}{2^k}\overrightarrow{AB}$ le $1/2^k$-milieu de $[AB]$ du coté de $A$.
+    Dans la suite on notera $A + \dfrac{1}{2^k}\overrightarrow{AB}$ le $1/2^k$-milieu de $[AB]$ du côté de $A$.
 \end{rema}
 \begin{rema}
     Paradoxe de Zénon.
 \end{rema}
 \begin{prop}
-    Soit $A$ et $B$ deux point distinct, $k\in\N$ et $I_k$ le $1/2^k$-milieu de $[AB]$ du coté de $A$ alors $I_k+2^k \overrightarrow{AI_k}=B$.
+    Soient $A$ et $B$ deux points distincts, $k\in\N$ et $I_k$ le $1/2^k$-milieu de $[AB]$ du côté de $A$, alors $I_k+2^k \overrightarrow{AI_k}=B$.
 \end{prop}
-\begin{defi}[Points diadique associé à un segment]
-    Soit $A$ et $B$ deux points distincts, pour tout $k\in \N$ on note $I_k=A + \dfrac{1}{2^k}\overrightarrow{AB}$ et pour tout $n\in \N$ on note $M_{n,k} = A + n \overrightarrow{AI_k}$. L'ensemble des points $\left(M_{n,k}\right)$ est appelé ensembles des points diadiques du segment $[AB]$ du coté de $B$. Le point $M_{n,k}$ est alors appellé $(n,k)$-diadique de $[AB]$ du coté de $B$.
+\begin{defi}[Points diadiques associés à un segment]
+    Soient $A$ et $B$ deux points distincts, pour tout $k\in \N$ on note $I_k=A + \dfrac{1}{2^k}\overrightarrow{AB}$ et pour tout $n\in \N$ on note $M_{n,k} = A + n \overrightarrow{AI_k}$. L'ensemble des points $\left(M_{n,k}\right)$ est appelé ensemble des points diadiques du segment $[AB]$ du côté de $B$. Le point $M_{n,k}$ est alors appellé $(n,k)$-diadique de $[AB]$ du côté de $B$.
 \end{defi}
 \begin{prop}\label{prop-diadiqueconfondu}
-    Le $(n,k)$-diadique et le $(n',k')$-diadique de $[AB]$ du coté de $B$ sont confondus \ssi,
+    Le $(n,k)$-diadique et le $(n',k')$-diadique de $[AB]$ du côté de $B$ sont confondus \ssi,
     \begin{equation*}
         \dfrac{n}{2^k}=\dfrac{n'}{2^{k'}}
     \end{equation*}
 \end{prop}
 \begin{rema}
-    Dans la suite on notera $A + \dfrac{n}{2^k}\overrightarrow{AB}$ le $(n,k)$-diadique de $[AB]$ du coté de $B$.
+    Dans la suite on notera $A + \dfrac{n}{2^k}\overrightarrow{AB}$ le $(n,k)$-diadique de $[AB]$ du côté de $B$.
 
-    La proposition précédentes assure la caractère non ambiguë de cette notation.
+    La proposition précédente assure la caractère non ambiguë de cette notation.
 \end{rema}
-\begin{defi}[Couple de point de distance diadique]
-    Dans un plan euclidien métré de segment unité $u$. Deux points $A$ et $B$ sont dit de distance diadique s'ils sont confondus ou si $B$ est un point diadique du segment $[AI]$ du coté de $I$ avec $I$ est l'unique point de $]AB)$ vérifiant $[AI]\equiv \, u$.
+\begin{defi}[Couple de points de distance diadique]
+    Dans un plan euclidien métré de segment unité $u$, deux points $A$ et $B$ sont dits de distance diadique s'ils sont confondus ou si $B$ est un point diadique du segment $[AI]$ du côté de $I$ \replaced[id=LB]{où}{avec} $I$ est l'unique point de $]AB)$ vérifiant $[AI]\equiv \, u$.
 
-    Si les points sont confondus on dira que la distance $AB$ est nulle : $AB=0$. Sinon puisque $B$ est un point diadique du segment $[AI]$ du coté de $I$, il existe $n,k$ deux entiers tel que $B$ soit le $(n,k)$-diadique de $[AI]$ du coté de $I$. On dit que la distance $AB$ est $\dfrac{n}{2^k}$ : $AB=\dfrac{n}{2^k}$.
+    Si les points sont confondus on dira que la distance $AB$ est nulle\,: $AB=0$. Sinon, puisque $B$ est un point diadique du segment $[AI]$ du côté de $I$, il existe $n,k$ deux entiers tels que $B$ soit le $(n,k)$-diadique de $[AI]$ du côté de $I$. On dit que la distance $AB$ est $\dfrac{n}{2^k}$ : $AB=\dfrac{n}{2^k}$.
 \end{defi}
 \begin{rema}
-    La proposition $\ref{prop-diadiqueconfondu}$ assure que la distance entre couples de points diadique. 
+    La proposition $\ref{prop-diadiqueconfondu}$ assure que la distance entre couples de points diadique.  \addlb{syntaxe incorrecte}
 \end{rema}
 \begin{thm}\label{thm-equivcongrudist}
-    Soit $A,B$ distinct de distance diadique et $A',B'$ distincts de distance diadique. Alors,
+    Soient $A,B$ distincts de distance diadique et $A',B'$ distincts de distance diadique. Alors,
     \begin{equation*}
         [AB]\equiv[A'B'] \Longleftrightarrow AB = A'B'
     \end{equation*}
 \end{thm}
 \begin{thm}\label{thm-ordredistancesegmentdiadique}
-    Soit $A,B,C$ et $D$ quatre point tel que $A$ et $B$ soit distinct et de distance diadique et $A$ et $B$ soit distinct et de distance diadique alors,
+    Soient $A,B,C$ et $D$ quatre points tels que $A$ et $B$ soits distincts et de distance diadique et $A$ et $B$ soient distincts et de distance diadique alors,
     \begin{equation*}
         AB \leq CD \Longleftrightarrow [AB]\leq[CD]
     \end{equation*}
@@ -2048,20 +2059,20 @@ Avant de poursuivre utilisons les axiomes de congruences entre segments afin de 
     \end{equation*}
 \end{thm}
 \begin{prop}\label{prop-addlongdiadique}
-    Soit $A,B$ et $C$ trois points distinct et de distance diadiques deux-à-deux, si $C\in [AB]$ alors $AB = AC + CB$.
+    Soient $A,B$ et $C$ trois points distincts et de distance diadiques deux-à-deux, si $C\in [AB]$ alors $AB = AC + CB$.
 \end{prop}
 
         \subsection{Mesure des segments}
 
-Construisons la distance entre deux points de distance. Considérons deux points $A$ et $B$ distinct dans un plan euclidien métré de segment unité $u$. On note $I$ l'unique point de $]AB)$ tel que $[AI]\equiv u$ et $M_{n,k}= A + \dfrac{n}{2^k}\overrightarrow{AI}$. Puisque $A$ et $B$ ne sont pas de distance diadique $\forall n,k$ on a $M_{n,k}\neq B$ et on définie,
+Construisons la distance entre deux points de distance \addlb{non diadique}. Considérons deux points $A$ et $B$ distincts dans un plan euclidien métré de segment unité $u$. On note $I$ l'unique point de $]AB)$ tel que $[AI]\equiv u$ et $M_{n,k}= A + \dfrac{n}{2^k}\overrightarrow{AI}$. Puisque $A$ et $B$ ne sont pas de distance diadique $\forall n,k$ on a $M_{n,k}\neq B$ et on définit,
 \begin{equation*}
 \begin{array}{ccc}
      \D_- = \ensemble{\dfrac{n}{2^k}}{A\star M_{n,k} \star B} &\text{et}& \D_+ = \ensemble{\dfrac{n}{2^k}}{A \star B\star M_{n,k} } 
 \end{array}\,.
 \end{equation*}
-Ces ensembles sont non vide en vertu de l'axiome d'Archimede \ref{axi-archimede}. 
+Ces ensembles sont non vides en vertu de l'axiome d'Archimède \ref{axi-archimede}. 
 
-Soit $(d_-,d_+)\in \D_- \times \D_+$ alors il existe $n_-,n_+, k_-, k_+$ tel que $$d_- = \dfrac{n_-}{2^{k_-}} \text{ et } d_+ = \dfrac{n_+}{2^{k_+}}\,.$$ Par définition $A\star M_{n_-,k_-} \star B$ et $A\star B \star M_{n_+,k_+}$ et donc par définition des inégalité entre segment ces ordres implique $[AM_{n_-,k_-}]< [AB]$ et $[AB] < [AM_{n_+,k_+}]$ (les inégalités étant stricte car $B$ n'est ni dans $\D_1$ ni dans $\D_2$). Par transitivité de la relation d'ordre $[A M_{n_-,k_-}]\leq [AM_{n_+,k_+}]$. Enfin puisque $A,M_{n_-,k_-}$ et $A,M_{n_+,k_+}$ sont de distance diadique on peut appliquer la proposition \ref{prop-ordredistancesegmentdiadique} et en déduire que,
+Soit $(d_-,d_+)\in \D_- \times \D_+$ alors il existe $n_-,n_+, k_-, k_+$ tels que $$d_- = \dfrac{n_-}{2^{k_-}} \text{ et } d_+ = \dfrac{n_+}{2^{k_+}}\,.$$ Par définition $A\star M_{n_-,k_-} \star B$ et $A\star B \star M_{n_+,k_+}$ et donc par définition des inégalités entre segments, ces ordres impliquent $[AM_{n_-,k_-}]< [AB]$ et $[AB] < [AM_{n_+,k_+}]$ (les inégalités étant strictes car $B$ n'est ni dans $\D_1$ ni dans $\D_2$). Par transitivité de la relation d'ordre, $[A M_{n_-,k_-}]\leq [AM_{n_+,k_+}]$. Enfin, puisque $A,M_{n_-,k_-}$ et $A,M_{n_+,k_+}$ sont de distance diadique on peut appliquer la proposition \ref{prop-ordredistancesegmentdiadique} et en déduire que,
 \begin{equation*}
     d_- = \dfrac{n_-}{2^{k_-}} = A M_{n_-,k_-} < AM_{n_+,k_+} = \dfrac{n_+}{2^{k_+}} = d_+\,.
 \end{equation*}
@@ -2069,15 +2080,15 @@ Ainsi il existe un unique nombre $x\in \R_+^\star$ tel que
 \begin{equation*}
     \forall (d_-,d_+)\in \D_- \times \D_+\,, \text{ on ai } d_- \leq x \leq d_+\,.
 \end{equation*}
-le nombre $x$ ne dépend dans sa construction que de $A$ et $B$ on l'appellera distance $AB$ et on note $AB=x$.
+Le nombre $x$ ne dépend dans sa construction que de $A$ et $B$ on l'appellera distance $AB$ et on note $AB=x$.
 \begin{prop}
-    Soit $A,B$ distinct et $A',B'$ distincts, alors,
+    Soient $A,B$ distincts et $A',B'$ distincts, alors,
     \begin{equation*}
         [AB]\equiv[A'B'] \Longleftrightarrow AB = A'B'
     \end{equation*}
 \end{prop}
 \begin{prop}
-        Soit $A,B,C$ et $D$ quatre point tel que $A$ et $B$ soit distinct et $A$ et $B$ soit distinct alors,
+        Soient $A,B,C$ et $D$ quatre points tels que $A$ et $B$ soient distincts et $A$ et $B$ soient distincts\,; alors,
     \begin{equation*}
         AB \leq CD \Longleftrightarrow [AB]\leq[CD]
     \end{equation*}
@@ -2087,14 +2098,14 @@ le nombre $x$ ne dépend dans sa construction que de $A$ et $B$ on l'appellera d
     \end{equation*}
 \end{prop}
 \begin{thm}[La droite est sans trou]
-    Soit $]d)$ une demi-droite d'extremité $O$ alors pour tout $x \in \R_+^\star$ il existe un unique point $X$ tel que $OX = x$.
+    Soit $]d)$ une demi-droite d'extremité $O$\,; alors pour tout $x \in \R_+^\star$ il existe un unique point $X$ tel que $OX = x$.
 \begin{proof}
     Conséquence de l'axiome de Dedekind \ref{axi-dedekind}.
 \end{proof}
 \end{thm}
 
 \begin{prop}\label{prop-addlong}
-    Soit $A,B$ et $C$ trois points, si $C\in [AB]$ alors $AB = AC + CB$.
+    Soient $A,B$ et $C$ trois points, si $C\in [AB]$ alors $AB = AC + CB$.
 \end{prop}
 
         \subsection{Relation d'ordre sur les secteurs d'angle}
@@ -2104,32 +2115,32 @@ le nombre $x$ ne dépend dans sa construction que de $A$ et $B$ on l'appellera d
 
     On dit alors que :
     \begin{itemize}[$\bullet$]
-        \item $\anglesaillant\left(O_1,]d_1),]d_1')\right)$ est plus petit que $\anglesaillant\left(O_2,]d_2),]d_2')\right)$ si ils sont congruent ou s'il existe une demi-droite $]d')$ d'extrémité $O_2$ entre $]d_2)$ tel que $\anglesaillant\left(O_1,]d_1),]d_1')\right) \equiv \anglesaillant\left(O_2,]d_2),]d')\right)$. On note alors,
+        \item $\anglesaillant\left(O_1,]d_1),]d_1')\right)$ est plus petit que $\anglesaillant\left(O_2,]d_2),]d_2')\right)$ si ils sont congruents ou s'il existe une demi-droite $]d')$ d'extrémité $O_2$ entre $]d_2)$ telle que $\anglesaillant\left(O_1,]d_1),]d_1')\right) \equiv \anglesaillant\left(O_2,]d_2),]d')\right)$. On note alors,
         \begin{equation*}
             \anglesaillant\left(O_1,]d_1),]d_1')\right) \leq \anglesaillant\left(O_2,]d_2),]d_2')\right)\,.
         \end{equation*}
-        \item $\anglesaillant\left(O_1,]d_1),]d_1')\right)$ est strictement plus petit que $\anglesaillant\left(O_2,]d_2),]d_2')\right)$ s'il existe une demi-droite $]d')$ d'extrémité $O_2$ entre $]d_2)$ tel que $\anglesaillant\left(O_1,]d_1),]d_1')\right) \equiv \anglesaillant\left(O_2,]d_2),]d')\right)$. On note alors,
+        \item $\anglesaillant\left(O_1,]d_1),]d_1')\right)$ est strictement plus petit que $\anglesaillant\left(O_2,]d_2),]d_2')\right)$ s'il existe une demi-droite $]d')$ d'extrémité $O_2$ entre $]d_2)$ telle que $\anglesaillant\left(O_1,]d_1),]d_1')\right) \equiv \anglesaillant\left(O_2,]d_2),]d')\right)$. On note alors,
         \begin{equation*}
             \anglesaillant\left(O_1,]d_1),]d_1')\right) < \anglesaillant\left(O_2,]d_2),]d_2')\right)\,.
         \end{equation*}
     \end{itemize}
 \end{defi}
 \begin{rema}
-    On démontre alors de façon similaire au preuve de la section \ref{subsec-ordresegment} que la relation $\leq$ entre secteur d'angle est une relation d'ordre total compatible avec la congruence.   
+    On démontre alors de façon similaire aux preuves de la section \ref{subsec-ordresegment} que la relation $\leq$ entre secteurs d'angle est une relation d'ordre totale compatible avec la congruence.   
 \end{rema}
 \begin{thm}\label{thm-ineqsegmentrelationordre}
-    La relation $\leq$ entre secteur d'angle est une relation d'ordre stricte total compatible avec la relation de congruence entre secteurs d'angle et $<$ est la relation d'ordre strict associé. 
+    La relation $\leq$ entre secteurs d'angle est une relation d'ordre stricte totale compatible avec la relation de congruence entre secteurs d'angle et $<$ est la relation d'ordre strict associée. 
 \end{thm}
 
-        \subsection{Isométrie entre demi-plan orienté}
+        \subsection{Isométrie entre demi-plans orientés}
 
 \begin{defi}[Demi-plan orienté]
-On appelle demi-plan orienté $\overrightarrow{\mathcal{P}}$ la donnée d'un demi-plan $\mathcal{P}$ et d'une demi-droite ouverte contenue dans la droite support de $\mathcal{P}$. On note $\overrightarrow{\mathcal{P}} = \left(\mathcal{P},]d)\right)$. L'extrémité de $]d)$ est également appelé centre du demi-plan orienté $\overrightarrow{\mathcal{P}}$
+On appelle demi-plan orienté $\overrightarrow{\mathcal{P}}$ la donnée d'un demi-plan $\mathcal{P}$ et d'une demi-droite ouverte contenue dans la droite support de $\mathcal{P}$. On note $\overrightarrow{\mathcal{P}} = \left(\mathcal{P},]d)\right)$. L'extrémité de $]d)$ est également appelée centre du demi-plan orienté $\overrightarrow{\mathcal{P}}$
 \end{defi}
 
-\begin{defi}[Application canonique entre demi-plan orienté]\,
+\begin{defi}[Application canonique entre demi-plans orientés]\,
 
-Soit $\overrightarrow{\mathcal{P}}_1 = \left(\mathcal{P}_1,]d_1)\right)$ et $\overrightarrow{\mathcal{P}}_2 = \left(\mathcal{P}_2,]d_2)\right)$ deux demi-plan orienté de centre $O_1$ et $O_2$. 
+Soient $\overrightarrow{\mathcal{P}}_1 = \left(\mathcal{P}_1,]d_1)\right)$ et $\overrightarrow{\mathcal{P}}_2 = \left(\mathcal{P}_2,]d_2)\right)$ deux demi-plans orientés de centre $O_1$ et $O_2$. 
 
 L'application canonique envoyant $\overrightarrow{\mathcal{P}}_1$ sur $\overrightarrow{\mathcal{P}}_2$ (qu'on notera $\mathcal{I}_{\overrightarrow{\mathcal{P}}_1,\overrightarrow{\mathcal{P}}_2}$) est l'application qui a tout $M_1$ dans $\mathcal{P}_1$ associe l'unique point $M_2$ de $\mathcal{P}_2$ tel que :
 \begin{equation*}
@@ -2140,16 +2151,16 @@ L'application canonique envoyant $\overrightarrow{\mathcal{P}}_1$ sur $\overrigh
     L'axiome \ref{axi-C4} assure l'unicité de la demi-droite $]O_2 M_2)$ tandis que l'axiome \ref{axi-C1} assure l'unicité de $M_2$ sur $]O_2 M_2)$.
 \end{rema}
 \begin{defi}[Isométrie]
-    Soit $\mathcal{D}_1$ et $\mathcal{D}_2$ deux parties du plan et $f : \mathcal{D}_1 \to \mathcal{D}_2$. On dis que $f$ est une isométrie \ssi pour tout point distinct $A$ et $B$ de $\mathcal{D}_1$ on a,
+    Soit $\mathcal{D}_1$ et $\mathcal{D}_2$ deux parties du plan et $f : \mathcal{D}_1 \to \mathcal{D}_2$. On dit que $f$ est une isométrie \ssi pour tous points distincts $A$ et $B$ de $\mathcal{D}_1$ on a,
     \begin{equation*}
         [AB]\equiv [f(A)f(B)]\,.
     \end{equation*}
 \end{defi}
 \begin{prop}
-    La composition de deux Isométrie est une Isométrie.
+    La composition de deux isométries est une isométrie.
 \end{prop}
 \begin{defi}[Partie Isométrique]
-    On dira que $\mathcal{D}_1$ et $\mathcal{D}_2$ sont deux parties isométrique \ssi il existe une isométrie $f : \mathcal{D}_1 \to \mathcal{D}_2$ avec $f(\mathcal{D}_1)=\mathcal{D}_2$
+    On dira que $\mathcal{D}_1$ et $\mathcal{D}_2$ sont deux parties isométriques \ssi il existe une isométrie $f : \mathcal{D}_1 \to \mathcal{D}_2$ avec $f(\mathcal{D}_1)=\mathcal{D}_2$
 \end{defi}
 \begin{rema}
     De façon équivalente dans un plan euclidien métré (Théorème \ref{thm-equivcongrudist}), une application  $f : \mathcal{D}_1 \to \mathcal{D}_2$ est une isométrie \ssi 
@@ -2158,21 +2169,21 @@ L'application canonique envoyant $\overrightarrow{\mathcal{P}}_1$ sur $\overrigh
     \end{equation*}
 \end{rema}
 \begin{thm}\label{thm-applicannoniqueisom}
-    L'application canonique entre demi-plan est un isométrie.
+    L'application canonique entre demi-plans est une isométrie.
 \begin{proof}
     Résulte du corollaire \ref{cor-congrudiffanglecongru} et de l'axiome \ref{axi-C6}.
 \end{proof}
 \end{thm}
 \begin{cor}\label{cor-congruimpliqueisom}
-    Deux angle saillant congruents sont isométriques.
+    Deux angles saillants congruents sont isométriques.
 \begin{scheme}
-    On travaille avec la restriction sur l'angle saillant de départ d'une application canonique entre demi-plan orienté de demi-droite choisit parmi les support d'angle saillant.
+    On travaille avec la restriction sur l'angle saillant de départ d'une application canonique entre demi-plans orientés de demi-droites choisies parmi les supports d'angles saillants.
 
-    On vérifie que l'application ainsi construite envoie bien le premier secteurs d'angle sur le second. Pour cela on aura besoin a un moment donné de :
+    On vérifie que l'application ainsi construite envoie bien le premier secteur d'angle sur le second. Pour cela on aura besoin à un moment donné :
     \begin{itemize}[$\bullet$]
-        \item de la partition en deux du demi plan par une demi droite d'extrémité dans son support (\ref{thm-partitiondemiplan}).,
+        \item de la partition en deux du demi-plan par une demi droite d'extrémité dans son support (\ref{thm-partitiondemiplan}).,
         \item du corollaire \ref{cor-B3demidroite} dit B3 des demi-droite,
-        \item la compatibilité avec la congruence de la relation d'ordre entre secteurs d'angles (Théorème \ref{thm-ineqsegmentrelationordre}).
+        \item de la compatibilité avec la congruence de la relation d'ordre entre secteurs d'angles (Théorème \ref{thm-ineqsegmentrelationordre}).
     \end{itemize}
 \end{scheme}
 \end{cor}
@@ -2187,20 +2198,20 @@ L'application canonique envoyant $\overrightarrow{\mathcal{P}}_1$ sur $\overrigh
     on notera $\mathfrak{C}$ l'ensemble des cercles. 
 \end{defi}
 \begin{defi}[Arc de cercle saillant]
-Soit $O,A$ et $B$ trois point distincts non alignés tel que $[OA]\equiv [OB]$. On appelle arc de cercle saillant de centre $O$ joignant $A$ à $B$ l'ensemble,
+Soient $O,A$ et $B$ trois points distincts non alignés tels que $[OA]\equiv [OB]$. On appelle arc de cercle saillant de centre $O$ joignant $A$ à $B$ l'ensemble,
 \begin{equation*}
     \wideparen{AOB} :=\ensemble{M\in \anglesaillant\left(O,]OA),]OB)\right)}{[OM]\equiv [OA]}\,,
 \end{equation*}
 Le segment $]AB[$ est alors appelé corde de l'arc $\wideparen{AOB}$.
 \end{defi}
-\begin{defi}[Suite de points ordonnées sur un arc de cercle]
-Soit $n$ en entier, pour toute suite de $n$ points distincts $C = \fami{C}{i}{1\ldots n}$ sur un arc de cercle $\wideparen{AOB}$, $C$ est dites suite de $n$ points ordonnée \ssi pour tout $i= 1\ldots n $ on a $D_{i-1} \star D_i \star D_{i+1}$, où pour tout $i= 1 \ldots n$,  $D_i$ est l'intersection $]AB[\cap ]O C_i)$, $C_0=A$ et $D_{n+1}=B$.
+\begin{defi}[Suite de points ordonnée sur un arc de cercle]
+Soit $n$ un entier, pour toute suite de $n$ points distincts $C = \fami{C}{i}{1\ldots n}$ sur un arc de cercle $\wideparen{AOB}$, $C$ est dite suite de $n$ points ordonnée \ssi pour tout $i= 1\ldots n $ on a $D_{i-1} \star D_i \star D_{i+1}$, où pour tout $i= 1 \ldots n$,  $D_i$ est l'intersection $]AB[\cap ]O C_i)$, $C_0=A$ et $D_{n+1}=B$.
 \end{defi}
 \begin{rema}
-    L'existence des point $D_i$ est assuré par le lemme des barreau \ref{lem-barrtrans}.
+    L'existence des point $D_i$ est assurée par le lemme des barreau \ref{lem-barrtrans}.
 \end{rema}
 \begin{defi}[Mesure d'une ligne brisé]
-Dans un plan euclidien métré. Pour tout entier $n$, pour toute suite $C = \fami{C}{i}{1\ldots n}$ de $n$ points on appelle mesure de la ligne brisé reposant sur la suite $C$ points la somme :
+Dans un plan euclidien métré, pour tout entier $n$, pour toute suite $C = \fami{C}{i}{1\ldots n}$ de $n$ points on appelle mesure de la ligne brisé reposant sur la suite $C$ points la somme :
 \begin{equation*}
     \ell(C) : = \sum\limit_{i=1}^n C_i C_{i+1}
 \end{equation*}
@@ -2213,7 +2224,7 @@ Si on note $\mathfrak{O}$ l'ensemble des suites de points ordonnée sur un arc d
 on notera $\ell\left(\wideparen{AOB}\right)$ ce nombre. 
 \end{defi}
 \begin{rema}
-    L'existence peut être assuré en trouvant un majorant de l'ensemble définit plus haut. Dans la suite on admettra l'existence de ce majorant. Un dessin ... 
+    L'existence peut être assuré en trouvant un majorant de l'ensemble défini plus haut. Dans la suite on admettra l'existence de ce majorant. Un dessin ... 
 \end{rema}
 \begin{prop}\label{prop-partiationarccercleetsum}
     Soit $\wideparen{AOC}$ un arc de cercle et $B\in \wideparen{AOC}$ alors on a la partition,
@@ -2225,19 +2236,19 @@ on notera $\ell\left(\wideparen{AOB}\right)$ ce nombre.
         \ell\left(\wideparen{AOC}\right) = \ell\left(\wideparen{AOB}\right)+\ell\left(\wideparen{BOC}\right)\,.
     \end{equation*}
 \begin{scheme}
-    La partition se déduit simplement de la partition des secteurs d'angles \ref{thm-incluspart}
+    La partition se déduit simplement de la partition des secteurs d'angle \ref{thm-incluspart}.
 
-    Enfin pour ce qui concerne la longueurs si $E$ est une suite de points ordonnée de $\wideparen{AOB}$, $F$ est une suite de points ordonnée de $\wideparen{BOC}$ alors on montre que $E\cup F$ est une suite de point ordonnée de suite de points ordonnée de $\wideparen{AOC}$ (cette partie est le point clée de la démonstration et repose sur la proposition des barreau transversaux \ref{prop-barrtrans} et le lemme des barreau transversaux \ref{lem-barrtrans}). Ce qui permet de montrer que,
+    Enfin pour ce qui concerne la longueur, si $E$ est une suite de points ordonnée de $\wideparen{AOB}$, $F$ est une suite de points ordonnée de $\wideparen{BOC}$ alors on montre que $E\cup F$ est une suite de point ordonnée de suite de points ordonnée de $\wideparen{AOC}$ (cette partie est le point clée de la démonstration et repose sur la proposition des barreau transversaux \ref{prop-barrtrans} et le lemme des barreau transversaux \ref{lem-barrtrans}). Ce qui permet de montrer que,
     $$\ell\left(\wideparen{AOB}\right)+\ell\left(\wideparen{BOC}\right) \leq  \ell\left(\wideparen{AOC}\right)_,.$$
 
-    Ensuite la partition permet de subdiviser une suite ordonné de points $G$ sur $\wideparen{AOC}$ en deux suite de points $E$ et $F$ qui sont des suites de points ordonnées sur $\wideparen{AOB}$ et $\wideparen{BOC}$ (a nouveau repose sur a proposition des barreau transversaux \ref{prop-barrtrans} et le lemme des barreau transversaux \ref{lem-barrtrans}). Ce qui permet de montrer que, $$ \ell\left(\wideparen{AOC}\right) \leq \ell\left(\wideparen{AOB}\right)+\ell\left(\wideparen{BOC}\right)\,.$$
+    Ensuite la partition permet de subdiviser une suite ordonnée de points $G$ sur $\wideparen{AOC}$ en deux suites de points $E$ et $F$ qui sont des suites de points ordonnées sur $\wideparen{AOB}$ et $\wideparen{BOC}$ (à nouveau repose sur la proposition des barreau transversaux \ref{prop-barrtrans} et le lemme des barreau transversaux \ref{lem-barrtrans}). Ce qui permet de montrer que, $$ \ell\left(\wideparen{AOC}\right) \leq \ell\left(\wideparen{AOB}\right)+\ell\left(\wideparen{BOC}\right)\,.$$
 \end{scheme}
 \end{prop}
 \begin{defi}[Mesure d'un secteur d'angle]
-    Dans un plan euclidien métré de segment unité $u$, pour tout secteur d'angle $s$ (de sommet $O$) et de demi-droite support $]d_A)$ et $]d_B)$, on appelle mesure de $s$ (noté $\mu(s)$) la mesure de l'arc de cercle $\wideparen{AOB}$ où $A$ est le point de $]d_A)$ tel que $[OA]\equiv s $ et $B$ est le point de $]d_B)$ tel que $[OB]\equiv s $.
+    Dans un plan euclidien métré de segment unité $u$, pour tout secteur d'angle $s$ (de sommet $O$) et de demi-droite support $]d_A)$ et $]d_B)$, on appelle mesure de $s$ (notée $\mu(s)$) la mesure de l'arc de cercle $\wideparen{AOB}$ où $A$ est le point de $]d_A)$ tel que $[OA]\equiv s $ et $B$ est le point de $]d_B)$ tel que $[OB]\equiv s $.
 \end{defi}
 \begin{prop}
-    Deux secteurs d'angle congruent on même mesure.
+    Deux secteurs d'angle congruents on même mesure.
 \begin{scheme}
     Conséquence immédiate du corollaire \ref{cor-congruimpliqueisom}
 \end{scheme}
@@ -2261,7 +2272,7 @@ on notera $\ell\left(\wideparen{AOB}\right)$ ce nombre.
 \begin{prop}
     Si deux secteurs d'angles on même mesure alors ils sont congruents.
 \begin{scheme}
-    On ramène le premier angle dans un des demi-plan du second avec l'isometrie canonique et on raisonne par l'absurde si la demi droite n'est pas envoyer sur l'autre alors on montre a l'aide de la propositions précédentes que les mesure sont différentes. Donc forcement les demi-droites correspondent. La congruance se déduit de la definition de l'application canonique.
+    On ramène le premier angle dans un des demi-plan du second avec l'isometrie canonique et on raisonne par l'absurde\,: si la demi-droite n'est pas envoyée sur l'autre alors on montre à l'aide de la proposition précédente que les mesures sont différentes. Donc forcément les demi-droites correspondent. La congruence se déduit de la définition de l'application canonique.
 \end{scheme}
 \end{prop}
 \begin{thm}
@@ -2271,9 +2282,9 @@ on notera $\ell\left(\wideparen{AOB}\right)$ ce nombre.
     
     \section{Angles et orientation}
 
-Au collège ou au lycée, la confusion entre angle et secteur d'angle est entretenue par les programmes officiels\,: le même mot \guil{angle} peut désigner un secteur d'angle (un lieu géométrique) ou une mesure d'angle (un nombre). L'égalité entre deux \guil{angles} sous-entendue par les élèves est celle de la mesure d'angle tandis que l'égalité des professeurs (non ignorants) et celles de la classe d'équivalence des secteurs d'angles sous relation d'isométrie. Autrement dit l'élève égalise deux \guil{angles} s'ils ont même mesure alors que le professeurs n'égalise ces \guil{angles} que s'il peut identifier un congruence entre le premier et le second.
+Au collège ou au lycée, la confusion entre angle et secteur d'angle est entretenue par les programmes officiels\,: le même mot \guil{angle} peut désigner un secteur d'angle (un lieu géométrique) ou une mesure d'angle (un nombre). L'égalité entre deux \guil{angles} sous-entendue par les élèves est celle de la mesure d'angle tandis que l'égalité des professeurs (non ignorants) et celles de la classe d'équivalence des secteurs d'angles sous relation d'isométrie. Autrement dit l'élève égalise deux \guil{angles} s'ils ont même mesure alors que le professeurs n'égalise ces \guil{angles} que s'il peut identifier une congruence entre le premier et le second.
 
-Nous avons dans les partie qui précèdent établit un grand nombre de résultat concernant les congruences entre secteurs d'angles. Il est pratique d'introduire alors les classes d'équivalences des secteurs d'angles sous la relation de congruence : l'angle.
+\replaced[id=LB]{Dans les parties qui précèdent, nous avons établi}{Nous avons dans les partie qui précèdent établit} un grand nombre de résultats \replaced[id=LB]{sur}{concernant} les congruences entre secteurs d'angles. Il est pratique d'introduire alors les classes d'équivalence des secteurs d'angles sous la relation de congruence\,: l'angle.
 
         \subsection{Angles}
 
@@ -2283,7 +2294,7 @@ Nous avons dans les partie qui précèdent établit un grand nombre de résultat
         \widehat{s} = \ensemble{s' \text{ secteurs d'angles}}{s' \equiv \, s}\,.
     \end{equation*}
     
-    Un angle $\mathcal{A}$ est alors un ensemble de secteur d'angle tel qu'il existe un secteur d'angle $s$ tel que $\mathcal{A}=\widehat{s}$. 
+    Un angle $\mathcal{A}$ est alors un ensemble de secteurs d'angle tel qu'il existe un secteur d'angle $s$ tel que $\mathcal{A}=\widehat{s}$. 
 \end{defi}
 
 \begin{thm}[Identité de l'angle et de sa mesure]
@@ -2302,43 +2313,43 @@ Inversement, pour tout nombre $\mu_0 \in ]0,\pi[$, il existe un unique angle $\m
 
         \subsection{Rotation du plan}
 
-\begin{defi}[Orientations respective des demi-plan orienté de même centre]
-On dira que les demi-plans orienté $\overrightarrow{\mathcal{P}}_1 = \left(\mathcal{P}_1,]d_1)\right)$ et $\overrightarrow{\mathcal{P}}_2 = \left(\mathcal{P}_2,]d_2)\right)$ de même centre $O$ sont orienté en même façon \ssi
+\begin{defi}[Orientations respectives des demi-plans orientés de même centre]
+On dira que les demi-plans orientés $\overrightarrow{\mathcal{P}}_1 = \left(\mathcal{P}_1,]d_1)\right)$ et $\overrightarrow{\mathcal{P}}_2 = \left(\mathcal{P}_2,]d_2)\right)$ de même centre $O$ sont orientés en même façon \ssi
 \begin{equation*}
     \mathcal{P}_1 \cap \mathcal{P}_2 %= s \quad \text{ou}\quad \mathcal{P}_1 \cap \mathcal{P}_2 = \bar{s}\,,
 \end{equation*}
-est un secteur d'angle saillant complémentaire de $\anglesaillant \left(O,]d_1),]d_2)\right)$. Sinon on dira qu'ils sont orienté différemment.
+est un secteur d'angle saillant complémentaire de $\anglesaillant \left(O,]d_1),]d_2)\right)$. Sinon on dira qu'ils sont orientés différemment.
 %où $s = \anglesaillant \left(O,]d_1),]d_2)\right)$ et $\bar{s}$ son secteur d'angle opposée par le sommet. 
 \end{defi}
 \begin{rema}
-    Si $\overrightarrow{\mathcal{P}}_1 = \left(\mathcal{P}_1,]d_1)\right)$ et $\overrightarrow{\mathcal{P}}_2 = \left(\mathcal{P}_2,]d_2)\right)$ sont orienté différemment alors,
+    Si $\overrightarrow{\mathcal{P}}_1 = \left(\mathcal{P}_1,]d_1)\right)$ et $\overrightarrow{\mathcal{P}}_2 = \left(\mathcal{P}_2,]d_2)\right)$ sont orientés différemment alors,
 \begin{equation*}
     \mathcal{P}_1 \cap \mathcal{P}_2 = s \quad \text{ou}\quad \mathcal{P}_1 \cap \mathcal{P}_2 = \bar{s}\,,
 \end{equation*}
-où $s = \anglesaillant \left(O,]d_1),]d_2)\right)$ et $\bar{s}$ son secteur d'angle opposée par le sommet. 
+où $s = \anglesaillant \left(O,]d_1),]d_2)\right)$ et $\bar{s}$ son secteur d'angle opposé par le sommet. 
 \end{rema}
 \begin{rema}
     La proposition \ref{prop-existetuniqueopposesommet} assure l'existence et l'unicité de $\bar{s}$
 \end{rema}
 
-\begin{prop}[Deux paires de plan orienté en même façon]\label{prop-pairsplanoriente}
-    Soit $]d_1)$ et $]d_2)$ deux demi-droites de même extrémité $O$. 
+\begin{prop}[Deux paires de plans orientés en même façon]\label{prop-pairsplanoriente}
+    Soient $]d_1)$ et $]d_2)$ deux demi-droites de même extrémité $O$. 
     
-    Notons $\mathcal{P}_1$ le demi plan de droite support $(d_1)$ contenant $]d_2)$ et $\bar{\mathcal{P}_1}$ l'autre, $\mathcal{P}_2$ le demi-plan de droite support $(d_2)$ ne contenant pas $]d_1)$ et $\bar{\mathcal{P}_2}$ l'autre.
+    Notons $\mathcal{P}_1$ le demi-plan de droite support $(d_1)$ contenant $]d_2)$ et $\bar{\mathcal{P}_1}$ l'autre, $\mathcal{P}_2$ le demi-plan de droite support $(d_2)$ ne contenant pas $]d_1)$ et $\bar{\mathcal{P}_2}$ l'autre.
 
-    Notons $\overrightarrow{\mathcal{P}}_1^+ = (\mathcal{P}_1,]d_1))$, $\overrightarrow{\mathcal{P}}_2^+ = (\mathcal{P}_2,]d_2))$, $\overrightarrow{\mathcal{P}}_1^- = (\bar{\mathcal{P}}_1,]d_1))$ et $\overrightarrow{\mathcal{P}}_2^- = (\bar{\mathcal{P}}_2,]d_2))$ les quatre plan orienté de centre $O$ qu'on peut construire avec les demi-droites $]d_1)$ et $]d_2)$. 
+    Notons $\overrightarrow{\mathcal{P}}_1^+ = (\mathcal{P}_1,]d_1))$, $\overrightarrow{\mathcal{P}}_2^+ = (\mathcal{P}_2,]d_2))$, $\overrightarrow{\mathcal{P}}_1^- = (\bar{\mathcal{P}}_1,]d_1))$ et $\overrightarrow{\mathcal{P}}_2^- = (\bar{\mathcal{P}}_2,]d_2))$ les quatre plan orientés de centre $O$ qu'on peut construire avec les demi-droites $]d_1)$ et $]d_2)$. 
 
     Alors,
     \begin{itemize}[$\bullet$]
-        \item $\overrightarrow{\mathcal{P}}_1^+$ et $\overrightarrow{\mathcal{P}}_2^+$ sont orienté en même façon,
-        \item $\overrightarrow{\mathcal{P}}_1^-$ et $\overrightarrow{\mathcal{P}}_2^-$ sont orienté en même façon,
-        \item tandis que $\overrightarrow{\mathcal{P}}_1^+$ et $\overrightarrow{\mathcal{P}}_2^-$ sont orienté différemment,
-        \item $\overrightarrow{\mathcal{P}}_1^-$ et $\overrightarrow{\mathcal{P}}_2^+$ sont orienté différemment.
+        \item $\overrightarrow{\mathcal{P}}_1^+$ et $\overrightarrow{\mathcal{P}}_2^+$ sont orientés en même façon,
+        \item $\overrightarrow{\mathcal{P}}_1^-$ et $\overrightarrow{\mathcal{P}}_2^-$ sont orientés en même façon,
+        \item tandis que $\overrightarrow{\mathcal{P}}_1^+$ et $\overrightarrow{\mathcal{P}}_2^-$ sont orientés différemment,
+        \item $\overrightarrow{\mathcal{P}}_1^-$ et $\overrightarrow{\mathcal{P}}_2^+$ sont orientés différemment.
     \end{itemize}
 \end{prop}
 
 \begin{defi}[Rotation]
-    Soit $]d_1)$ et $]d_2)$ deux demi-droite d'extrémité $O$. On reprend alors les notations de la proposition \ref{prop-pairsplanoriente}. On note également $]\bar{d_1})$ (respectivement $]\bar{d_2})$) la demi-droite ouverte supplémentaire de $]d_1)$ (respectivement $]d_2)$). 
+    Soient $]d_1)$ et $]d_2)$ deux demi-droite d'extrémité $O$. On reprend alors les notations de la proposition \ref{prop-pairsplanoriente}. On note également $]\bar{d_1})$ (respectivement $]\bar{d_2})$) la demi-droite ouverte supplémentaire de $]d_1)$ (respectivement $]d_2)$). 
 
     La rotation $R_{]d_1),]d_2)}$ envoyant $]d_1)$ sur $]d_2)$ est une application $R_{]d_1),]d_2)} : \mathcal{E} \to \mathcal{E}$ définie comme suit :
     \begin{equation*}
@@ -2353,7 +2364,7 @@ où $s = \anglesaillant \left(O,]d_1),]d_2)\right)$ et $\bar{s}$ son secteur d'a
     \end{equation*}
 \end{defi}
 \begin{thm}
-    Soit $]d_1)$ et $]d_2)$ deux demi-droite d'extrémité $O$ alors la rotation $R_{]d_1),]d_2)}$ envoyant $]d_1)$ sur $]d_2)$ est une Isométrie. 
+    Soient $]d_1)$ et $]d_2)$ deux demi-droites d'extrémité $O$\,; alors la rotation $R_{]d_1),]d_2)}$ envoyant $]d_1)$ sur $]d_2)$ est une isométrie. 
 \end{thm}
 
         \subsection{Translation}
@@ -2371,32 +2382,32 @@ où $s = \anglesaillant \left(O,]d_1),]d_2)\right)$ et $\bar{s}$ son secteur d'a
     L'axiome des parallèles \ref{axi-parra} assure l'univocité de cette application.
 \end{rema}
 \begin{thm}
-    Soit $A$ et $B$ deux points alors $\tau_{\vb{AB}}$ la translation envoyant $A$ sur $B$ est une isométrie. 
+    Soient $A$ et $B$ deux points alors $\tau_{\vb{AB}}$ la translation envoyant $A$ sur $B$ est une isométrie. 
 \end{thm}
 
         \subsection{Inégalité triangulaire et conséquences}
 
-Afin d'établir quelques propriétés essentiels des isométries qui nous servirons dans notre construction de la notion d'angle orienté, nous avons besoin d'un résultat essentiel : l'inégalité triangulaire. Celle-ci repose sur un série de Lemme:
+Afin d'établir quelques propriétés \deletb{essentielles} des isométries qui nous serviront dans notre construction de la notion d'angle orienté, nous avons besoin d'un résultat essentiel\,: l'inégalité triangulaire. Celle-ci repose sur un série de lemmes\,:
 
 %\begin{prop}\label{prop-rajlong}
 %    Soit $A,B$ et $C$ trois points alors $AB \leq AB + BC$.
 %\end{prop}
 
 \begin{thm}[Théorème de l'angle extérieur]
-    Soit $A,B$ et $C$ trois points distinct, alors dans le triangle $ABC$ la mesure de l'angle supplémentaire en $A$ est supérieur à l'angle en $A$ où en $B$.
+    Soient $A,B$ et $C$ trois points distincts, alors dans le triangle $ABC$ la mesure de l'angle supplémentaire en $A$ est supérieur à l'angle en $A$ où en $B$.
 % 4.12 dans le document pour les profs :https://publimath.univ-irem.fr/numerisation/LY/ILY98002/ILY98002.pdf
 \end{thm}
 
 \begin{lem}
-Dans un triangle, si deux cotés n'ont pas même mesure alors les angles des sommets opposés aux cotés correspondant sont également de mesure différentes. De plus au coté le plus long est opposé le secteur d'angle de plus grande mesure. 
+Dans un triangle, si deux côtés n'ont pas même mesure alors les angles des sommets opposés aux côtés correspondants sont également de mesures différentes. De plus au côté le plus long est opposé le secteur d'angle de plus grande mesure. 
 \end{lem}
 \begin{lem}\label{lem-i3}
-Dans un triangle, si deux angles au sommets sont de mesure différentes alors les cotés opposés au angles sommet correspondant sont également de mesure différentes. De plus à l'angle au sommet de plus grande mesure est opposée le cotés de plus grande mesure.  
+Dans un triangle, si deux angles aux sommets sont de mesures différentes alors les côtés opposés aux angles sommets correspondants sont également de mesures différentes. De plus à l'angle au sommet de plus grande mesure est opposé le côté de plus grande mesure.  
 \end{lem}
 
 
 \begin{thm}
-Soit $A,B$ et $C$ trois points, alors,
+Soient $A,B$ et $C$ trois points, alors,
 \begin{equation*}
 AB \leq AC + CD
 \end{equation*}
@@ -2406,13 +2417,13 @@ où l'égalité est réalisé uniquement si $C\in [AB]$,
 \end{equation*}
 
 \begin{proof}
-On commence avec le cas de trois points $A,B$ et $C$ non-alignés (distinct et tel que $C\notin (AB)$). 
+On commence avec le cas de trois points $A,B$ et $C$ non-alignés (distincts et tel que $C\notin (AB)$). 
 
-Notons $[d)$ la demi-droite fermé supplémentaire de la demi-droite ouverte $]CB)$ et notons (Axiome \ref{axi-C1}) l'unique point $D \in [d)$ tel que $CA\equiv CD$.  
+Notons $[d)$ la demi-droite fermée supplémentaire de la demi-droite ouverte $]CB)$ et notons (Axiome \ref{axi-C1}) l'unique point $D \in [d)$ tel que $CA\equiv CD$.  
 
-Par construction on a $B\star C \star D$ en effet les trois points appartenant à la même droite $(BC)$ respectent un alignement à trois points parmi trois possible (Axiome \ref{ax-B3}). Les deux autres possibles sont exclus du fait que $D \notin ]CB)$. 
+Par construction on a $B\star C \star D$. En effet, les trois points appartenant à la même droite $(BC)$ respectent un alignement à trois points parmi trois possible (Axiome \ref{ax-B3}). Les deux autres possibles sont exclus du fait que $D \notin ]CB)$. 
 
-Ainsi, $C \in ]DC[$ et donc (Prop. \ref{prop-barrtrans}) $C\in \anglesaillant \left( A,]AB),])AD)\right)$. Puis, en vertu de (Prop. \ref{thm-incluspart}) on a,
+Ainsi, $C \in ]DC[$ et donc (Prop. \ref{prop-barrtrans}) $C\in \anglesaillant \left( A,]AB),])AD)\right)$. Puis, en vertu de la proposition \ref{thm-incluspart}, on a,
 \begin{equation*}
 \anglesaillant \left( A,]AC),])AD)\right)\varsubsetneq \anglesaillant \left( A,]AB),])AD)\right)
 \end{equation*}
@@ -2425,12 +2436,12 @@ Or par construction $ACD$ est isocèle en $C$ et $]DC)=]DB)$ (car $C\in]BC[$) do
  \begin{align*}
 \anglesaillant \left( D,]DA),])DB)\right) \equiv \anglesaillant \left( D,]DA),])DC)\right)  \equiv \anglesaillant \left( A,]AC),])AD)\right) 
 \end{align*}
-et par compatibilité de la congruence avec relation d'ordre sur le secteurs d'angle,
+et par compatibilité de la congruence avec la relation d'ordre sur le secteurs d'angle,
 \begin{equation*}
     \anglesaillant \left( D,]DA),])DB)\right) < \anglesaillant \left( A,]AB),])AD)\right)\,.
 \end{equation*}
 
-En utilisant le Lemme \ref{lem-i3} dans le triangle $ABD$ (qui est non aplatit car sinon cela voudrai dire que $A\in (BD)=(BC)$ et on a pris $A,B$ et $C$ non alignés) et sur les angles au sommets $A$ et $D$ que,
+En utilisant le Lemme \ref{lem-i3} dans le triangle $ABD$ (qui est non aplati car sinon cela voudrait dire que $A\in (BD)=(BC)$, et on a pris $A,B$ et $C$ non alignés) et sur les angles au sommets $A$ et $D$ que,
 \begin{equation*}
 AB<BD
 \end{equation*}
@@ -2442,7 +2453,7 @@ AB < AC + CB\,.
 Dans le cas ou les points $A,B$ ou $C$ sont alignés il y a trois cas à considérer : 
 \begin{itemize}[$\bullet$]
 \item soit $A\star C \star B$ on  a $C \in ]AB[$ et donc (Prop. \ref{prop-addlong}) $AB = AC + CB$,
-\item soit $C\star A \star B$ alors $A\in ]CB[$ et donc (définitions \ref{def-ineqlong}) $AB < BC$.  Ce qui (Prop. \ref{prop-addlong}) implique $AB < BC \leq AC + CB $. Ainsi, $ AB < AC + CB$.
+\item soit $C\star A \star B$ alors $A\in ]CB[$ et donc (définitions \ref{def-ineqlong}) $AB < BC$.  Ce qui implique $AB < BC \leq AC + CB $  (Prop. \ref{prop-addlong}). Ainsi, $ AB < AC + CB$.
 \item soit  $A\star B \star C$, alors $B\in ]CA[$ et donc (définitions \ref{def-ineqlong}) $AB < AC$. De même (Prop. \ref{prop-addlong}) $AB < AC \leq AC + CB$. 
 \end{itemize}
 \end{proof}
@@ -2455,54 +2466,54 @@ Dans le cas ou les points $A,B$ ou $C$ sont alignés il y a trois cas à consid�
         \subsection{Secteur d'angle orienté}
 
 \begin{defi}[Secteurs d'angles orienté]
-    On appelle secteurs d'angles orienté les couples de demi-droite $o = \left(]d_1),]d_2)\right)$ de même extrémité. L'extrémité commune des demi-droite est appelé sommet de $o$.
+    On appelle secteurs d'angle orientés les couples de demi-droite $o = \left(]d_1),]d_2)\right)$ de même extrémité. L'extrémité commune des demi-droite est appelé sommet de $o$.
 \end{defi}
 \begin{rema}
-    Pour tout secteurs d'angle orienté $o = \left(]d_1),]d_2)\right)$ de sommet $O$, on notera $\anglesaillant o = \anglesaillant \left(]d_1),]d_2)\right)= \anglesaillant\left(O,]d_1),]d_2)\right)$.
+    Pour tout secteur d'angle orienté $o = \left(]d_1),]d_2)\right)$ de sommet $O$, on notera $\anglesaillant o = \anglesaillant \left(]d_1),]d_2)\right)= \anglesaillant\left(O,]d_1),]d_2)\right)$.
 \end{rema}
 \begin{defi}[Plan orienté associé à un angle orienté]
     Pour tout secteur d'angle orienté $\left(]d_1),]d_2)\right)$ on appelle demi-plan orienté associé le plan orienté $\overrightarrow{\mathcal{P}}=\left(\mathcal{P}_{(d_1),]d_2)},]d_1)\right)$.
 \end{defi}
-\begin{defi}[Orientation respective des secteurs d'angles orientés]
-    Deux secteurs d'angles orienté sont orienté en même façon \ssi leurs demi-plan orienté associé le sont. On dit qu'ils sont orienté différemment sinon. 
+\begin{defi}[Orientation respective des secteurs d'angle orientés]
+    Deux secteurs d'angle orientés sont orientés en même façon \ssi leurs demi-plans orientés associés le sont. \replaced[id=LB]{Sinon, on}{On} dit qu'ils sont orientés différemment\deletb{ sinon}. 
 \end{defi}
 \begin{prop}
-    La relation d'orientation respective entre secteurs d'angle orienté est une relation d'équivalence.
+    La relation d'orientation respective entre secteurs d'angle orientés est une relation d'équivalence.
 \end{prop}
 \begin{defi}[Plan orienté]
-L'espace euclidien $\mathcal{E}$ est dit orienté \ssi il est muni d'un secteurs d'angle orienté $r = \left(]d_I),]d_J)\right)$. On note $(\mathcal{E},r)$ l'espace euclidien orienté définit.
+L'espace euclidien $\mathcal{E}$ est dit orienté \ssi il est muni d'un secteur d'angle orienté $r = \left(]d_I),]d_J)\right)$. On note $(\mathcal{E},r)$ l'espace euclidien orienté défini.
 \end{defi}
 \begin{defi}[Orientation]
-Dans un plan euclidien orienté $(\mathcal{E},r)$ on dit que le secteur d'angle orienté $\left(]d_1),]d_2)\right)$ est orienté positivement \ssi $r$ et $\left(]d_1),]d_2)\right)$ sont orienté en même façon. Sinon on dira que l'angle orienté $\left(]d_1),]d_2)\right)$ est orienté negativement.
+Dans un plan euclidien orienté $(\mathcal{E},r)$ on dit que le secteur d'angle orienté $\left(]d_1),]d_2)\right)$ est orienté positivement \ssi $r$ et $\left(]d_1),]d_2)\right)$ sont orienté en même façon. Sinon on dira que l'angle orienté $\left(]d_1),]d_2)\right)$ est orienté négativement.
 \end{defi}
 
         \subsection{Angle orienté}
 
 \begin{defi}[Congruence entre angle orienté]
-Soit $o_1$ et $o_2$ deux secteurs d'angle orienté on dira que ces secteurs d'angles sont congruents \ssi $o_1$ et $o_2$ sont orienté en même façon et que $\anglesaillant o_1$ et $\anglesaillant o_2$ sont congruent. 
+Soient $o_1$ et $o_2$ deux secteurs d'angle orientés\,; on dira que ces secteurs d'angles sont congruents \ssi $o_1$ et $o_2$ sont orientés en même façon et que $\anglesaillant o_1$ et $\anglesaillant o_2$ sont congruents. 
 
 On notera également $\equiv$ cette relation.
 \end{defi}
 \begin{prop}
-    La relation de congruence entre secteurs d'angle orienté est une relation d'équivalence.
+    La relation de congruence entre secteurs d'angle orientés est une relation d'équivalence.
 \end{prop}
 \begin{defi}[Angle orienté]
-    Pour tout secteur d'angle orienté $o$ on appelle angle orienté $\widehat{o}$ de représentant $o$ la classe d'équivalence de $o$ sous la relation de congruence entre angle orienté, autrement dit,
+    Pour tout secteur d'angle orienté $o$ on appelle angle orienté $\widehat{o}$ de représentant $o$ la classe d'équivalence de $o$ sous la relation de congruence entre angles orientés, autrement dit,
     \begin{equation*}
-        \widehat{o} = \ensemble{o' \text{ secteurs d'angles orienté}}{o' \equiv \, o}\,.
+        \widehat{o} = \ensemble{o' \text{ secteurs d'angles orient\'es}}{o' \equiv \, o}\,.
     \end{equation*}
     
-    Un angle orienté $\mathcal{O}$ est alors un ensemble de secteur d'angle orienté tel qu'il existe un secteur d'angle orienté $o$ tel que $\mathcal{O}=\widehat{o}$. 
+    Un angle orienté $\mathcal{O}$ est alors un ensemble de secteurs d'angle orientés tel qu'il existe un secteur d'angle orienté $o$ tel que $\mathcal{O}=\widehat{o}$. 
 \end{defi}
 
         \subsection{Mesure des secteurs d'angles orientés}
 
 \begin{defi}[Mesure d'un angle orienté]
-    Dans un plan euclidien orienté $(\mathcal{E},r)$ la mesure du secteurs d'angle orienté $o$ est,
+    Dans un plan euclidien orienté $(\mathcal{E},r)$ la mesure du secteur d'angle orienté $o$ est,
     \begin{equation*}
         \mu(o) = \pm \mu\left(\anglesaillant o\right)
     \end{equation*}*
-    où $\pm = +$ si $r$ et $o$ sont orienté en même façon et $\pm = -$ sinon.
+    où $\pm = +$ si $r$ et $o$ sont orientés en même façon et $\pm = -$ sinon.
 \end{defi}
 \begin{thm}
     Soit $\mathcal{O}$ un angle orienté, alors il existe $\mu_0\in ]-\pi,\pi[$ tel que pour tout $o\in \mathcal{O}$ on a $\mu(o)=\mu_0$. On appellera alors mesure de $\mathcal{O}$ le nombre $\mu_0$. On note alors $\mu\left(\mathcal{O}\right)$ la mesure de l'angle orienté $\mathcal{O}$.  

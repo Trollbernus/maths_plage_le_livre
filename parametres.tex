@@ -398,11 +398,13 @@
   \newtheorem*{prop*}{Propriété}
   \newtheorem*{conj*}{Conjecture}
 
-% coloration et numérotation spéciale pour les axiomes
+
+
+% mettre les axiomes en boîte grise
 \usepackage[many]{tcolorbox}
-\newtheorem{axi}{Axiome}[subsection]
+\newtheorem{axi}{Axiome}[section]
 \tcolorboxenvironment{axi}{
-  colback=grey,
+  % colback=, % le gris clair est déjà la couleur par défaut
   boxrule=0pt,
   boxsep=0pt,
   left=4pt,right=4pt,top=4pt,bottom=4pt,
@@ -411,10 +413,13 @@
   before skip=\topsep,
   after skip=\topsep,
 }
-\newcounter{serieaxiom}
-\setcounter{serieaxiom}{1}
-\newcounter{axinum}
-\setcounter{axinum}{1}
-\renewcommand{\theaxi}{\Alph{serieaxiom}.\arabic{axi}}
+% remarque : les paramètres de numérotation spéciale des axiomes ont été définis dans le fichier "2-Angles.tex" afin de ne pas avoir les mêmes numéros d'axiomes dans différents chapitres.
+
+% pour pas avoir le texte en italique
+\theoremstyle{definition}
+\newtheorem{rema}{Remarque}[section]
+\newtheorem{exo}{Exercice}[section]
+\newtheorem*{scheme}{Schème}
+
 
 %\theorembodyfont{\upshape}

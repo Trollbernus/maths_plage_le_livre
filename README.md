@@ -9,7 +9,7 @@ Pour compiler juste une fois : en raison du paquet ```minted```, il faut compile
 
 Structure du fichier
 --------------------
-```main.tex``` est le fichier exécuté.
+```main.tex``` est le fichier compilé.
 
 Le dossier ```broutilles/``` contient les broutilles suivantes :
 ```titre.tex``` est la page de titre.
@@ -19,6 +19,6 @@ Les dossiers ```classicthesis/``` et ```titlesec/``` contiennent des paquets "no
 
 ```parametres.tex``` contient la liste des paquets ainsi que des commandes utiles.
 
-Les chapitres sont appelés par la commande ```\input{fichier.tex}```.
+Les chapitres sont appelés par la commande ```\input{fichier}``` (l'extension n'est pas incluse dans la commande).
 
 
