@@ -104,7 +104,7 @@
 		\begin{thm}
 			Soit $r/q$ la fraction irréductible d'un nombre rationnel. Alors ce nombre est décimal si et seulement si $q$ peut s'écrire sous la forme $2^k5^\ell$ où $k$ et $\ell$ sont des nombres entiers naturels. En langage plus formel\,:
 			\begin{equation}
-				\frac{r}{q}\in\D \Leftrightarrow \exists k,\ell\in\N, q=2^k5^\ell.
+				\mathrm{pgcd}(r,q)=1\Rightarrow\(\frac{r}{q}\in\D \Leftrightarrow \exists k,\ell\in\N, q=2^k5^\ell\).
 			\end{equation}
 		\end{thm}
 		\begin{proof}
@@ -112,7 +112,7 @@
 			
 			\noindent\emph{Première démonstration\,: double inclusion.}
 
-			Soit $\D_0$ l'ensemble des nombres qui peuvent s'écrire sous la forme $\frac{a}{2^k5^\ell}$, où $a\in\Z, k,\ell\in\N$. Nous allons montrer que $\D_0=\D$. Pour montrer que deux ensembles sont égaux, il faut montrer que l'un est inclus dans l'autre et que l'autre est inclus dans l'un. Formellement, il faut donc montrer que $\D_0=\D\Leftrightarrow (\D\subset\D_0\wedge\D_0\subset\D)$. Alors, on aura démontré que tout nombre dans $\D$ peut s'écrire comme le demande le théorème, et que tout  nombre écrit comme le demande le théorème est bien un nombre décimal.
+			Soit $\D_0$ l'ensemble des nombres qui peuvent s'écrire sous la forme $\frac{a}{2^k5^\ell}$, où $a\in\Z, k,\ell\in\N$. Nous allons montrer que $\D_0=\D$. Pour montrer que deux ensembles sont égaux, il faut montrer que l'un est inclus dans l'autre et que l'autre est inclus dans l'un. Formellement, il faut donc montrer que $\D\subset\D_0\wedge\D_0\subset\D$. Alors, on aura démontré que tout nombre dans $\D$ peut s'écrire comme le demande le théorème, et que tout  nombre écrit comme le demande le théorème est bien un nombre décimal.
 
 			Démontrons que $\D_0\subset\D$. Soit un nombre $x$, arbitraire, appartenant à $\D_0$\,; nous allons démontrer qu'il appartient aussi à $\D$. Comme $x\in\D_0$, on peut écrire $x=\frac{a}{2^k5^\ell}$. Mais\,:
 			\begin{equation}
@@ -120,7 +120,7 @@
 			\end{equation}
 			le numérateur étant un nombre entier et le dénominateur une puissance de dix, on a bien $x\in\D$. Donc $\D_0\subset\D$.
 
-			Démontrons maintenant que $\D\subset\D_0$. Soit $y\in\D_0$\,; on peut écrire $y=\frac{b}{10^n}$ où $b\in\Z$ et $n\in\N$. Alors\,:
+			Démontrons maintenant que $\D\subset\D_0$. Soit $y\in\D$\,; on peut écrire $y=\frac{b}{10^n}$ où $b\in\Z$ et $n\in\N$. Alors\,:
 			\begin{equation}
 				y=\frac{b}{10^n}=\frac{b}{(2\times 5)^n}=\frac{b}{2^n5^n}
 			\end{equation}

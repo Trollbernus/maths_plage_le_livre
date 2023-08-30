@@ -264,184 +264,162 @@
 
 
 
-	\section{Résolution graphique}
+\chapter{Résolution graphique des équations}
 
-		\subsection{Repère cartésien}
-			Descartes a démocratisé le lien entre la géométrie et l'algèbre, avec ce qu'on appelle aujourd'hui les \emph{repères cartésiens}. Nous allons  présenter le repère le plus utile qui soit, le repère cartésien orthogonal. Nous utiliserons une présentation semi-intuitive comme celle de Descartes\footnote{La théorie axiomatique des nombres réels sera abordée dans une future leçon.}.
+	\section{Repère cartésien}
+		Descartes a démocratisé le lien entre la géométrie et l'algèbre, avec ce qu'on appelle aujourd'hui les \emph{repères cartésiens}. Nous allons  présenter le repère le plus utile qui soit, le repère cartésien orthogonal. Nous utiliserons une présentation semi-intuitive comme celle de Descartes\footnote{La théorie axiomatique des nombres réels sera abordée dans une future leçon.}.
 
-			Considérons une droite. Plaçons un point arbitraire $O$ sur cette droite, ainsi qu'un autre point arbitraire nommé $I$. Le premier point sera appelé {\bfseries l'origine} du repère alors que le deuxième point permettra de définir {\bfseries l'unité de mesure des distance}. En effet, nous venons de créer une unité de mesure, et nous poserons que la distance $OI$ sera égale à l'unité.
-			Une telle droite a plusieurs noms dans les livres de mathématiques; pour l'heure nous la nommerons \emph{droite graduée}.
+		Considérons une droite. Plaçons un point arbitraire $O$ sur cette droite, ainsi qu'un autre point arbitraire nommé $I$. Le premier point sera appelé {\bfseries l'origine} du repère alors que le deuxième point permettra de définir {\bfseries l'unité de mesure des distance}. En effet, nous venons de créer une unité de mesure, et nous poserons que la distance $OI$ sera égale à l'unité.
+		Une telle droite a plusieurs noms dans les livres de mathématiques; pour l'heure nous la nommerons \emph{droite graduée}.
 
-			Plaçons un point $A$ de manière arbitraire sur la droite. Nous allons définir de manière unique un nombre qui permettra de repérer ce point sur la droite. Ce nombre, souvent noté $x$, est l'abscisse du point $M$. Il est défini comme suit\,:
-			\begin{itemize}[$\bullet$]
-				\item Si $M$ est du même côté que\footnote{La notion \guil{du même côté que} sera définie formellement dans le chapitre de trigonométrie.} $I$ par rapport à $O$, $x=\frac{OM}{OI}$ (illustration ci-dessous).
+		Plaçons un point $A$ de manière arbitraire sur la droite. Nous allons définir de manière unique un nombre qui permettra de repérer ce point sur la droite. Ce nombre, souvent noté $x$, est l'abscisse du point $M$. Il est défini comme suit\,:
+		\begin{itemize}[$\bullet$]
+			\item Si $M$ est du même côté que\footnote{La notion \guil{du même côté que} sera définie formellement dans le chapitre de trigonométrie.} $I$ par rapport à $O$, $x=\frac{OM}{OI}$ (illustration ci-dessous).
 
-				\includegraphics[width=0.6\textwidth]{image/calcul/point1d1.png}
-				\item Sinon, $x=-\frac{OM}{OI}$ (illustration ci-dessous). 
+			\includegraphics[width=0.6\textwidth]{image/calcul/point1d1.png}
+			\item Sinon, $x=-\frac{OM}{OI}$ (illustration ci-dessous). 
 
-				\includegraphics[width=0.6\textwidth]{image/calcul/point1d2.png}
-			\end{itemize}
-
-
-
-			En deux dimensions, il faut ajouter un deuxième axe qui coupe le premier. Le plus simple est de prendre un axe perpendiculaire au premier, qui le coupe en $O$. Ensuite, nous choisissons un point $J$ tel que $OI=OJ$ pour avoir la même unité de mesure dans les deux axes\footnote{Ce n'est pas une obligation. Les deux axes pourraient même avoir des origines différentes. Mais nous commençons par présenter le cas le plus simple.}. Un tel repère est appelé \emph{Repère orthonormé}. Si nous choisissons de mettre le point $I$ \guil{vers la droite} et le point $J$ \guil{vers le haut}, on dit que le repère est \emph{direct}, sinon il est \emph{indirect}\footnote{Il s'agit de l'orientation du repère. Plus rigoureusement\,: si les points $O$, $I$, $J$, dans cet odre, tournent dans le sens anti-horaire, alors le repère est direct. Sinon il est indirect. L'orientation sera définie formellement dans le chapitre de trigonométrie.}. Ayant construit une deuxième droite graduée, on peut y placer un autre point, $B$ également repréré par une autre abscisse, le nombre $y$. Mais en général, pour le deuxième axe, on préfère parler d'\emph{ordonnée} plutôt que d'abscisse, afin d'éviter de confondre les deux. 
-			Muni de ces deux nombres $(x,y)$, on peut construire un point du plan, le point $M$, qui sera l'unique point tel que $OAMB$ est un rectangle. 
-
-			Réciproquement, si l'on se donne un point du plan $M$, alors on pourra trouver de manière univoque son abscisse $x$ et son ordonnée $y$. Pour ce faire, il suffit de tirer la droite perpendiculaire à $(OI)$ passant par $M$\,; cette droite coupe $(OI)$ en $A$ et $x$ n'est autre que l'abscisse de $A$. De même pour $y$ en prenant la perpendiculaire à $(OJ)$ passant par $M$.
-
-			Les nombres $(x,y)$ regroupés dans un couple sont les {\bfseries coordonnés cartésiennes} du point $M$.
-
-			Nous  illustrons cela ci-dessous\,:
-
-			\vspace{0.2cm}
-
-			\includegraphics[width=0.4\textwidth]{image/calcul/point2d.png}			
-
-			Notez que d'après le théorème de Pythagore, si le point $M$ est repéré par les coordonnées $(x,y)$ et $N$ par les coordonnées $(x',y')$, alors la distance $MN$ se calcule ainsi\,:
-			\begin{equation}
-				MN=\sqrt{(x-x')^2+(y-y')^2}
-			\end{equation}
-
-			\includegraphics[width=0.7\textwidth]{image/calcul/point2dpyth.png}
+			\includegraphics[width=0.6\textwidth]{image/calcul/point1d2.png}
+		\end{itemize}
 
 
-		\subsection{Courbe d'une fonction}
-			Maintenant que nous savons repérer un point quelconque dans le plan, imaginons que nous fassions varier $x$ et $y$ continument dans le temps. Imaginons que le point $M$ soit au préalable plongé dans de l'encre et qu'il laisse une trace. Alors le résultat sera une ligne tracée sur le plan, que l'on a coutûme d'appeler \emph{courbe}\footnote{Bien qu'elle ne soit pas forcément courbée. Ainsi, les droites sont aussi des \guil{courbes}\,!}. Il existe de nombreuses façons de construire des courbes et nous ne les aborderons pas toutes. La manière la plus simple de construire des courbes est de considérer que les quantités $x$ et $y$ ont une relation de dépendance, et en particulier, que $y$ dépend de $x$. On écrira que $y=f(x)$, sous-entendu, que $y$ est fonction de $x$. Notez que $f(x)$ se lit \guil{$f$ de $x$} (le choix de la lettre $f$ correspond au mot \guil{fonction}, mais il est possible de prendre n'importe quelle autre lettre). De là, il suffit de faire varier le nombre $x$ et, pour chaque valeur connue de $x$, il suffit de calculer le nombre $y$ correspondant. On obtient un tableau qui regroupe de nombreuses coordonnées du point mobile, et il suffit de les tracer et de les relier plus ou moins continument pour obtenir quelque chose qui ressemble à une courbe.
 
-			Essayons par exemple de tracer la courbe dont les coordonnées vérifient $y=x^2$. Ici, nous avons donc $c(x)=x^2$ (le choix de la lettre $c$ vient du fait que le processus de cette fonction consiste à élever le nombre $x$ en son carré, $x^2$). En théorie, $x$ varie de moins l'infini jusqu'à plus l'infini, mais la taille du papier n'étant pas infinie, nous allons restreindre le domaine de variation du nombre $x$. Nous partirons de $x=-2$ et nous irons jusqu'à $x=+2$ par exemple. Alors, il faut remplir le tableau suivant\,:
+		En deux dimensions, il faut ajouter un deuxième axe qui coupe le premier. Le plus simple est de prendre un axe perpendiculaire au premier, qui le coupe en $O$. Ensuite, nous choisissons un point $J$ tel que $OI=OJ$ pour avoir la même unité de mesure dans les deux axes\footnote{Ce n'est pas une obligation. Les deux axes pourraient même avoir des origines différentes. Mais nous commençons par présenter le cas le plus simple.}. Un tel repère est appelé \emph{Repère orthonormé}. Si nous choisissons de mettre le point $I$ \guil{vers la droite} et le point $J$ \guil{vers le haut}, on dit que le repère est \emph{direct}, sinon il est \emph{indirect}\footnote{Il s'agit de l'orientation du repère. Plus rigoureusement\,: si les points $O$, $I$, $J$, dans cet odre, tournent dans le sens anti-horaire, alors le repère est direct. Sinon il est indirect. L'orientation sera définie formellement dans le chapitre de trigonométrie.}. Ayant construit une deuxième droite graduée, on peut y placer un autre point, $B$ également repréré par une autre abscisse, le nombre $y$. Mais en général, pour le deuxième axe, on préfère parler d'\emph{ordonnée} plutôt que d'abscisse, afin d'éviter de confondre les deux. 
+		Muni de ces deux nombres $(x,y)$, on peut construire un point du plan, le point $M$, qui sera l'unique point tel que $OAMB$ est un rectangle. 
 
-			\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
-				\hline
-				$x$     &$  -2 $&$ -1.8 $&$ -1.6 $&$ -1.4 $&$ -1.2 $&$ -1 $&$ -0.8 $&$ -0.6 $&$ -0.4 $&$ -0.2 $\\
-				\hline
-				$y=x^2$ &       &         &       &        &        &      &         &       &         &        \\
-				\hline
-			\end{tabular}
+		Réciproquement, si l'on se donne un point du plan $M$, alors on pourra trouver de manière univoque son abscisse $x$ et son ordonnée $y$. Pour ce faire, il suffit de tirer la droite perpendiculaire à $(OI)$ passant par $M$\,; cette droite coupe $(OI)$ en $A$ et $x$ n'est autre que l'abscisse de $A$. De même pour $y$ en prenant la perpendiculaire à $(OJ)$ passant par $M$.
 
-			\vspace{0.3cm}
+		Les nombres $(x,y)$ regroupés dans un couple sont les {\bfseries coordonnés cartésiennes} du point $M$.
 
-			\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
-				\hline
-				$x$     &$  0 $&$ 0.2    $&$ 0.4 $&$ 0.6  $&$ 0.8  $&$ 1   $&$1.2    $&$ 1.4 $&$ 1.6   $&$ 1.8  $& 2\\
-				\hline
-				$y=x^2$ &       &         &       &        &        &      &         &       &         &        & \\
-				\hline
-			\end{tabular}
+		Nous  illustrons cela ci-dessous\,:
 
-\iffalse
+		\vspace{0.2cm}
 
-			\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
-				\hline
-				$x$     &$  -2 $&$ -1.8 $&$ -1.6 $&$ -1.4 $&$ -1.2 $&$ -1 $&$ -0.8 $&$ -0.6 $&$ -0.4 $&$ -0.2 $\\
-				\hline
-				$y=x^2$ &   4   & $3.24$ &$2.56$  &$1.96$  &$ 1.44$ & $1$  &$0.64$  &$0.64$  &$0.16$  &$0.04$   \\
-				\hline
-			\end{tabular}
+		\includegraphics[width=0.4\textwidth]{image/calcul/point2d.png}			
 
-			\vspace{0.3cm}
+		Notez que d'après le théorème de Pythagore, si le point $M$ est repéré par les coordonnées $(x,y)$ et $N$ par les coordonnées $(x',y')$, alors la distance $MN$ se calcule ainsi\,:
+		\begin{equation}
+			MN=\sqrt{(x-x')^2+(y-y')^2}
+		\end{equation}
 
-			\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
-				\hline
-				$x$     &$  0 $&$ 0.2    $&$ 0.4 $&$ 0.6  $&$ 0.8  $&$ 1   $&$1.2    $&$ 1.4 $&$ 1.6   $&$ 1.8  $& 2\\
-				\hline
-				$y=x^2$ &$0$   &$0.04$    &$0.16$ &$0.36$  &$0.64$  &$1$    &$1.44$   &$1.96$ &$2.56$   &$3.24$  &$4$ \\
-				\hline
-			\end{tabular}
-\fi
+		\includegraphics[width=0.7\textwidth]{image/calcul/point2dpyth.png}
 
 
-			Pour la première case vide, il faut effectuer le calcul suivant en remplaçant $x$ par la valeur annoncée\,: $y=x^2=(-2)^2=(-2)\times(-2)=+4$. Et ainsi de suite pour toutes les autres cases. Souvent, on utilise des logiciels pour automatiser la procédure. Geogebra le fait automatiquement, et calcule beaucoup plus de valeurs que dans ce simple tableau, ce qui donne l'illusion d'une belle courbe continue. Nous, nous allons utiliser le tableur\,:
+	\section{Courbe d'une fonction}
+		Maintenant que nous savons repérer un point quelconque dans le plan, imaginons que nous fassions varier $x$ et $y$ continument dans le temps. Imaginons que le point $M$ soit au préalable plongé dans de l'encre et qu'il laisse une trace. Alors le résultat sera une ligne tracée sur le plan, que l'on a coutûme d'appeler \emph{courbe}\footnote{Bien qu'elle ne soit pas forcément courbée. Ainsi, les droites sont aussi des \guil{courbes}\,!}. Il existe de nombreuses façons de construire des courbes et nous ne les aborderons pas toutes. La manière la plus simple de construire des courbes est de considérer que les quantités $x$ et $y$ ont une relation de dépendance, et en particulier, que $y$ dépend de $x$. On écrira que $y=f(x)$, sous-entendu, que $y$ est fonction de $x$. Notez que $f(x)$ se lit \guil{$f$ de $x$} (le choix de la lettre $f$ correspond au mot \guil{fonction}, mais il est possible de prendre n'importe quelle autre lettre). De là, il suffit de faire varier le nombre $x$ et, pour chaque valeur connue de $x$, il suffit de calculer le nombre $y$ correspondant. On obtient un tableau qui regroupe de nombreuses coordonnées du point mobile, et il suffit de les tracer et de les relier plus ou moins continument pour obtenir quelque chose qui ressemble à une courbe.
 
-			\noindent\includegraphics[width=\textwidth]{image/calcul/valfctcar.png}
+		Essayons par exemple de tracer la courbe dont les coordonnées vérifient $y=x^2$. Ici, nous avons donc $c(x)=x^2$ (le choix de la lettre $c$ vient du fait que le processus de cette fonction consiste à élever le nombre $x$ en son carré, $x^2$). En théorie, $x$ varie de moins l'infini jusqu'à plus l'infini, mais la taille du papier n'étant pas infinie, nous allons restreindre le domaine de variation du nombre $x$. Nous partirons de $x=-2$ et nous irons jusqu'à $x=+2$ par exemple. Alors, il faut remplir le tableau suivant\,:
 
-			Pour obtenir ce tableau, il suffit de rentrer -2 en B1, puis de rentrer en C1\,: \mintinline{python}{=B+0,2} et d'étendre jusqu'à ce qu'on atteigne le nombre 2. Ensuite, il suffit de rentrer en B2 la formule\,: \mintinline{python}{=B1*B1} et d'étendre.
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+			\hline
+			$x$     &$  -2 $&$ -1.8 $&$ -1.6 $&$ -1.4 $&$ -1.2 $&$ -1 $&$ -0.8 $&$ -0.6 $&$ -0.4 $&$ -0.2 $\\
+			\hline
+			$y=x^2$ &       &         &       &        &        &      &         &       &         &        \\
+			\hline
+		\end{tabular}
 
-			Nous obtenons alors le \emph{tableau de valeurs de la fonction carré}. Pour tracer ceci, il faut placer chaque couple abscisse/ordonnée dans le plan. Par exemple, lorsque $x=2$, on a $c(x)=4$. Ainsi, il faudra placer un point dont les coordonnées sont $(2;4)$. On fait de même avec les autres points, ce qui donne une idée du graphe de la courbe.
+		\vspace{0.3cm}
 
-			\includegraphics[width=0.9\textwidth]{image/calcul/courbe_fct_car.png}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+			\hline
+			$x$     &$  0 $&$ 0.2    $&$ 0.4 $&$ 0.6  $&$ 0.8  $&$ 1   $&$1.2    $&$ 1.4 $&$ 1.6   $&$ 1.8  $& 2\\
+			\hline
+			$y=x^2$ &       &         &       &        &        &      &         &       &         &        & \\
+			\hline
+		\end{tabular}
 
-		\subsection{Modélisation et résolution graphiques d'une équation}
+		Pour la première case vide, il faut effectuer le calcul suivant en remplaçant $x$ par la valeur annoncée\,: $y=x^2=(-2)^2=(-2)\times(-2)=+4$. Et ainsi de suite pour toutes les autres cases. Souvent, on utilise des logiciels pour automatiser la procédure. Geogebra le fait automatiquement, et calcule beaucoup plus de valeurs que dans ce simple tableau, ce qui donne l'illusion d'une belle courbe continue. Nous, nous allons utiliser le tableur\,:
 
-			Une équation du premier degré d'inconnue $x$ peut toujours se mettre sous la forme $f(x)=g(x)$ où $f(x)=ax+b$ et $g(x)=cx+d$ où $a$, $b$, $c$, et $d$ sont des nombres fixés. Si on n'aime pas le calcul, il suffit de tracer les graphes des fonctions $f$ et $g$ et de visualiser où les courbes se coupent. Lorsqu'il y a une unique solution, on a affaire à des droites qui se coupent en un point de coordonnées $(x;y)$. L'abscisse $x$ de ce point est la solution de cette équation. Il suffit donc de lire l'abscisse du point solution sur l'axe des abscisse.
+		\noindent\includegraphics[width=\textwidth]{image/calcul/valfctcar.png}
 
-			\begin{exo}
-				On considère une voiture sur une autoroute rectiligne se déplaçant à la vitesse $v=130$km/h. On modélise la route par une droite graduée d'origine $O$. La droite est orientée dans le sens du mouvement de la voiture. On note $x(t)$ l'abscisse de la voiture à la date $t$ ; ce nombre représente la position de la voiture sur la droite. On suppose qu'à $t=0$, la voiture passe par $O$.
-				\begin{enumerate}
-					\item Démontrer que $x(t)=v t$.
-					\item Convertir $v$ en m/s.
-					\item Compléter le tableau suivant\,:
+		Pour obtenir ce tableau, il suffit de rentrer -2 en B1, puis de rentrer en C1\,: \mintinline{python}{=B+0,2} et d'étendre jusqu'à ce qu'on atteigne le nombre 2. Ensuite, il suffit de rentrer en B2 la formule\,: \mintinline{python}{=B1*B1} et d'étendre.
 
-					\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c}
-						t (s) & -5 & -4& -3& -2& -1& 0& 1& 2& 3& 4& 5 \\
-						\hline
-						x(t) (m)& &   &   &    &   &  &  &  &  &  &  
-					\end{tabular}
+		Nous obtenons alors le \emph{tableau de valeurs de la fonction carré}. Pour tracer ceci, il faut placer chaque couple abscisse/ordonnée dans le plan. Par exemple, lorsque $x=2$, on a $c(x)=4$. Ainsi, il faudra placer un point dont les coordonnées sont $(2;4)$. On fait de même avec les autres points, ce qui donne une idée du graphe de la courbe.
 
-					\item Tracer le graphe de la fonction $x:t\mapsto x(t)$. Commenter cette courbe. Y avait-il besoin d'autant de points que de colonnes dans le tableau précedent pour tracer la courbe\,?
-					%\item Calculer l'angle que fait la courbe avec l'axe des abscisses.
-					\item Une autre voiture se déplace dans le sens opposé à la première, à la vitesse\\ $v'=110$km/h, et à $t=0$, elle se situe à $d=200$m de la première voiture. On note $y(t)$ son abscisse à la date $t$. Démontrer que $y(t)=-v't+d$. 
-					\item Tracer le graphe de la fonction $y$. 
-					\item Calculer la date à laquelle les voitures se croiseront. Vérifier la cohérence avec la lecture graphique de la solution.
+		\includegraphics[width=0.9\textwidth]{image/calcul/courbe_fct_car.png}
 
+	\section{Modélisation et résolution graphiques d'une équation}
 
-				\end{enumerate}
-			\end{exo}
+		Une équation du premier degré d'inconnue $x$ peut toujours se mettre sous la forme $f(x)=g(x)$ où $f(x)=ax+b$ et $g(x)=cx+d$ où $a$, $b$, $c$, et $d$ sont des nombres fixés. Si on n'aime pas le calcul, il suffit de tracer les graphes des fonctions $f$ et $g$ et de visualiser où les courbes se coupent. Lorsqu'il y a une unique solution, on a affaire à des droites qui se coupent en un point de coordonnées $(x;y)$. L'abscisse $x$ de ce point est la solution de cette équation. Il suffit donc de lire l'abscisse du point solution sur l'axe des abscisse.
 
-			\textit{Solution.} 
+		\begin{exo}
+			On considère une voiture sur une autoroute rectiligne se déplaçant à la vitesse $v=130$km/h. On modélise la route par une droite graduée d'origine $O$. La droite est orientée dans le sens du mouvement de la voiture. On note $x(t)$ l'abscisse de la voiture à la date $t$ ; ce nombre représente la position de la voiture sur la droite. On suppose qu'à $t=0$, la voiture passe par $O$.
 			\begin{enumerate}
-				\item $v=d/t$ donc $d=vt$.
-				\item $1$km$=1000$m et $1$h=$60$min$=60\times 60$s=$3600$s. De là, on tire $1$km/h $=\frac{1\text{km}}{1\text{h}}=\frac{1000\text{m}}{3600\text{s}}=\frac{1}{3.6}$m/s. Donc, 130km/h$=130\times 1/3.6$m/s$\approx 36$m/s.
-				\item 
+				\item Démontrer que $x(t)=v t$.
+				\item Convertir $v$ en m/s.
+				\item Compléter le tableau suivant\,:
 
 				\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c}
-					$t$ (s) &$     -5 $&$    -4$&$  -3 $&$   -2 $&$ -1$&$ 0$&$ 1 $&$  2 $&$ 3$&$ 4  $&$ 5 $\\
+					t (s) & -5 & -4& -3& -2& -1& 0& 1& 2& 3& 4& 5 \\
 					\hline
-					$x(t)$ (m)&$-180.6 $&$ -144 $&$-108 $&$ -72  $&$-36$&$ 0$&$ 36$&$ 72 $&$108$&$ 144 $& $180.6$ 
+					x(t) (m)& &   &   &    &   &  &  &  &  &  &  
 				\end{tabular}
-				\item La courbe est une droite qui passe par l'origine du repère. Un seul point différent de l'origine aurait suffi à tracer la droite.
-				\item On sait qu'à $t=0$, la voiture est à la distance $d$ de la première, dans le sens positif. Donc $y(0)=d$. En suite, la deuxième voiture s'éloigne de cette position à la vitesse $v$, dans le sens négatif, donc l'écart $y(t)-y(0)$ mesure $-v't$. En substituant, cela nous donne $y(t)-d=-vt$, d'où $y(t)=-vt+d$.
+
+				\item Tracer le graphe de la fonction $x:t\mapsto x(t)$. Commenter cette courbe. Y avait-il besoin d'autant de points que de colonnes dans le tableau précedent pour tracer la courbe\,?
+				%\item Calculer l'angle que fait la courbe avec l'axe des abscisses.
+				\item Une autre voiture se déplace dans le sens opposé à la première, à la vitesse\\ $v'=110$km/h, et à $t=0$, elle se situe à $d=200$m de la première voiture. On note $y(t)$ son abscisse à la date $t$. Démontrer que $y(t)=-v't+d$. 
+				\item Tracer le graphe de la fonction $y$. 
+				\item Calculer la date à laquelle les voitures se croiseront. Vérifier la cohérence avec la lecture graphique de la solution.
+
 
 			\end{enumerate}
+		\end{exo}
 
-			\begin{exo}
-				On rappelle l'axiome de distributivité du produit\,: 
+		\textit{Solution.} 
+		\begin{enumerate}
+			\item $v=d/t$ donc $d=vt$.
+			\item $1$km$=1000$m et $1$h=$60$min$=60\times 60$s=$3600$s. De là, on tire $1$km/h $=\frac{1\text{km}}{1\text{h}}=\frac{1000\text{m}}{3600\text{s}}=\frac{1}{3.6}$m/s. Donc, 130km/h$=130\times 1/3.6$m/s$\approx 36$m/s.
+			\item 
 
-				\begin{axi}[Distributivité de $\times$ par rapport à $+$]
-					Pour tous $a,b,c$ nombres, on a $a(b+c)=a b+ a c$.
-				\end{axi}	
+			\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c}
+				$t$ (s) &$     -5 $&$    -4$&$  -3 $&$   -2 $&$ -1$&$ 0$&$ 1 $&$  2 $&$ 3$&$ 4  $&$ 5 $\\
+				\hline
+				$x(t)$ (m)&$-180.6 $&$ -144 $&$-108 $&$ -72  $&$-36$&$ 0$&$ 36$&$ 72 $&$108$&$ 144 $& $180.6$ 
+			\end{tabular}
+			\item La courbe est une droite qui passe par l'origine du repère. Un seul point différent de l'origine aurait suffi à tracer la droite.
+			\item On sait qu'à $t=0$, la voiture est à la distance $d$ de la première, dans le sens positif. Donc $y(0)=d$. En suite, la deuxième voiture s'éloigne de cette position à la vitesse $v$, dans le sens négatif, donc l'écart $y(t)-y(0)$ mesure $-v't$. En substituant, cela nous donne $y(t)-d=-vt$, d'où $y(t)=-vt+d$.
 
-				L'action de passer de la forme de gauche $a(b+c)$ à la forme de droite s'appelle \emph{développer une expression algébrique}. L'action réciproque s'appelle \emph{factoriser une expression algébrique}.
+		\end{enumerate}
 
-				Résoudre le problème A.				
-			\end{exo}
+		\begin{exo}
+			On rappelle l'axiome de distributivité du produit\,: 
 
-			\noindent\emph{Solution.}
+			\begin{axi}[Distributivité de $\times$ par rapport à $+$]
+				Pour tous $a,b,c$ nombres, on a $a(b+c)=a b+ a c$.
+			\end{axi}	
 
-			On rappelle que l'équation à laquelle on était arrivée était\,: $4d=3(1-d)$. En utilisant l'axiome, on transforme $3(1-d)$ en $3\times 1+3\times(-d)$, c'est-à-dire $3-3d$. Ensuite, on procède comme lors des équations du premier degré "classique". Quelques opérations algébriques devraient vous convaincre que la solution est $d=\frac{3}{7}$. La longueur $AM$ doit donc mesurer $\frac{3}{7}$ unités. 
+			L'action de passer de la forme de gauche $a(b+c)$ à la forme de droite s'appelle \emph{développer une expression algébrique}. L'action réciproque s'appelle \emph{factoriser une expression algébrique}.
+
+			Résoudre le problème A.				
+		\end{exo}
+
+		\noindent\emph{Solution.}
+
+		On rappelle que l'équation à laquelle on était arrivée était\,: $4d=3(1-d)$. En utilisant l'axiome, on transforme $3(1-d)$ en $3\times 1+3\times(-d)$, c'est-à-dire $3-3d$. Ensuite, on procède comme lors des équations du premier degré "classique". Quelques opérations algébriques devraient vous convaincre que la solution est $d=\frac{3}{7}$. La longueur $AM$ doit donc mesurer $\frac{3}{7}$ unités. 
 
 
-			\begin{exo}
-				L'unité de mesure du temps est la seconde, l'unité de mesure des distance est le mètre.
+		\begin{exo}
+			L'unité de mesure du temps est la seconde, l'unité de mesure des distance est le mètre.
 
-				Le lièvre et la tortue font la course. L'arbitre a un chronomètre qui démarre à $t=0$. La tortue est lente : elle se déplace à $v_T=0.01$m/s. Le lièvre avance à $v_L=20$m/s. 
+			Le lièvre et la tortue font la course. L'arbitre a un chronomètre qui démarre à $t=0$. La tortue est lente : elle se déplace à $v_T=0.01$m/s. Le lièvre avance à $v_L=20$m/s. 
 
-				On modélise la piste par une demi-droite d'origine $O$ ; la tortue est représentée par un point mobile $T$ et le lièvre est représenté par un point mobile $L$. On note $x_T(t)=OT$, la distance parcourue par la tortue à la date $t$. On note $x_L(t)=OL$, la distance parcourue par le lièvre à la date $t$. 
+			On modélise la piste par une demi-droite d'origine $O$ ; la tortue est représentée par un point mobile $T$ et le lièvre est représenté par un point mobile $L$. On note $x_T(t)=OT$, la distance parcourue par la tortue à la date $t$. On note $x_L(t)=OL$, la distance parcourue par le lièvre à la date $t$. 
 
-				La tortue commence la course à $t=0$. Le lièvre, lui, sûr de sa victoire, fait une sieste jusqu'à $t_0=996$s, et\footnote{\emph{Le lièvre et la tortue}, de la Fontaine.}
-				\begin{quote}
-					[...] à la fin, quand il  vit \\
-				  Que l'autre touchait presque au bout de la carrière, \\
-				  Il partit comme un trait [...].
-				\end{quote}
+			La tortue commence la course à $t=0$. Le lièvre, lui, sûr de sa victoire, fait une sieste jusqu'à $t_0=996$s, et\footnote{\emph{Le lièvre et la tortue}, de la Fontaine.}
+			\begin{quote}
+				[...] à la fin, quand il  vit \\
+			  Que l'autre touchait presque au bout de la carrière, \\
+			  Il partit comme un trait [...].
+			\end{quote}
 
-				\begin{enumerate}
-					\item En utilisant les lois de la cinématique, démontrer que lorsque $t\ge0$, $x_T(t)=v_T\times t$.
-					\item De même, démontrer que lorsque $0\le t\le 999s$, $x_L(t)=0$ et lorsque $t\ge t_0$s, $x_L(t)=v_L(t-t_0)$.
-					\item Tracer le graphe des deux fonctions : $x_T: t\mapsto x_T(t)$, et $x_L:t\mapsto x_L(t)$, pour $0\le t\le 100$s.
-					\item Résoudre graphiquement, puis algébriquement, l'équation $x_L(t)=x_T(t)$.
-					\item Sachant que la course se déroule sur 100m, qui va gagner ?
-				\end{enumerate}
-			\end{exo}
+			\begin{enumerate}
+				\item En utilisant les lois de la cinématique, démontrer que lorsque $t\ge0$, $x_T(t)=v_T\times t$.
+				\item De même, démontrer que lorsque $0\le t\le 999s$, $x_L(t)=0$ et lorsque $t\ge t_0$s, $x_L(t)=v_L(t-t_0)$.
+				\item Tracer le graphe des deux fonctions : $x_T: t\mapsto x_T(t)$, et $x_L:t\mapsto x_L(t)$, pour $0\le t\le 100$s.
+				\item Résoudre graphiquement, puis algébriquement, l'équation $x_L(t)=x_T(t)$.
+				\item Sachant que la course se déroule sur 100m, qui va gagner ?
+			\end{enumerate}
+		\end{exo}
 
 
 

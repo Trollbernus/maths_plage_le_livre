@@ -248,6 +248,18 @@
 \newcommand{\vei}[2][]{\overrightarrow{\bm{#1}_{#2}}}
 \newcommand{\guil}[1]{\og{} #1\fg}
 
+% pour les accents a l'envers
+\DeclareFontFamily{U}{mathx}{\hyphenchar\font45}
+\DeclareFontShape{U}{mathx}{m}{n}{
+      <5> <6> <7> <8> <9> <10>
+      <10.95> <12> <14.4> <17.28> <20.74> <24.88>
+      mathx10
+      }{}
+\DeclareSymbolFont{mathx}{U}{mathx}{m}{n}
+\DeclareFontSubstitution{U}{mathx}{m}{n}
+\DeclareMathAccent{\widecheck}{0}{mathx}{"71}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %--------------------------------------------
 %   Commandes de Loïc (légèrement modifiées)
